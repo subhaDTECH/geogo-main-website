@@ -4,16 +4,16 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
-// const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
-const IndexPage = () => (
+
+const ContactPage = () => (
   <Layout>
   
-      <h1>hello world!!</h1> 
+      <h1>hello world from ContactPage !!</h1> 
    
   </Layout>
 )
 
 
-export const Head = () => <Seo title="Home" />
+export const Head = () => <Seo title="Contact" />
 
-export default IndexPage
+export default ContactPage
