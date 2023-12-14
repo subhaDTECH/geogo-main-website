@@ -1,0 +1,34 @@
+.HeroTextContainer{
+    margin-top: 30px;
+    padding: 20px;
+}
+.HeroImgContainer{
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.HeroImg{
+    width: 540px;
+    height: 440px;
+}
+.Herotitle{
+    font-size: 36px;
+    font-weight: 500;
+}
+.Hero-btn{
+    width: 160px;
+    background-color: #32373c;
+    border-radius: 10px;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.125em;
+    overflow-wrap: break-word;
+    padding: calc(0.667em + 2px) calc(1.333em + 2px);
+    text-align: center;
+    text-decoration: none;
+}

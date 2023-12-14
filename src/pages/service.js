@@ -10,8 +10,7 @@ const ServicePage = () => (
   <Layout>
   
       <h1>hello world from Service !!</h1> 
-   
-  </Layout>
+ </Layout>
 )
 
 

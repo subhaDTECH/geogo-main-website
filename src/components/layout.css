@@ -46,6 +46,9 @@ body {
   margin: 0;
   font-family: Avenir Next, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, system-ui, -apple-system, sans-serif;
   background-color: white;
+  padding: 0px;
+  box-sizing: border-box;
+  overflow-y: hidden;
 }
 a {
   background-color: transparent;
@@ -226,3 +229,14 @@ pre tt:before,
 pre tt:after {
   content: none;
 }
+
+/* my css  */
+p{
+    font-size: 22px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
