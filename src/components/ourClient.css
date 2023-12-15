@@ -1,0 +1,17 @@
+.Img-box{
+    width: 200px;
+    height: 80px;
+}
+
+
+@media (max-width:900px) {
+    .Img-box > img{
+        width: 140px;
+        height: 80px;
+    }
+    .Img-box{
+        width: 140px;
+        height: 80px;
+    }
+
+}

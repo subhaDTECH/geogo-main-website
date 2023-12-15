@@ -6,10 +6,11 @@ import OurClient from "./ourClient";
 import Review from "./review";
 import Technology from "./Technology";
 import Post from "./post";
+import OurPatner from "./ourPatner";
 
 const Service = () => (
     <div className="Service-Section">
-        <div className="container h-full mx-auto w-[100%] p-5 m-3 my-10 p-10">
+        <div className="container h-full mx-auto w-[95%] p-5 m-3 my-10 p-10">
             {/* first row  */}
              <h1 className="title">Our Core Services</h1>
             <div className="row grid grid-cols-1 md:grid-cols-2 gap-5 mx-auto ml-4">
@@ -60,7 +61,7 @@ const Service = () => (
 
         {/* team part section  */}
         <div className="service-team-section py-10 my-10">
-              <div className="container h-full mx-auto w-[100%] p-5 m-3 my-10 p-10">
+              <div className="container h-full mx-auto w-[95%] p-5 m-3 my-10 p-10">
                       <h2 className="title my-10">We’re a team of thinkers and problem solvers</h2>
 
                       {/* first row of team  */}
@@ -130,6 +131,7 @@ const Service = () => (
             <Review/>
             <Technology/>
             <Post/>
+            <OurPatner/>
 
         </div>
     </div>

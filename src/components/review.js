@@ -4,7 +4,7 @@ import GeogoLogo from "../../src/images/geogo-logo-1.png";
 import "./ourClient.css";
 const Review = () => (
     <div className="Review-Section">
-        <div className="container h-full mx-auto w-[100%] p-5 m-3 my-10 p-10">
+        <div className="container h-full mx-auto w-[95%] p-5 m-3 my-10 p-10">
 
             <div class=" min-h-screen flex items-center justify-center">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

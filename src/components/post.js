@@ -5,7 +5,7 @@ import Card from "./card";
 
 const Post = () => (
     <div className="Post-Section">
-        <div className="container h-full mx-auto w-[100%] p-5 m-3 my-10 p-10">
+        <div className="container h-full mx-auto w-[95%] p-5 m-3 my-10 p-10">
             <h2 className="title py-8">Featured Posts</h2>
             <div className="row flex grid grid-cols-1 lg:grid-cols-3 gap-4">
                   

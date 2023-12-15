@@ -8,7 +8,7 @@ import Technology from "./Technology";
 import Post from "./post";
 
 const Card = () => (
-    <div class="flex px-3 py-3">
+    <div class="flex px-3 py-3 items-center justify-center">
     <div class="max-w-lg rounded cursor-pointer overflow-hidden shadow-lg transition transform duration-300 hover:translate-y-12 ease-in-out">
         <img class="w-full" src="https://tailwindcss.com/img/card-top.jpg" alt="Sunset in the mountains"/>
         <div class="px-6 py-4">
