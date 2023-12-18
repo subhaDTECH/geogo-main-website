@@ -7,15 +7,13 @@ import * as styles from "../components/index.module.css"
 import Hero from "../components/hero"
 import Service from "../components/service"
 
-
 // const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 const IndexPage = () => (
   <Layout>
-      <Hero/>
-      <Service/>
- </Layout>
+    <Hero />
+    <Service />
+  </Layout>
 )
-
 
 export const Head = () => <Seo title="Home" />
 

@@ -7,12 +7,9 @@ import * as styles from "../components/index.module.css"
 
 const ContactPage = () => (
   <Layout>
-  
-      <h1>hello world from ContactPage !!</h1> 
-   
+    <h1>hello world from ContactPage !!</h1>
   </Layout>
 )
-
 
 export const Head = () => <Seo title="Contact" />
 
