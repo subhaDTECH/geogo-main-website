@@ -7,7 +7,7 @@ const CareerHero = () => (
         <div className="container-full text-start h-full mx-auto w-full md:w-[95%] p-5 m-3 my-10 p-10">
             <h1 className="text-3xl md:text-5xl mb-4 font-medium mx-5 leading-tight  p-5">Crafting software with a human touch.</h1>
             <section class="body-font mx-4">
-                <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col justify-center items-center">
+                <div class="container mx-auto flex px-5 py-24 flex-row items-center justify-center">
                     <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
                         <img class="object-cover object-center rounded" alt="hero" src="https://www.geogo.in/static/379f1cbebe89ed19da6f096e8a250d28/banner2.jpg"/>
                     </div>

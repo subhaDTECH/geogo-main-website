@@ -4,12 +4,12 @@ import GeogoLogo from "../../src/images/geogo-logo-1.png";
 
 const CareerCard = () => (
     <div className="Career-Section my-10 py-5">
-        <div className="container h-full mx-auto w-[95%] p-5 m-3 my-10 p-10">
+        <div className="container h-full mx-auto w-[90%] p-5 m-3 my-10 p-10">
             {/* first row start  */}
            <div className="row  shadow-lg flex grid grid-cols-1 md:grid-cols-4">
               <div className="box h-[360px] w-full flex flex-col justify-center order-2 md:order-none">
                    <h4 className="text-2xl lg:text-3xl px-4 p-4">Core Values</h4>
-                   <p className="text-sm px-4">We will be AGILE in doing what we do.</p>
+                   <p className="text-sm px-4 ">We will be AGILE in doing what we do.</p>
               </div>
               <div className="box h-[360px] w-full md:order-none">
                    <img className="w-full h-full" src="https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_640.jpg"/>
@@ -31,8 +31,8 @@ const CareerCard = () => (
               <img className="w-full h-full" src="https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_640.jpg"/>
             </div>
               <div className="box h-[360px] w-full flex flex-col justify-center">
-                   <h4 className="text-2xl md:text-3xl px-4 p-4">Open Discussions</h4>
-                   <p className="text-sm px-4">We respect voice of our team members. We always seek for the best idea, no matter from where it's coming.</p>
+                   <h4 className="text-2xl md:text-3xl px-2 p-4">Open Discussions</h4>
+                   <p className="text-sm px-4 border">We respect voice of our team members. We always seek for the best idea, no matter from where it's coming.</p>
               </div>
              
               <div className="box h-[360px] w-full">

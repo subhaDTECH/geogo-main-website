@@ -3,9 +3,12 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Hero from "./hero"
 import Service from "./service"
-
-
 import "./layout.css"
+import FooterCom from "./footerCom"
+import FooterHead from "./footerHead"
+
+
+
 
 
 const Layout = ({ children }) => {
@@ -26,7 +29,12 @@ const Layout = ({ children }) => {
       
       <div>
         <main>{children}</main>
-        <footer></footer>
+        
+        <footer>
+          
+          <FooterHead/>
+          
+        </footer>
       </div>
      </div>
      

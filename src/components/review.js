@@ -14,11 +14,13 @@ const Review = () => (
                         </div>
                         <div class="p-8">
                             <div className="flex items-center justify-between">
-                              <div>
-                              <img src="https://www.geogo.in/static/14476f106cd973f7af8a78cade03a1ab/clutch-2.png" />
-                              <p className="text-sm">THE REVIEW</p>
+                              <div className="start-container">
+                                <img  src="https://www.geogo.in/static/14476f106cd973f7af8a78cade03a1ab/clutch-2.png" />
+                                <p className="text-sm">THE REVIEW</p>
                               </div>
-                             <img src="https://www.geogo.in/static/356119cdb5a9cfa3ae83c70940ca623c/star.png"/>
+                            <div className="w-[30px] h-[30px]">
+                               <img className="w-[100%] h-[100%] object-contain" src="https://www.geogo.in/static/356119cdb5a9cfa3ae83c70940ca623c/star.png"/>
+                            </div>
                         </div>
                             <p class="mb-6 text-lg">We’ve worked with a few provider companies, and GEOGO Technologies is number one, in my opinion.
                                 Solutions Architect, Fortune 500 Manufacturing Company</p>
@@ -44,7 +46,10 @@ const Review = () => (
                              <img src="https://www.geogo.in/static/14476f106cd973f7af8a78cade03a1ab/clutch-2.png" />
                               <p className="text-sm">THE REVIEW</p>
                              </div>
-                             <img src="https://www.geogo.in/static/356119cdb5a9cfa3ae83c70940ca623c/star.png"/>
+                             
+                             <div className="w-[30px] h-[30px]">
+                               <img className="w-[100%] h-[100%] object-contain" src="https://www.geogo.in/static/356119cdb5a9cfa3ae83c70940ca623c/star.png"/>
+                            </div>
                             </div>
                             <p class="mb-6 text-lg">GEOGO Techsolutions has facilitated a dynamic project management process, meeting deadlines and satisfying the client’s requirements.</p>
                             <p class="text-sm  text-gray-800 my-2">CEO, Staffing & Recruiting Company</p>
@@ -70,7 +75,9 @@ const Review = () => (
                                <img src="https://www.geogo.in/static/14476f106cd973f7af8a78cade03a1ab/clutch-2.png" />
                                    <p className="text-sm">THE REVIEW</p>
                                </div>
-                             <img src="https://www.geogo.in/static/356119cdb5a9cfa3ae83c70940ca623c/star.png"/>
+                               <div className="w-[30px] h-[30px]">
+                               <img className="w-[100%] h-[100%] object-contain" src="https://www.geogo.in/static/356119cdb5a9cfa3ae83c70940ca623c/star.png"/>
+                            </div>
                             </div>
                             <p class="text-lg">They provide us quite a satisfactory service, cooperate with us, and don’t point fingers. Their team stands out for their willingness to make things right.</p>
                             <p class="text-sm text-gray-800 my-2">Director & CTO, Tech Mobility Firm</p>

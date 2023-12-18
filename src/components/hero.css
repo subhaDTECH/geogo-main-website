@@ -7,11 +7,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
     
 }
 .HeroImg{
-    width: 540px;
-    height: 440px;
+    /* width: 540px;
+    height: 440px; */
 }
 .Herotitle{
     font-size: 36px;

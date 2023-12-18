@@ -45,6 +45,7 @@ body {
 
   margin: 0;
   font-family: Avenir Next, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, system-ui, -apple-system, sans-serif;
+  /* font-family: Avenir Next, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, system-ui, -apple-system, sans-serif; */
   background-color: white;
   padding: 0px;
   box-sizing: border-box;
@@ -89,7 +90,10 @@ h1 > b {
 }
 img {
   border-style: none;
-  max-width: 100%;
+  /* max-width: 100%; */
+  height: 100%;
+  width:100%;
+  object-fit:cover;
 }
 code,
 kbd,
@@ -239,4 +243,6 @@ p{
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
+
+
 

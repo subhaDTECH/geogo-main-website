@@ -1,13 +1,27 @@
-.Img-box > img{
-    width: 230px;
+.Img-box {
+    width: 250px;
     height: 100px;
+    object-fit: contain;
+    
+
+}
+
+.Img-box > img{
+    width: 100%;
+    height: 100%;
     object-fit: contain;
 }
 
 @media (max-width:900px) {
-    .Img-box > img{
-        width: 200px;
+
+    .Img-box {
+        width: 180px;
         height: 80px;
+        object-fit: contain;
+    }
+    .Img-box > img{
+        width: 100%;
+        height: 100%;
         object-fit: contain;
     }
 }
