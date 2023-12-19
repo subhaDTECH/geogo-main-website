@@ -3,11 +3,11 @@ import { Link } from "gatsby"
 import GeogoLogo from "../../src/images/geogo-logo-1.png";
 import { headerConatiner, logoImg, myClass, logoContainer } from "./header.module.css";
 const Header = ({ siteTitle }) => (
-  <header className="body-font shadow-lg top-0 left-0 sticky z-10 bg-white">
+  <header className="body-font shadow-lg  sticky z-10 bg-white">
     <div className="container flex flex-wrap px-5 flex-col md:flex-row items-center">
       <div className={logoContainer}>
         <Link to="/">
-          <img className={logoImg} src={GeogoLogo} />
+          <img alt="Img" className={logoImg} src={GeogoLogo} />
         </Link>
       </div>
       <nav className="w-1/2 mr-5 md:ml-auto flex  flex-wrap items-center text-base justify-center md:justify-end mx-5">

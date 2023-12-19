@@ -1,6 +1,6 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import GeogoLogo from "../../src/images/geogo-logo-1.png"
+// import { Link } from "gatsby"
+// import GeogoLogo from "../../src/images/geogo-logo-1.png"
 
 const TermsCom = () => (
   <div className="Technology-Section">

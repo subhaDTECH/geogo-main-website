@@ -2,8 +2,33 @@ import * as React from "react"
 import { Link } from "gatsby"
 import GeogoLogo from "../../src/images/geogo-logo-1.png"
 import "./Technology.css"
-const Technology = () => (
-  <div className="Technology-Section">
+
+//import graphql
+import { graphql, useStaticQuery } from 'gatsby';
+
+const Technology = ({tools}) => {
+//   const data = useStaticQuery(graphql`
+//   query MyQuery {
+//     allStrapiTool {
+//       nodes {
+//         id
+//         type
+//         image {
+//           localFile {
+//             url
+//           }
+//         }
+        
+//       }
+//     }
+//   }
+// `);
+ 
+//  const tools =  data?.allStrapiTool?.nodes;
+//  console.log(data,"tools")
+
+  return (
+    <div className="Technology-Section">
     <div className="container h-full mx-auto w-[95%] p-5 m-3 my-10 p-10">
       <h3 className="title">
         Ensuring quality and performance using these{" "}
@@ -37,68 +62,18 @@ const Technology = () => (
         </button>
       </div>
       <div className="row flex mx-auto justify-center items-center mt-4 grid grid-cols-2 lg:grid-cols-6 gap-3">
-        <div className="Img-container  flex items-center justify-center  m-2 md:m-2">
-          <img src="https://cms.geogo.in/wp-content/uploads/2021/05/Ruby_On_Rails.png" />
+       {
+        tools && tools?.map((tool,index)=>(
+          <div key={index} className="Img-container  flex items-center justify-center  m-2 md:m-2">
+                 <img alt="Img" src={tool?.image?.localFile?.url} />
         </div>
-        <div className="Img-container flex items-center justify-center  m-2 md:m-2">
-          <img src="https://cms.geogo.in/wp-content/uploads/2021/05/Node.png" />
-        </div>
-        <div className="Img-container flex items-center justify-center m-2 md:m-2">
-          <img src="https://cms.geogo.in/wp-content/uploads/2021/05/react-js-blog-header-min-min.png" />
-        </div>
-        <div className="Img-container flex items-center justify-center m-2 md:m-2">
-          <img src="https://cms.geogo.in/wp-content/uploads/2021/05/gatby.png" />
-        </div>
-        <div className="Img-container flex items-center justify-center m-2 md:m-2">
-          <img src="https://cms.geogo.in/wp-content/uploads/2021/05/WordPress-1.png" />
-        </div>
-        <div className="Img-container flex items-center justify-center m-2 md:m-2">
-          <img src="https://cms.geogo.in/wp-content/uploads/2021/05/android.png" />
-        </div>
-      </div>
-      <div className="row mt-2  grid grid-cols-2 lg:grid-cols-6">
-        <div className="Img-container flex items-center justify-center m-2 p-3 md:m-2">
-          <img src="https://www.geogo.in/static/58d9e595f9d4bb74e7c8bab59c7c08c9/500-fortune-1.png" />
-        </div>
-        <div className="Img-container flex items-center justify-center m-2 p-3 md:m-2">
-          <img src="https://www.geogo.in/static/329d55c1013486607529d570be5e64a1/logo.jpeg" />
-        </div>
-        <div className="Img-container flex items-center justify-center m-2 p-3 md:m-2">
-          <img src="https://www.geogo.in/static/4a2c4636b6d455e1a2a4b25e92780bc4/TCS_Logo-removebg-preview-min.png" />
-        </div>
-        <div className="Img-container flex items-center justify-center m-2 p-3 md:m-2">
-          <img src="https://www.geogo.in/static/3a0b417d80d858390ac69ce5da6981ac/parxsys-1.png" />
-        </div>
-        <div className="Img-container flex items-center justify-center m-2 p-3 md:m-2">
-          <img src="https://www.geogo.in/static/2ebfb4055f9b6a44bca3d36b9682870f/logo-1.png" />
-        </div>
-        <div className="Img-container flex items-center justify-center m-2 p-3 md:m-2">
-          <img src="https://www.geogo.in/static/034ecf4304f507eb718b7481b1b814d9/logo-white.png" />
-        </div>
-      </div>
-
-      <div className="row mt-4 grid grid-cols-2 lg:grid-cols-6 mx-auto text-center">
-        <div className="Img-container m-2 p-3 md:m-2 flex justify-center items-center">
-          <img src="https://cms.geogo.in/wp-content/uploads/2021/05/Ruby_On_Rails.png" />
-        </div>
-        <div className="Img-container m-2 p-3 md:m-2 flex items-center justify-center">
-          <img src="https://cms.geogo.in/wp-content/uploads/2021/05/Node.png" />
-        </div>
-        <div className="Img-container m-2 p-3 md:m-2 flex items-center justify-center">
-          <img src="https://cms.geogo.in/wp-content/uploads/2021/05/react-js-blog-header-min-min.png" />
-        </div>
-        <div className="Img-container m-2 p-3 md:m-2 flex items-center justify-center">
-          <img src="https://cms.geogo.in/wp-content/uploads/2021/05/gatby.png" />
-        </div>
-        <div className="Img-container m-2 p-3 md:m-2 flex items-center justify-center">
-          <img src="https://cms.geogo.in/wp-content/uploads/2021/05/WordPress-1.png" />
-        </div>
-        <div className="Img-container m-2 p-3 md:m-2 flex items-center justify-center">
-          <img src="https://cms.geogo.in/wp-content/uploads/2021/05/android.png" />
-        </div>
-      </div>
-    </div>
+        ))
+       }
+       
+       </div>
+     </div>
   </div>
-)
+  )
+}
 
 export default Technology

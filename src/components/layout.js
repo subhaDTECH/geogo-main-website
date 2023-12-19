@@ -1,10 +1,10 @@
+// import Hero from "./hero"
+// import Service from "./service"
+//import FooterCom from "./footerCom"
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
-import Hero from "./hero"
-import Service from "./service"
 import "./layout.css"
-import FooterCom from "./footerCom"
 import FooterHead from "./footerHead"
 
 const Layout = ({ children }) => {

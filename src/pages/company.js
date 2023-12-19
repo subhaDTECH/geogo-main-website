@@ -1,15 +1,21 @@
+// import { Link } from "gatsby"
+// import { StaticImage } from "gatsby-plugin-image"
+//import * as styles from "../components/index.module.css"
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
 import CompanyHero from "../components/Company"
 import CompanyCard from "../components/CompanyCard"
 import RecogCom from "../components/recog"
 import Teamcard from "../components/teamCard"
-const CompanyPage = () => (
-  <Layout>
+
+import { graphql } from "gatsby"
+const CompanyPage = ({data}) => {
+
+
+  const teams=data.allStrapiTeam.nodes;
+  return (
+    <Layout>
     <CompanyHero />
     <CompanyCard
       imageUrl={
@@ -34,11 +40,38 @@ const CompanyPage = () => (
       title={"Our culture charter reads"}
       subtitle={"1. Goals first, People second & Individual third"}
     />
-    <RecogCom />
-    <Teamcard />
+     <RecogCom />
+     <Teamcard teams={teams} />
   </Layout>
-)
+  )
+}
 
 export const Head = () => <Seo title="Company" />
+
+export const query = graphql`
+query MyQuery {
+  
+  allStrapiTeam {
+    nodes {
+      id
+      joining_date(formatString: "DD|MM|YY")
+      link
+      name
+      position_type
+      image {
+        
+        localFile {
+          id
+          url
+        }
+      }
+      employment_type
+    }
+  }
+}
+`
+
+
+
 
 export default CompanyPage

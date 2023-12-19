@@ -10,12 +10,14 @@ const FooterCom = () => (
           <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
             <div>
               <div>
+                <div className="logo-container-box">
                 <img
                  
-                  className="w-[200px] h-[200px] object-contain h-6 sm:h-9 footer-logo"
-                  src="https://www.geogo.in/static/logo-white-a9aaab322545dd4a7ade1a1e44850b4c.png"
-                  alt="logo"
-                />
+                 className="w-[150px] h-[150px] md:w-[200px] md:h-[200px] object-contain h-6 sm:h-9 footer-logo"
+                 src={GeogoLogo}
+                 alt="logo"
+               />
+                </div>
                 <p className="max-w-xs mt-4 text-sm text-white">
                   © 2021 GEOGO Techsolutions Pvt. Ltd. All rights reserved.
                 </p>
@@ -81,7 +83,7 @@ const FooterCom = () => (
               </div>
             </div>
             <div className="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
-              <div>
+              <div className="ml-[100px] md:ml-[0px]">
                 <p className="font-medium">Company</p>
                 <nav className="flex flex-col mt-4 space-y-2 text-sm">
                   <Link
@@ -139,7 +141,7 @@ const FooterCom = () => (
                   </a>
                 </nav>
               </div>
-              <div>
+              <div className="ml-[200px] md:ml-[0px]">
                 <p className="font-medium">Contact Us</p>
                 <nav className="flex flex-col  space-y-2 text-sm text-gray-500">
                   <p

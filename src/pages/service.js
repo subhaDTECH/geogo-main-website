@@ -1,13 +1,14 @@
+// import { Link } from "gatsby"
+// import { StaticImage } from "gatsby-plugin-image"
+// import * as styles from "../components/index.module.css"
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
+
 
 const ServicePage = () => (
   <Layout>
-    <section className="service-page-section">
+    <section className="service-page-section relative">
       <div className="container h-full mx-auto w-[90%] p-5 m-3 my-10 p-10 mx-5">
         <div className="service-header">
           <h1 className="text-[46px] font-semibold">Services.</h1>
@@ -20,8 +21,8 @@ const ServicePage = () => (
           </p>
         </div>
 
-        <div className="row my-8 p-5 flex flex-col lg:flex-row ">
-          <div className="left-box w-full lg:w-1/2 ">
+        <div className="row my-8 p-5 flex flex-col lg:flex-row">
+          <div className="left-box w-full lg:w-1/2  sticky">
             <ul>
               <li className="m-2 p-2">Digital Products Engineering</li>
               <li className="m-2 p-2">Agile Service Management</li>
@@ -131,5 +132,11 @@ const ServicePage = () => (
 )
 
 export const Head = () => <Seo title="Service" />
+
+
+
+
+
+
 
 export default ServicePage

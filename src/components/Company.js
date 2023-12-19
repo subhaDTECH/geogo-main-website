@@ -1,6 +1,4 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import GeogoLogo from "../../src/images/geogo-logo-1.png"
 import "../components/hero.css"
 const CompanyHero = () => (
   <div className="Company-Section">
@@ -26,6 +24,7 @@ const CompanyHero = () => (
       </div>
       <div className="HeroImgContainer m-4 p-4 order-2">
         <img
+          alt="Img"
           className=""
           src="https://www.geogo.in/static/9c5091c210a5d564b4f6779fcde80b38/aboutGeogo-1.jpg"
         />

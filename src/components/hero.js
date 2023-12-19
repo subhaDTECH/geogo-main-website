@@ -1,6 +1,6 @@
+// import { Link } from "gatsby"
+import MainHeroImg from "../../src/images/main-page-img.png";
 import * as React from "react"
-import { Link } from "gatsby"
-import GeogoLogo from "../../src/images/geogo-logo-1.png";
 import "../components/hero.css";
 const Hero = () => (
     <div className="Hero-Section">
@@ -15,7 +15,7 @@ const Hero = () => (
                 <button className="Hero-btn my-5 hover:animate-bounce">LETS TALK</button>
             </div>
             <div className="HeroImgContainer m-4 p-4">
-                <img className="HeroImg" src="https://www.geogo.in/static/91800ab9bfa948db1e554a5ddde56bdf/pottery-bg-1024x930-min.png" />
+                <img alt="Img" className="HeroImg" src={MainHeroImg} />
             </div>
 
         </div>
