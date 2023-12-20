@@ -2,6 +2,7 @@ import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 // import * as styles from "../components/index.module.css"
+// style={{  backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url(${solution?.image?.localFile?.url})`, backgroundSize: 'cover' }}
 import { graphql } from "gatsby"
 const SolutionPage = ({data}) => {
   
@@ -39,7 +40,9 @@ const SolutionPage = ({data}) => {
             solutions
               .filter(solution => solution.type === 'MSME')
               .map((solution,index)=>(
-                   <div  key={index} className="w-full border digital-product-box my-8 p-5 shadow-lg">
+                   <div 
+                   
+                   key={index} className="w-full border digital-product-box my-8 p-5 shadow-lg">
               <h2 className="text-2xl font-semibold">
                 {solution?.title}
               </h2>
@@ -49,7 +52,7 @@ const SolutionPage = ({data}) => {
               }
               </p>
               
-              <button  class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+              <button  class="bg-white hover:bg-gray-100 text-white font-semibold py-2 px-4 border border-gray-400  rounded shadow">
                <a className="no-underline text-black">
                  Read More..
                </a>
@@ -66,7 +69,8 @@ const SolutionPage = ({data}) => {
                 solutions
                   .filter(solution => solution.type === 'Micro Mobility')
                   .map((solution,index)=>(
-                       <div  key={index} className=" border digital-product-box my-8 p-5 shadow-lg">
+                       <div  key={index} 
+                        className="w-full border digital-product-box my-8 p-5 shadow-lg">
                   <h2 className="text-2xl font-semibold">
                     {solution?.title}
                   </h2>
@@ -94,7 +98,8 @@ const SolutionPage = ({data}) => {
                 solutions
                   .filter(solution => solution.type === 'Industry 4.0')
                   .map((solution,index)=>(
-                       <div  key={index} className=" border digital-product-box my-8 p-5 shadow-lg">
+                       <div 
+                       key={index} className="w-full border digital-product-box my-8 p-5 shadow-lg">
                   <h2 className="text-2xl font-semibold">
                     {solution?.title}
                   </h2>

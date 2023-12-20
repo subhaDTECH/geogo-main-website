@@ -44,7 +44,7 @@ export const Head = () => <Seo title="Home" />
 
 export const query = graphql`
 query MyQuery {
-  allStrapiService {
+  allStrapiService(limit: 4, sort: {piority: ASC}) {
     nodes {
       slug
       technology

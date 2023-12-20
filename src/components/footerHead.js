@@ -2,6 +2,8 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import GeogoLogo from "../../src/images/geogo-logo-1.png"
+import FooterImg1 from "../../src/images/footer-logo1.png";
+import FooterImg2 from "../../src/images/footer-logo2.png";
 
 const FooterHead = () => (
   <div className="Footer-Header-Section  w-full h-full text-white">
@@ -17,19 +19,19 @@ const FooterHead = () => (
                    <p className="px-4 text-sm">Just tell us what you want from us.</p>
                 
                 </div>
-                <div className="right-box-context  flex flex-col lg:flex-row flex-row mx-10">
+                <div className="right-box-context  flex flex-col lg:flex-row flex-row mx-10 gap-2">
                 
                     <div className="btn-box-container flex flex-col items-center justify-center">
                        
-                       <button className="text-start w-full border border-gray-500 px-3 py-3 m-3  hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">Get our Service</button>
-                       <button className=" text-start w-full border border-gray-500 px-3 py-3 m-3  hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">Become Our Patner</button>
-                       <button className="text-start w-full border border-gray-500 px-3 py-3 m-3  hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">Join Our Team</button>
-                       <button className="text-start w-full border border-gray-500 px-3 py-3 m-3  hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">Discuss about something else</button>
+                       <button className="text-start w-full border border-gray-500 px-3 py-2 m-3  hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">Get our Service</button>
+                       <button className=" text-start w-full border border-gray-500 px-3 py-2 m-3  hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">Become Our Patner</button>
+                       <button className="text-start w-full border border-gray-500 px-3 py-2 m-3  hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">Join Our Team</button>
+                       <button className="text-start w-full border border-gray-500 px-3 py-2 m-3  hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">Discuss about something else</button>
                     </div>
-                    <div className="content-box m-3 flex  flex-col  justify-center">
+                    <div className="content-box m-3  flex  flex-col  justify-center">
                          <div className="flex flex-row justify-center">
-                         <div className="footer-img-container">
-                            <img src=""/>
+                         <div className="footer-img-container w-[80px] h-[80px] md:w-[50px] md:h-[50px]">
+                            <img className="w-[100%] h-[100%] object-contain" src={FooterImg1}/>
                           </div>
                           <div className="p-2 m-2">
                               <h3 className="text-lg">Confidentiality Assured!</h3>
@@ -38,8 +40,8 @@ const FooterHead = () => (
                           </div>
                          </div>
                           <div className="flex flex-row justify-center">
-                          <div className="footer-img-container">
-                            <img src=""/>
+                          <div className="footer-img-container w-[80px] h-[80px] md:w-[50px] md:h[50px] ">
+                            <img className="w-[100%] h-[100%] object-contain" src={FooterImg2}/>
                           </div>
                           <div className="p-2 m-2">
                               <h3 className="text-lg">Same Day Response is Guaranteed!</h3>
@@ -164,28 +166,28 @@ const FooterHead = () => (
                 <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
                   <Link
                     className="text-gray-300 cursor-pointer hover:text-green-500 no-underline"
-                    to="/service"
+                    to="/service/digital-product-development"
                   >
                     Digital Products Engineering
                   </Link>
                   <Link
                     className="text-gray-300 cursor-pointer hover:text-green-500 no-underline"
-                    to="/service"
+                    to="/service/agile-service-management"
                   >
                     Agile Service Management
                   </Link>
-                  <a
+                  <Link
                     className="text-gray-300 cursor-pointer hover:text-green-500 no-underline"
-                    to="/service"
+                    to="/service/business-process-automation/"
                   >
                     Business Process Automation
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     className="text-gray-300 cursor-pointer hover:text-green-500 no-underline"
-                    to="/service"
+                    to="/service/recruitment-training"
                   >
                     Recruitment & Training
-                  </a>
+                  </Link>
                 </nav>
               </div>
               <div>

@@ -29,7 +29,6 @@ const Card = ({post}) => (
                 {post?.author_name}
             </a>
             <p className="text-sm">{post?.author_subtitle}</p>
-           
         </div>
     </div>
   </div>

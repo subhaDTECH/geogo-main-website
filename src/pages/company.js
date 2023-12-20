@@ -8,7 +8,9 @@ import CompanyHero from "../components/Company"
 import CompanyCard from "../components/CompanyCard"
 import RecogCom from "../components/recog"
 import Teamcard from "../components/teamCard"
-
+import CompanyImg1 from "../images/company-img1.jpg";
+import CompanyImg2 from "../images/company-img2.jpg";
+import CompanyImg3 from "../images/company-img3.jpg";
 import { graphql } from "gatsby"
 const CompanyPage = ({data}) => {
 
@@ -18,29 +20,29 @@ const CompanyPage = ({data}) => {
     <Layout>
     <CompanyHero />
     <CompanyCard
-      imageUrl={
-        "https://www.geogo.in/static/e0512ad5585b29de76271c5effc84191/fighter-plane2-1.jpg"
-      }
+      imageUrl={CompanyImg1}
       title={"Our Mission"}
-      subtitle={"To simplify digital technology adoption with a human touch"}
+      subtitle1={"To simplify digital technology adoption with a human touch"}
     />
     <CompanyCard
-      imageUrl={
-        "https://www.geogo.in/static/a7e2faa16f210d1d7e9b85e6ca2e38be/side-section2-min.jpg"
-      }
+      imageUrl={CompanyImg2}
       title={"Our Vision"}
-      subtitle={
+      subtitle1={
         "Be a Team of Champions delivering high quality Digital Products & solutions to solve business needs and challenges with agility using best of technology"
       }
     />
-    <CompanyCard
-      imageUrl={
-        "https://www.geogo.in/static/e0512ad5585b29de76271c5effc84191/fighter-plane2-1.jpg"
-      }
+     <CompanyCard
+      imageUrl={CompanyImg3}
       title={"Our culture charter reads"}
-      subtitle={"1. Goals first, People second & Individual third"}
+      subtitle1={"1. Goals first, People second & Individual third."}
+      subtitle2={"2. A WIN-WIN-WIN business, where Customer wins, Employees win and the Business Owners win."}
+      subtitle3={"3. Fail fast, fail differently."}
     />
-     <RecogCom />
+
+
+
+
+    <RecogCom />
      <Teamcard teams={teams} />
   </Layout>
   )

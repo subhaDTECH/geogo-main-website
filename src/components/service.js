@@ -8,41 +8,26 @@ import Review from "./review"
 import Technology from "./Technology"
 import Post from "./post"
 import OurPatner from "./ourPatner"
+import TeamPartImg1 from "../../src/images/team-part-img1.jpg";
+import TeamPartImg2 from "../../src/images/team-part-img2.jpg";
+import TeamParImg3 from "../../src/images/team-part-img3.jpg";
+import TeamPartImg4 from "../../src/images/team-part-last.png";
+
+
 
 //import graphql
-import { graphql, useStaticQuery } from 'gatsby';
+import { Link, graphql, useStaticQuery } from 'gatsby';
 
 const Service = ({services,clients,tools,posts,reviews}) => {
-  // const data = useStaticQuery(graphql`
-  //   query MyQuery {
-  //     allStrapiService {
-  //       nodes {
-  //         slug
-  //         technology
-  //         title
-  //         id
-  //         description
-  //         image {
-  //           localFile {
-  //             url
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `);
-
-   // Access data returned from the query
-   //const services = data?.allStrapiService?.nodes
   
-
-  return (
+  
+return (
     <div className="Service-Section">
     <div className="container h-full mx-auto w-[95%] p-5 m-3 my-10 p-10">
      <h1 className="title">Our Core Services</h1>
       <div className="row grid grid-cols-1 md:grid-cols-2 gap-5  mx-auto ">
       { services && services?.map(service => (
-               <div  className="Service-box bg-white h-full w-full md:80vh   shadow-lg flex flex-row flex items-center justify-center">
+               <Link to={`/service/${service?.slug}`}  className="Service-box no-underline text-black text-sm bg-white h-full w-full md:80vh   shadow-lg flex flex-row flex items-center justify-center">
                <img
                  alt="Img"
                  className="Service-box-Img hidden md:block"
@@ -55,11 +40,11 @@ const Service = ({services,clients,tools,posts,reviews}) => {
                  <h4 className="font-bold text-sm p-2">
                   {service?.technology}
                  </h4>
-                 <p className="Service-Paragraph">
+                 <p className="Service-Paragraph text-[16px] font-normal">
                   {service?.description}.
                  </p>
                </div>
-             </div>
+             </Link>
         ))}
 
        </div>
@@ -79,16 +64,16 @@ const Service = ({services,clients,tools,posts,reviews}) => {
               <img
                 alt="Img"
                 className="team-Img items-center mx-auto "
-                src="https://www.geogo.in/static/9afe3591474a8d95a4555b174dcbb739/Screenshot-2021-04-13-at-3.46.22-PM.jpg"
+                src={TeamPartImg1}
               />
             </div>
             <div className="flex flex-col w-full md:w-[60%]   p-3 m-3">
               <p>We believe</p>
               <h2 className="text-2xl md:text-4xl">Simplicity is the Key</h2>
               <span className="py-3 my-5 ">
-                <a href="#" className="no-underline">
+                <Link to="/" className="no-underline">
                   See Our Work
-                </a>
+                </Link>
               </span>
             </div>
           </div>
@@ -98,16 +83,16 @@ const Service = ({services,clients,tools,posts,reviews}) => {
               <img
               alt="Img"
                 className="team-Img items-center mx-auto "
-                src="https://www.geogo.in/static/942c1612824f412bed0d239bb65f30e4/Screenshot-2021-04-13-at-3.48.12-PM.jpg"
+                src={TeamPartImg2}
               />
             </div>
             <div className="flex flex-col w-full md:w-[60%]   p-3 m-3">
               <p>We practice</p>
               <h2 className="text-2xl md:text-4xl">Creativity at Core</h2>
               <span className="py-3 my-5 ">
-                <a href="#" className="no-underline">
+                <Link to="/service" className="no-underline">
                   Explore our services
-                </a>
+                </Link>
               </span>
             </div>
           </div>
@@ -116,16 +101,16 @@ const Service = ({services,clients,tools,posts,reviews}) => {
               <img
               alt="Img"
                 className="team-Img items-center mx-auto "
-                src="https://www.geogo.in/static/4558d3961acb15314bd59d7ad9d636ce/Agile-e1618309457190-min.png"
+                src={TeamParImg3}
               />
             </div>
             <div className="flex flex-col w-full md:w-[60%]   p-3 m-3">
               <p>Our process is</p>
               <h2 className="text-2xl md:text-4xl">Always Agile</h2>
               <span className="py-3 my-5 ">
-                <a href="#" className="no-underline">
+                <Link to="/we-are-agile" className="no-underline">
                   More about our process
-                </a>
+                </Link>
               </span>
             </div>
           </div>
@@ -134,16 +119,16 @@ const Service = ({services,clients,tools,posts,reviews}) => {
               <img
               alt="Img"
                 className="team-Img items-center mx-auto "
-                src="https://www.geogo.in/static/5dfa26afaec2863684b67d33a36f2236/Screenshot-2021-04-13-at-3.58.29-PM.jpg"
+                src={TeamPartImg4}
               />
             </div>
             <div className="flex flex-col w-full md:w-[60%]   p-3 m-3">
               <p>Powered by</p>
               <h2 className="text-2xl md:text-4xl">Passionate People</h2>
               <span className="py-3 my-5 ">
-                <a href="#" className="no-underline">
+                <Link to="/career" className="no-underline">
                   Join our team
-                </a>
+                </Link>
               </span>
             </div>
           </div>
@@ -152,9 +137,11 @@ const Service = ({services,clients,tools,posts,reviews}) => {
         {/* end of team row  */}
       </div>
       <div className="btn-continer mx-auto my-10 text-center">
+        <Link to="/company">
         <button class="border border-gray-300 bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
           LEARN MORE ABOUT OUR COMPANY
         </button>
+        </Link>
       </div>
 
       <OurClient clients={clients} />

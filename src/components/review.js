@@ -40,11 +40,12 @@ const Review = ({reviews}) => (
                   </p>
                 </div>
                 <div class="p-4">
-                  <button class="bg-[#32373c] w-[160px] mx-auto  text-white rounded-sm px-4 py-2  focus:outline-none focus:shadow-outline-blue active:bg-blue-800">
-                    <a target="_blank" className="no-underline text-white" href={review?.link}>
-                      View Full Review
+                <a target="_blank" className="no-underline text-white ml-2" href={review?.link}>
+                <button class="bg-[#32373c] w-[160px] mx-auto  text-white rounded-sm px-4 py-2  focus:outline-none focus:shadow-outline-blue active:bg-blue-800">
+                    View Full Review
+                    </button>
                     </a>
-                  </button>
+                 
                 </div>
               </div>
               )
@@ -55,7 +56,9 @@ const Review = ({reviews}) => (
 
       <div className="btn-continer mx-auto mb-8  mt-20 text-center">
         <button class="border border-gray-600 bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-          OUR CLUTCH PROFILE
+          <a target="_blank" href="https://clutch.co/profile/geogo-techsolutions" className="no-underline text-black">
+             OUR CLUTCH PROFILE
+          </a>
         </button>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import * as React from "react"
 import "../components/hero.css"
+import AboutImg from "../../src/images/about-img.jpg";
 const CompanyHero = () => (
   <div className="Company-Section">
     <div className="container  w-[95%] md:w-[90%]  p-5 m-3 flex flex-col mx-auto grid grid-cols-1 md:grid-cols-2 px-5 md:flex-col md:flex-row items-center">
@@ -25,8 +26,8 @@ const CompanyHero = () => (
       <div className="HeroImgContainer m-4 p-4 order-2">
         <img
           alt="Img"
-          className=""
-          src="https://www.geogo.in/static/9c5091c210a5d564b4f6779fcde80b38/aboutGeogo-1.jpg"
+          className="w-[100%] h-[100%] object-contain"
+          src={AboutImg}
         />
       </div>
     </div>

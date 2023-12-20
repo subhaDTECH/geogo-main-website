@@ -6,22 +6,6 @@ import "./ourClient.css";
 //import graphql
 import { graphql, useStaticQuery } from 'gatsby';
 const OurClient = ({clients}) => {
-//    const data = useStaticQuery(graphql`
-//    query MyQuery {
-  
-//       allStrapiClient {
-//         nodes {
-//           id
-//           client_image {
-//             localFile {
-//               url
-//             }
-//           }
-//         }
-//       }
-//     }
-//  `);
- //const clients = data?.allStrapiClient?.nodes;
 
    return (
       <div className="OurClient-Section">

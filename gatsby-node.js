@@ -9,10 +9,31 @@
  */
 exports.createPages = async ({ actions }) => {
   const { createPage } = actions
-  createPage({
-    path: "/using-dsg",
-    component: require.resolve("./src/templates/using-dsg.js"),
-    context: {},
-    defer: true,
-  })
+  // createPage({
+  //   path: "/using-dsg",
+  //   component: require.resolve("./src/templates/using-dsg.js"),
+  //   context: {},
+  //   defer: true,
+  // })
+
+ 
+  const pagePaths = [
+    { path: '/service/digital-product-development', template: './src/templates/digital-product-development.js' },
+    { path: '/service/agile-service-management', template: './src/templates/agile-service-management.js' },
+    { path: '/service/business-process-automation', template: './src/templates/business-process-automation.js' },
+    { path: '/service/recruitment-training', template: './src/templates/recruitment-training.js' },
+  ];
+
+  pagePaths.forEach(({ path, template }) => {
+    createPage({
+      path: path,
+      component: require.resolve(template),
+      context: {
+        // You can pass additional context data if needed
+        // For example, you could pass the path itself as context here
+        pagePath: path,
+      },
+    });
+  });
+
 }

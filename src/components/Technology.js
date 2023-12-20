@@ -1,4 +1,5 @@
 import * as React from "react"
+import { useState } from "react"
 import { Link } from "gatsby"
 import GeogoLogo from "../../src/images/geogo-logo-1.png"
 import "./Technology.css"
@@ -7,25 +8,19 @@ import "./Technology.css"
 import { graphql, useStaticQuery } from 'gatsby';
 
 const Technology = ({tools}) => {
-//   const data = useStaticQuery(graphql`
-//   query MyQuery {
-//     allStrapiTool {
-//       nodes {
-//         id
-//         type
-//         image {
-//           localFile {
-//             url
-//           }
-//         }
+
+ // const [toolsData,setToolsData]=useState(tools);
+  const [showTools,setTools]=useState(tools);
+
+  const handleClick=(type)=>{
+       console.log(type,"type");
+        const newData=tools.filter((tool)=>{
+          return tool.type===type;
+        });
         
-//       }
-//     }
-//   }
-// `);
- 
-//  const tools =  data?.allStrapiTool?.nodes;
-//  console.log(data,"tools")
+        setTools(newData);
+  }
+
 
   return (
     <div className="Technology-Section">
@@ -35,35 +30,35 @@ const Technology = ({tools}) => {
         <span className="text-green-500">Tools</span> and{" "}
         <span className="text-green-500">Technologies</span>.
       </h3>
-      <div className="btn-container flex items-center justify-start  flex-wrap my-3">
-        <button className="technology-btn bg-gray-200 text-center py-2 px-5 mx-3 my-3 rounded-full ">
+      <div className="btn-container flex items-center justify-start  flex-wrap my-5">
+        <button onClick={()=>setTools(tools)} className="w-[120px] transition transform duration-300 ease-in-out  technology-btn bg-green-500 text-white hover:bg-[#013220]  text-center py-2 px-5 mx-3 my-3 rounded-full ">
           All
         </button>
-        <button className="technology-btn bg-gray-200 text-center py-2 px-5 mx-3 my-3 rounded-full">
+        <button onClick={()=>handleClick("Plan")} className="w-[120px] transition transform duration-300 ease-in-out  technology-btn bg-green-500 text-white hover:bg-[#013220]  text-center py-2 px-5 mx-3 my-3 rounded-full ">
           Plan
         </button>
-        <button className="technology-btn bg-gray-500 text-center py-2 px-5 mx-3 my-3 rounded-full">
+        <button onClick={()=>handleClick("Code")} className="w-[120px] transition transform duration-300 ease-in-out  technology-btn bg-green-500 text-white hover:bg-[#013220]  text-center py-2 px-5 mx-3 my-3 rounded-full ">
           Code
         </button>
-        <button className="technology-btn bg-gray-200 text-center py-2 px-5 mx-3 my-3 rounded-full">
+        <button onClick={()=>handleClick("Build")} className="w-[120px] transition transform duration-300 ease-in-out  technology-btn bg-green-500 text-white hover:bg-[#013220]  text-center py-2 px-5 mx-3 my-3 rounded-full ">
           Build
         </button>
-        <button className="technology-btn bg-gray-200 text-center py-2 px-5 mx-3 my-3 rounded-full">
+        <button onClick={()=>handleClick("Release")} className="w-[120px] transition transform duration-300 ease-in-out  technology-btn bg-green-500 text-white hover:bg-[#013220]  text-center py-2 px-5 mx-3 my-3 rounded-full ">
           Release
         </button>
-        <button className="technology-btn bg-gray-200 text-center py-2 px-5 mx-3 my-3 rounded-full">
+        <button onClick={()=>handleClick("Test")} className="w-[120px] transition transform duration-300 ease-in-out  technology-btn bg-green-500 text-white hover:bg-[#013220]  text-center py-2 px-5 mx-3 my-3 rounded-full ">
           Test
         </button>
-        <button className="technology-btn bg-gray-200 text-center py-2 px-5 mx-3 my-3 rounded-full">
+        <button onClick={()=>handleClick("Deploy")} className="w-[120px] transition transform duration-300 ease-in-out  technology-btn bg-green-500 text-white hover:bg-[#013220]  text-center py-2 px-5 mx-3 my-3 rounded-full ">
           Deploy
         </button>
-        <button className="technology-btn bg-gray-200 text-center py-2 px-5 mx-3 my-3 rounded-full">
+        <button onClick={()=>handleClick("Monitor")} className="w-[120px] transition transform duration-300 ease-in-out  technology-btn bg-green-500 text-white hover:bg-[#013220]  text-center py-2 px-5 mx-3 my-3 rounded-full ">
           Monitor
         </button>
       </div>
-      <div className="row flex mx-auto justify-center items-center mt-4 grid grid-cols-2 lg:grid-cols-6 gap-3">
+      <div className="row my-5 flex mx-auto justify-center items-center mt-4 grid grid-cols-2 lg:grid-cols-6 gap-3">
        {
-        tools && tools?.map((tool,index)=>(
+        showTools && showTools?.map((tool,index)=>(
           <div key={index} className="Img-container  flex items-center justify-center  m-2 md:m-2">
                  <img alt="Img" src={tool?.image?.localFile?.url} />
         </div>
