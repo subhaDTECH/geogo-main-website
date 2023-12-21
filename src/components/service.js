@@ -71,7 +71,7 @@ return (
               <p>We believe</p>
               <h2 className="text-2xl md:text-4xl">Simplicity is the Key</h2>
               <span className="py-3 my-5 ">
-                <Link to="/" className="no-underline">
+                <Link to="/portfolio" className="no-underline">
                   See Our Work
                 </Link>
               </span>

@@ -155,7 +155,7 @@ const FooterHead = () => (
                   </Link>
                   <Link
                     className="text-gray-300 cursor-pointer hover:text-green-500 no-underline"
-                    to="life-at-geogo"
+                    to="/life-at-geogo"
                   >
                     Life at Geogo
                   </Link>

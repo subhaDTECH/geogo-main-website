@@ -3,14 +3,14 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import TermsCom from "../components/termsCom"
 
-const WeAerAgilePage = () => {
+const PortfolioPage = () => {
   return (
     <Layout>
       <div className="Technology-Section">
         <div className="container h-full mx-auto w-[95%] p-5 m-3 my-10 p-10 bg-white">
          <div className="py-10">
          <h2 className="text-3xl md:text-6xl font-semibold p-5">
-            We are Agile
+         Our Projects.
           </h2>
 
          </div>
@@ -136,4 +136,4 @@ const WeAerAgilePage = () => {
 
 export const Head = () => <Seo title="we are agile" />
 
-export default WeAerAgilePage
+export default PortfolioPage
