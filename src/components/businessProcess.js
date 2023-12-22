@@ -1,7 +1,7 @@
 import * as React from "react"
 import "../components/hero.css"
-import AboutImg from "../../src/images/about-img.jpg";
-import BusinessProcessAutomation from "../templates/business-process-automation";
+// import AboutImg from "../../src/images/about-img.jpg";
+// import BusinessProcessAutomation from "../templates/business-process-automation";
 const BusinessProcessAutomationCom = () => (
   <div className="Digital-product-Section">
     <div className="container  w-[90%] md:w-[90%] p-5 mx-auto my-10">

@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import GeogoLogo from "../../src/images/geogo-logo-1.png";
-import { headerConatiner, logoImg, myClass, logoContainer } from "./header.module.css";
+import {  logoImg, myClass, logoContainer } from "./header.module.css";
 const Header = ({ siteTitle }) => (
   <header className="body-font shadow-lg  sticky z-10 bg-white">
     <div className="container flex flex-wrap px-5 flex-col md:flex-row items-center">

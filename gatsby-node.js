@@ -22,6 +22,8 @@ exports.createPages = async ({ actions }) => {
     { path: '/service/agile-service-management', template: './src/templates/agile-service-management.js' },
     { path: '/service/business-process-automation', template: './src/templates/business-process-automation.js' },
     { path: '/service/recruitment-training', template: './src/templates/recruitment-training.js' },
+    { path: '/solution/msme', template: './src/templates/msme.js' },
+    { path: '/solution/industry', template: './src/templates/industry.js' },
   ];
 
   pagePaths.forEach(({ path, template }) => {

@@ -4,7 +4,7 @@ import * as React from "react"
 import "./ourClient.css";
 
 //import graphql
-import { graphql, useStaticQuery } from 'gatsby';
+
 const OurClient = ({clients}) => {
 
    return (

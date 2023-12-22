@@ -1,7 +1,6 @@
 
 import * as React from "react"
 import { Link } from "gatsby"
-import GeogoLogo from "../../src/images/geogo-logo-1.png"
 import FooterImg1 from "../../src/images/footer-logo1.png";
 import FooterImg2 from "../../src/images/footer-logo2.png";
 
@@ -31,7 +30,7 @@ const FooterHead = () => (
                     <div className="content-box m-3  flex  flex-col  justify-center">
                          <div className="flex flex-row justify-center">
                          <div className="footer-img-container w-[80px] h-[80px] md:w-[50px] md:h-[50px]">
-                            <img className="w-[100%] h-[100%] object-contain" src={FooterImg1}/>
+                            <img alt="img" className="w-[100%] h-[100%] object-contain" src={FooterImg1}/>
                           </div>
                           <div className="p-2 m-2">
                               <h3 className="text-lg">Confidentiality Assured!</h3>
@@ -41,7 +40,7 @@ const FooterHead = () => (
                          </div>
                           <div className="flex flex-row justify-center">
                           <div className="footer-img-container w-[80px] h-[80px] md:w-[50px] md:h[50px] ">
-                            <img className="w-[100%] h-[100%] object-contain" src={FooterImg2}/>
+                            <img alt="img" className="w-[100%] h-[100%] object-contain" src={FooterImg2}/>
                           </div>
                           <div className="p-2 m-2">
                               <h3 className="text-lg">Same Day Response is Guaranteed!</h3>

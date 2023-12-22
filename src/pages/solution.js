@@ -3,11 +3,13 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 // import * as styles from "../components/index.module.css"
 // style={{  backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url(${solution?.image?.localFile?.url})`, backgroundSize: 'cover' }}
-import { graphql } from "gatsby"
+import { graphql , Link} from "gatsby"
 const SolutionPage = ({data}) => {
   
   const solutions=data.allStrapiSolution.nodes;
+  const [show,setShow]=React.useState(false);
   console.log(solutions);
+  console.log(show,"show");
   return (
     <Layout>
     <section className="service-page-section">
@@ -51,11 +53,18 @@ const SolutionPage = ({data}) => {
                 solution?.description
               }
               </p>
-              
-              <button  class="bg-white hover:bg-gray-100 text-white font-semibold py-2 px-4 border border-gray-400  rounded shadow">
-               <a className="no-underline text-black">
-                 Read More..
-               </a>
+
+            
+              {/* <button  onClick={()=>setShow(!show)} class="m-2 bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow transition transform duration-300">
+              <Link   className="no-underline text-black">
+              {show ? "Read More.." : "Hide"}
+                </Link>
+              </button> */}
+
+              <button  class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+              <Link to={`${solution?.slug}`} className="no-underline text-black">
+                  Read More..
+                </Link>
               </button>
             </div>
               ))
@@ -79,12 +88,22 @@ const SolutionPage = ({data}) => {
                     solution?.description
                   }
                   </p>
+
+             
+             
                  
-                  <button  class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-                   <a className="no-underline text-black">
-                     Read More..
-                   </a>
-                  </button>
+
+
+             {/* <button  onClick={()=>setShow(!show)} class="m-2 bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow transition transform duration-300">
+              <Link   className="no-underline text-black">
+              {show ? "Read More.." : "Hide"}
+                </Link>
+              </button> */}
+             <button  class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+              <Link to={`${solution?.slug}`} className="no-underline text-black">
+                 Read More..
+                </Link>
+              </button>
                 </div>
                   ))
             }
@@ -108,12 +127,17 @@ const SolutionPage = ({data}) => {
                     solution?.description
                   }
                   </p>
-                  
-                  <button  class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-                   <a href={solution?.link} className="no-underline text-black">
-                     Read More..
-                   </a>
-                  </button>
+            
+              {/* <button  onClick={()=>setShow(!show)} class="m-2 bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow transition transform duration-300">
+              <Link   className="no-underline text-black">
+              {show ? "Read More.." : "Hide"}
+                </Link>
+              </button> */}
+              <button  class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+              <Link to={`${solution?.slug}`} className="no-underline text-black">
+                  Read More..
+                </Link>
+              </button>
                 </div>
                   ))
             }
@@ -125,7 +149,7 @@ const SolutionPage = ({data}) => {
                 solutions
                   .filter(solution => solution.type === 'Education')
                   .map((solution,index)=>(
-                       <div  key={index} className=" border   digital-product-box my-8 p-5 shadow-lg">
+                  <div  key={index} className=" border   digital-product-box my-8 p-5 shadow-lg">
                   <h2 className="text-2xl font-semibold">
                     {solution?.title}
                   </h2>
@@ -134,12 +158,17 @@ const SolutionPage = ({data}) => {
                     solution?.description
                   }
                   </p>
-                 
-                  <button  class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-                   <a className="no-underline text-black">
-                     Read More..
-                   </a>
-                  </button>
+                
+              {/* <p className={`text-[16px] transition transform duration-300 ease-in-out ${show && 'hidden'}`}>
+              {
+                solution?.content?.data?.content
+              }
+             </p> */}
+          <button  class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+              <Link to={`${solution?.slug}`} className="no-underline text-black">
+                  Read More..
+                </Link>
+          </button>
                 </div>
                   ))
             }
@@ -169,6 +198,11 @@ query MyQuery {
       title
       id
       description
+      content {
+        data {
+          content
+        }
+      }
       image {
         localFile {
           url

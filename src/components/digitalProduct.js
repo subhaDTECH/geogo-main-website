@@ -1,6 +1,7 @@
 import * as React from "react"
 import "../components/hero.css"
 import AboutImg from "../../src/images/about-img.jpg";
+import SystemImg from "../../src/images/system-img.jpg";
 const DigitalProductCom = () => (
   <div className="Digital-product-Section">
     <div className="container  w-[90%] md:w-[90%] p-5 mx-auto my-10">
@@ -32,7 +33,7 @@ const DigitalProductCom = () => (
                      systems and microservices. We evaluate all possible alternatives depending on cost, go-to-market strategy, performance, scaling, and security considerations.</p>
              </div>
               <div className="w-full md:w-1/2">
-                 <img src="https://www.geogo.in/static/653fae7377d6f7c0bf0c66deb0c65307/system4.jpg" />
+                 <img alt="img" src={SystemImg} />
               </div>
         </div>
 

@@ -1,11 +1,11 @@
 import * as React from "react"
 import { useState } from "react"
-import { Link } from "gatsby"
-import GeogoLogo from "../../src/images/geogo-logo-1.png"
+
+
 import "./Technology.css"
 
 //import graphql
-import { graphql, useStaticQuery } from 'gatsby';
+
 
 const Technology = ({tools}) => {
 

@@ -6,7 +6,7 @@ const GlassDoorReview = () => (
     <div className="Career-Section my-10 py-5">
         <div className="container h-full shadow-lg mx-auto w-[90%] p-5 m-3 my-10 p-10 mx-5">
             <div className="review-container w-[280px] h-[100px]">
-               <img className="w-[100%] h-[100%] " src= "https://www.glassdoor.co.in/api/widget/verticalStarRating.htm?e=5413808"/>
+               <img alt="img" className="w-[100%] h-[100%] " src= "https://www.glassdoor.co.in/api/widget/verticalStarRating.htm?e=5413808"/>
             </div>
      {/* first row start  */}
            <div className="row container flex grid grid-cols-1 md:grid-cols-3">

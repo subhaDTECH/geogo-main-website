@@ -1,11 +1,10 @@
 import * as React from "react"
 import "../components/hero.css"
-import AboutImg from "../../src/images/about-img.jpg";
 import HiringImg1 from "../../src/images/hiring-img1.jpg";
 import HiringImg3 from "../../src/images/hiring-img3.jpg";
 import HiringImg4 from "../../src/images/hiring-img4.jpg";
 import HiringImg5 from "../../src/images/hiring-img5.jpg";
-import RecruitmentTraining from "../templates/recruitment-training";
+
 const RecruitmentTrainingCom = () => (
   <div className="Recruitment-Section">
     <div className="container  w-[90%] md:w-[90%] p-5 mx-auto my-10">
@@ -50,7 +49,7 @@ const RecruitmentTrainingCom = () => (
                   </ul>
              </div>
               <div className="w-full md:w-1/2 my-12 p-10">
-                 <img src={HiringImg4} />
+                 <img src={HiringImg4} alt="img" />
               </div>
         </div>
 
@@ -68,7 +67,7 @@ const RecruitmentTrainingCom = () => (
                   </ul>
              </div>
               <div className="w-full md:w-1/2 my-12 p-10">
-                 <img src={HiringImg3} />
+                 <img alt="img" src={HiringImg3} />
               </div>
         </div>
 
@@ -81,7 +80,7 @@ const RecruitmentTrainingCom = () => (
                  
              </div>
               <div className="w-full md:w-1/2 my-12 p-10">
-                 <img src={HiringImg5} />
+                 <img alt="img" src={HiringImg5} />
               </div>
         </div>
 
@@ -94,7 +93,7 @@ const RecruitmentTrainingCom = () => (
                  
              </div>
               <div className="w-full md:w-1/2 my-12 p-10">
-                 <img src={HiringImg1} />
+                 <img alt="img" src={HiringImg1} />
               </div>
         </div>
       

@@ -23,11 +23,7 @@ const Review = ({reviews}) => (
                     </div>
                     <div className=" w-[40px] h-[40px] p-2 bg-green-500 text-white rounded-full flex items-center  justify-center">
                       <p className="text-sm">{review?.rating}</p>
-                      {/* <img
-                        alt="Img"
-                        className="w-[100%] h-[100%] object-contain"
-                        src="https://www.geogo.in/static/356119cdb5a9cfa3ae83c70940ca623c/star.png"
-                      /> */}
+                      
                     </div>
                   </div>
                   <p class="mb-6 text-lg">
