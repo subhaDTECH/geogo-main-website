@@ -7,6 +7,10 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`, // Load environment variables based on the current environment
+});
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -19,8 +23,10 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `https://strapicms.geogo.in`, 
-        accessToken: 'f1f6bd9126c3a4c99a315facafdf5b90184ff145a2b689676d89e736f8f30e3af78adce513c21e6480285e74a0d0e7e73ff5405ac76cfbabf8dfd45ef36400d724f1883f038f55723faf7b13c8355781ee2e9fd092c625b6c28193edacfaa4b06e68ee90f1575c556bc798fcaa5c8e81160207ce6cbf7799585bb5240b9019eb',
+        
+        apiURL:process.env.STRAPI_API_URL,
+        
+        accessToken:process.env.STRAPI_ACCESS_TOKEN,
         // Replace with your Strapi API URL
         queryLimit: 1000, // Optional, increase if you have a large number of content entries
         collectionTypes: [
@@ -34,7 +40,7 @@ module.exports = {
            'program',
            'job',
            'team',
-           'solution_type',
+           'solution_category',
            'solution',
            'gallery'
           // Add other content types as needed

@@ -1,5 +1,4 @@
 import * as React from "react";
-
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import MsmeSolutionCom from "../components/MsmeSolution";
@@ -12,7 +11,7 @@ import MsmeSolutionCom from "../components/MsmeSolution";
 const IndustryPage= () => (
   <Layout>
     
-    <MsmeSolutionCom/>
+   <p>Industry page</p>
   </Layout>
 )
 
