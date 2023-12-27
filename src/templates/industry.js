@@ -1,17 +1,11 @@
-import * as React from "react";
-import Layout from "../components/layout";
-import Seo from "../components/seo";
-import MsmeSolutionCom from "../components/MsmeSolution";
+import * as React from "react"
+import Layout from "../components/layout"
+import Seo from "../components/seo"
+// import MsmeSolutionCom from "../components/MsmeSolution";
 
-
-
-
-
-
-const IndustryPage= () => (
+const IndustryPage = () => (
   <Layout>
-    
-   <p>Industry page</p>
+    <p>Industry page</p>
   </Layout>
 )
 

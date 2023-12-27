@@ -159,10 +159,11 @@ const SolutionPage = ({ data }) => {
                       </p>
 
                       {
-                        
-                             
-                              <div  dangerouslySetInnerHTML={{ __html: solution?.content?.data?.content }} />
-
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: solution?.content?.data?.content,
+                          }}
+                        />
                       }
                     </div>
                   ))}

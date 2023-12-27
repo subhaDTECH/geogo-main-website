@@ -458,8 +458,7 @@ const PrivacyPage = () => {
                   notice before Your Personal Data is transferred and becomes
                   subject to a different Privacy Policy.
                 </p>
-               
-                
+
                 <h3 className="text-4xl font-semibold">Law enforcement</h3>
                 <p className="text-[17px] py-2">
                   Under certain circumstances, the Company may be required to

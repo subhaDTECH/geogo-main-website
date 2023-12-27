@@ -1,13 +1,7 @@
 import * as React from "react";
-
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import MsmeSolutionCom from "../components/MsmeSolution";
-
-
-
-
-
+import MsmeSolutionCom from "../components/SolutionCom/MsmeSolutionCom.js"
 
 const MsmeSolution= () => (
   <Layout>

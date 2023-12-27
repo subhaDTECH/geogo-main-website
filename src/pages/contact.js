@@ -6,7 +6,6 @@ import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-
 const ContactPage = () => (
   <Layout>
     <h1>hello world from ContactPage !!</h1>

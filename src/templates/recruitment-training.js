@@ -1,18 +1,12 @@
-import * as React from "react";
-import Layout from "../components/layout";
-import Seo from "../components/seo";
+import * as React from "react"
+import Layout from "../components/layout"
+import Seo from "../components/seo"
 
-import RecruitmentTrainingCom from "../components/RecruitmentService";
+import RecruitmentTrainingCom from "../components/ServiceCom/recruitmentService"
 
-
-
-
-
-
-const RecruitmentTraining= () => (
+const RecruitmentTraining = () => (
   <Layout>
-    
-    <RecruitmentTrainingCom/>
+    <RecruitmentTrainingCom />
   </Layout>
 )
 

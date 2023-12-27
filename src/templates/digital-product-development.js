@@ -1,17 +1,11 @@
-import * as React from "react";
-import Layout from "../components/layout";
-import Seo from "../components/seo";
-import DigitalProductCom from "../components/digitalProduct";
+import * as React from "react"
+import Layout from "../components/layout"
+import Seo from "../components/seo"
+import DigitalProductCom from "../components/ServiceCom/digitalProduct.js"
 
-
-
-
-
-
-const DigitalProductDevelopment= () => (
+const DigitalProductDevelopment = () => (
   <Layout>
-    
-    <DigitalProductCom/>
+    <DigitalProductCom />
   </Layout>
 )
 

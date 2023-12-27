@@ -1,0 +1,55 @@
+.card-img-box{
+
+}
+.company-card{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.company-card:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.card-img-box > img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+
+
+/* ***********hero part css***************** */
+
+.HeroTextContainer{
+    margin-top: 30px;
+    padding: 20px;
+}
+.HeroImgContainer{
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
+}
+.HeroImg{
+    /* width: 540px;
+    height: 440px; */
+}
+.Herotitle{
+    font-size: 36px;
+    font-weight: 500;
+}
+.Hero-btn{
+    width: 160px;
+    background-color: #32373c;
+    border-radius: 10px;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.125em;
+    overflow-wrap: break-word;
+    padding: calc(0.667em + 2px) calc(1.333em + 2px);
+    text-align: center;
+    text-decoration: none;
+}

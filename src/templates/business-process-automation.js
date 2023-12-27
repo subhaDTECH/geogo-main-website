@@ -1,17 +1,11 @@
-import * as React from "react";
-import Layout from "../components/layout";
-import Seo from "../components/seo";
-import BusinessProcessAutomationCom from "../components/businessProcess";
+import * as React from "react"
+import Layout from "../components/layout"
+import Seo from "../components/seo"
+import BusinessProcessAutomationCom from "../components/ServiceCom/businessProcess"
 
-
-
-
-
-
-const BusinessProcessAutomation= () => (
+const BusinessProcessAutomation = () => (
   <Layout>
-    
-    <BusinessProcessAutomationCom/>
+    <BusinessProcessAutomationCom />
   </Layout>
 )
 

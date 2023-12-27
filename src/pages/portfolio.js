@@ -34,7 +34,7 @@ const PortfolioPage = () => {
                 effectiveness.
               </p>
               <div className="img-conatner">
-                <img src="" />
+                <img alt="img" src="" />
               </div>
 
               <p className="text-[17px]">
@@ -57,7 +57,7 @@ const PortfolioPage = () => {
                 effectiveness.
               </p>
               <div className="img-conatner">
-                <img src="" />
+                <img alt="img" src="" />
               </div>
 
               <p className="text-[17px]">

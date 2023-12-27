@@ -1,0 +1,31 @@
+.technology-btn{
+    text-align: center;
+
+    
+}
+
+.Img-container{
+    width: 120px;
+    height: 80px;
+   
+}
+
+.Img-container > img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+@media (max-width:900px)
+{
+    .Img-container{
+        width: 100%;
+        height: 120px;
+    }
+    
+    .Img-container > img{
+        width: 140px;
+        height: 80px;
+    }
+}

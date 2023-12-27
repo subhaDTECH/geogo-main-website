@@ -1,17 +1,11 @@
-import * as React from "react";
-import Layout from "../components/layout";
-import Seo from "../components/seo";
-import AgileServiceCom from "../components/agileService";
+import * as React from "react"
+import Layout from "../components/layout"
+import Seo from "../components/seo"
+import AgileServiceCom from "../components/ServiceCom/agileService"
 
-
-
-
-
-
-const AgileServiceManageMent= () => (
+const AgileServiceManageMent = () => (
   <Layout>
-    
-    <AgileServiceCom/>
+    <AgileServiceCom />
   </Layout>
 )
 
