@@ -4,12 +4,11 @@
 import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-// import Service from "../components/service"
 import { graphql } from "gatsby"
 import Hero from "../components/Hero/hero.js"
 import Service from "../components/Service/service.js"
 
-// const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
+
 const IndexPage = ({ data }) => {
   //console.log(data, "data")
   // console.log("allStrapiService".data?.allStrapiService?.nodes)

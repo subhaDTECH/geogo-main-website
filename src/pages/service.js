@@ -7,11 +7,10 @@ import Seo from "../components/seo"
 import { graphql, Link } from "gatsby"
 
 const ServicePage = ({ data }) => {
-  //console.log(data.allStrapiService.nodes,"data");
+  
 
-  const services = data.allStrapiService.nodes
-  //console.log(services,"services--")
-  // const services=data.allStrapiService.nodes;
+const services = data.allStrapiService.nodes
+
 
   return (
     <Layout>

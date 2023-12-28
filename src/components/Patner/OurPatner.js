@@ -5,7 +5,7 @@ import "./OurPatner.css";
 const OurPatner = () => (
     <div className="OurPatner-Section">
         <div className="container h-full mx-auto w-[95%] p-5 m-3 my-10 p-10">
-                 <h3 className="title my-10">Our Patners</h3>
+            <h3 className="title my-10">Our Patners</h3>
               <div className="row grid grid-cols-2 md:grid-cols-4 gap-2">
                    
                    <div className="Img-box  p-4 md:m-3">
@@ -19,12 +19,12 @@ const OurPatner = () => (
                        </a>
                    </div>
                    <div className="Img-box  p-4 md:m-3">
-                       <a className="no-underline">
+                       <a  rel="noreferrer" className="no-underline">
                        <img alt="Img" src="https://www.geogo.in/static/abfc67db6c1ffa7f1002e21319ed45c2/NIFT-logo-1-min.png" />
                        </a>
                    </div>
                    <div className="Img-box  p-4 md:m-3">
-                       <a className="no-underline">
+                       <a  rel="noreferrer" className="no-underline">
                          <img alt="Img" src="https://www.geogo.in/static/3b9728acf05629e023e091785f9d94c8/atoll.jpg" />
                        </a>
                    </div>

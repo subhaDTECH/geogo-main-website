@@ -15,14 +15,14 @@ const PrivacyPage = () => {
 
           <div className="flex  flex-col md:flex-col justify-center py-10">
             <div className="content-box w-full md:w-1/2  mx-auto p-5">
-              <p className="text-[17px] py-2">Last updated: June 22, 2021</p>
-              <p className="text-[17px] py-2">
+              <p className="text-[18px] py-2">Last updated: June 22, 2021</p>
+              <p className="text-[18px] py-2">
                 This Privacy Policy describes Our policies and procedures on the
                 collection, use and disclosure of Your information when You use
                 the Service and tells You about Your privacy rights and how the
                 law protects You.
               </p>
-              <p className="text-[17px] py-2">
+              <p className="text-[18px] py-2">
                 We use Your Personal data to provide and improve the Service. By
                 using the Service, You agree to the collection and use of
                 information in accordance with this Privacy Policy.
@@ -36,7 +36,7 @@ const PrivacyPage = () => {
             </h1>
             <h4 className="text-2xl font-semibold mx-3">Interpretation</h4>
             <div className="content-box w-full md:w-1/2  mx-auto p-5">
-              <p className="text-[17px] py-2">
+              <p className="text-[18px] py-2">
                 The words of which the initial letter is capitalized have
                 meanings defined under the following conditions. The following
                 definitions shall have the same meaning regardless of whether
@@ -45,10 +45,10 @@ const PrivacyPage = () => {
             </div>
           </div>
 
-          <div className="flex  flex-col md:flex-col justify-center py-10">
+          <div className="flex flex-col md:flex-col justify-center py-10">
             <h1 className="text-4xl font-semibold mx-3">Definitions</h1>
             <div className="content-box w-full md:w-1/2  mx-auto p-5">
-              <p className="text-[17px] py-2">
+              <p className="text-[18px] py-2">
                 For the purposes of this Privacy Policy:
               </p>
               <ul>
@@ -110,7 +110,7 @@ const PrivacyPage = () => {
                   <strong>Website</strong> Website refers to Geogo, accessible
                   from{" "}
                   <a href="https://www.geogo.in/contact">
-                    https://www.geogo.in/contact
+                        https://www.geogo.in/contact
                   </a>
                 </li>
                 <li>
@@ -133,7 +133,7 @@ const PrivacyPage = () => {
 
             <div className="content-box w-full md:w-1/2  mx-auto p-5">
               <h3 className="text-3xl font-semibold">Personal Data</h3>
-              <p className="text-[17px] py-2">
+              <p className="text-[18px] py-2">
                 While using Our Service, We may ask You to provide Us with
                 certain personally identifiable information that can be used to
                 contact or identify You. Personally identifiable information may
@@ -148,10 +148,10 @@ const PrivacyPage = () => {
               </ul>
 
               <h3 className="text-3xl font-semibold">Usage Data</h3>
-              <p className="text-[17px]">
+              <p className="text-[18px]">
                 Usage Data is collected automatically when using the Service.
               </p>
-              <p className="text-[17px]">
+              <p className="text-[18px]">
                 Usage Data may include information such as Your Device's
                 Internet Protocol address (e.g. IP address), browser type,
                 browser version, the pages of our Service that You visit, the
@@ -159,7 +159,7 @@ const PrivacyPage = () => {
                 unique device identifiers and other diagnostic data.
               </p>
 
-              <p className="text-[17px]">
+              <p className="text-[18px]">
                 When You access the Service by or through a mobile device, We
                 may collect certain information automatically, including, but
                 not limited to, the type of mobile device You use, Your mobile
@@ -168,7 +168,7 @@ const PrivacyPage = () => {
                 use, unique device identifiers and other diagnostic data.
               </p>
 
-              <p className="text-[17px]">
+              <p className="text-[18px]">
                 We may also collect information that Your browser sends whenever
                 You visit our Service or when You access the Service by or
                 through a mobile device.
@@ -182,7 +182,7 @@ const PrivacyPage = () => {
             </h1>
 
             <div className="content-box w-full md:w-1/2  mx-auto p-5">
-              <p className="text-[17px] py-2">
+              <p className="text-[18px] py-2">
                 We use Cookies and similar tracking technologies to track the
                 activity on Our Service and store certain information. Tracking
                 technologies used are beacons, tags, and scripts to collect and
@@ -280,7 +280,7 @@ const PrivacyPage = () => {
               </h1>
 
               <div className="content-box w-full md:w-1/2  mx-auto p-5">
-                <p className="text-[17px] py-2">
+                <p className="text-[18px] py-2">
                   The Company may use Personal Data for the following purposes:
                 </p>
                 <ul>
@@ -392,7 +392,7 @@ const PrivacyPage = () => {
               </h1>
 
               <div className="content-box w-full md:w-1/2  mx-auto p-5">
-                <p className="text-[17px] py-2">
+                <p className="text-[18px] py-2">
                   The Company will retain Your Personal Data only for as long as
                   is necessary for the purposes set out in this Privacy Policy.
                   We will retain and use Your Personal Data to the extent
@@ -401,7 +401,7 @@ const PrivacyPage = () => {
                   applicable laws), resolve disputes, and enforce our legal
                   agreements and policies.
                 </p>
-                <p className="text-[17px] py-2">
+                <p className="text-[18px] py-2">
                   The Company will also retain Usage Data for internal analysis
                   purposes. Usage Data is generally retained for a shorter
                   period of time, except when this data is used to strengthen
@@ -418,7 +418,7 @@ const PrivacyPage = () => {
               </h1>
 
               <div className="content-box w-full md:w-1/2  mx-auto p-5">
-                <p className="text-[17px] py-2">
+                <p className="text-[18px] py-2">
                   Your information, including Personal Data, is processed at the
                   Company's operating offices and in any other places where the
                   parties involved in the processing are located. It means that
@@ -427,12 +427,12 @@ const PrivacyPage = () => {
                   other governmental jurisdiction where the data protection laws
                   may differ than those from Your jurisdiction.
                 </p>
-                <p className="text-[17px] py-2">
+                <p className="text-[18px] py-2">
                   Your consent to this Privacy Policy followed by Your
                   submission of such information represents Your agreement to
                   that transfer.
                 </p>
-                <p className="text-[17px] py-2">
+                <p className="text-[18px] py-2">
                   The Company will take all steps reasonably necessary to ensure
                   that Your data is treated securely and in accordance with this
                   Privacy Policy and no transfer of Your Personal Data will take
@@ -452,7 +452,7 @@ const PrivacyPage = () => {
                 <h3 className="text-4xl font-semibold">
                   Business Transactions
                 </h3>
-                <p className="text-[17px] py-2">
+                <p className="text-[18px] py-2">
                   If the Company is involved in a merger, acquisition or asset
                   sale, Your Personal Data may be transferred. We will provide
                   notice before Your Personal Data is transferred and becomes
@@ -460,7 +460,7 @@ const PrivacyPage = () => {
                 </p>
 
                 <h3 className="text-4xl font-semibold">Law enforcement</h3>
-                <p className="text-[17px] py-2">
+                <p className="text-[18px] py-2">
                   Under certain circumstances, the Company may be required to
                   disclose Your Personal Data if required to do so by law or in
                   response to valid requests by public authorities (e.g. a court
@@ -470,7 +470,7 @@ const PrivacyPage = () => {
                 <h3 className="text-4xl font-semibold">
                   Other legal requirements
                 </h3>
-                <p className="text-[17px] py-2">
+                <p className="text-[18px] py-2">
                   The Company may disclose Your Personal Data in the good faith
                   belief that such action is necessary to: .
                 </p>
@@ -493,7 +493,7 @@ const PrivacyPage = () => {
                 <h3 className="text-4xl font-semibold">
                   Security of Your Personal Data
                 </h3>
-                <p className="text-[17px] py-2">
+                <p className="text-[18px] py-2">
                   The security of Your Personal Data is important to Us, but
                   remember that no method of transmission over the Internet, or
                   method of electronic storage is 100% secure. While We strive
@@ -502,7 +502,7 @@ const PrivacyPage = () => {
                 </p>
 
                 <h3 className="text-4xl font-semibold">Children's Privacy</h3>
-                <p className="text-[17px] py-2">
+                <p className="text-[18px] py-2">
                   Our Service does not address anyone under the age of 13. We do
                   not knowingly collect personally identifiable information from
                   anyone under the age of 13. If You are a parent or guardian
@@ -522,7 +522,7 @@ const PrivacyPage = () => {
                 <h3 className="text-4xl font-semibold">
                   Links to Other Websites
                 </h3>
-                <p className="text-[17px] py-2">
+                <p className="text-[18px] py-2">
                   Our Service may contain links to other websites that are not
                   operated by Us. If You click on a third party link, You will
                   be directed to that third party's site. We strongly advise You
@@ -537,7 +537,7 @@ const PrivacyPage = () => {
                 <h3 className="text-4xl font-semibold">
                   Changes to this Privacy Policy
                 </h3>
-                <p className="text-[17px] py-2">
+                <p className="text-[18px] py-2">
                   We may update Our Privacy Policy from time to time. We will
                   notify You of any changes by posting the new Privacy Policy on
                   this page.
@@ -554,7 +554,7 @@ const PrivacyPage = () => {
                 </p>
 
                 <h3 className="text-4xl font-semibold">Contact Us</h3>
-                <p className="text-[17px] py-2">
+                <p className="text-[18px] py-2">
                   If you have any questions about this Privacy Policy, You can
                   contact us:
                 </p>

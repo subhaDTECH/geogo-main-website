@@ -73,5 +73,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-postcss',
+    'gatsby-transformer-remark',
   ],
 }

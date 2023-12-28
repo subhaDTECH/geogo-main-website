@@ -21,8 +21,7 @@ const SolutionPage = ({ data }) => {
           <div className="service-header">
             <h1 className="text-[46px] font-semibold">Solutions.</h1>
           </div>
-
-          <div className="row my-8 p-5 flex flex-col lg:flex-row ">
+           <div className="row my-8 p-5 flex flex-col lg:flex-row ">
             <div className="left-box w-full lg:w-1/2 ">
               <ul>
                 {solution_category &&
@@ -134,9 +133,16 @@ const SolutionPage = ({ data }) => {
                         {solution?.description}
                       </p>
 
-                      <p className="text-[16px] opacity-0.8">
-                        {solution?.content?.data?.content}
-                      </p>
+                      {solution?.content?.data?.content && (
+                        <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                          <Link
+                            to={`${solution?.slug}`}
+                            className="no-underline text-black"
+                          >
+                            Read More..
+                          </Link>
+                        </button>
+                      )}
                     </div>
                   ))}
 
@@ -158,13 +164,29 @@ const SolutionPage = ({ data }) => {
                         {solution?.description}
                       </p>
 
-                      {
+                      {/* {
                         <div
                           dangerouslySetInnerHTML={{
                             __html: solution?.content?.data?.content,
                           }}
                         />
-                      }
+                      } */}
+
+
+                     {solution?.content?.data?.content && (
+                        <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                          <Link
+                            to={`${solution?.slug}`}
+                            className="no-underline text-black"
+                          >
+                            Read More..
+                          </Link>
+                        </button>
+                      )}
+
+
+
+                      
                     </div>
                   ))}
             </div>
@@ -190,7 +212,7 @@ export const query = graphql`
       nodes {
         slug
         title
-        id
+       
         description
         content {
           data {
@@ -203,7 +225,7 @@ export const query = graphql`
           }
         }
         type
-        link
+       
       }
     }
   }

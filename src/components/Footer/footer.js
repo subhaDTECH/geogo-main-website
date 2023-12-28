@@ -2,6 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import FooterImg1 from "../../images/footer-logo1.png";
 import FooterImg2 from "../../images/footer-logo2.png";
+import GeogoLogo from "../../images/geogo-logo-1.png";
 
 const FooterHead = () => (
   <div className="Footer-Header-Section  w-full h-full text-white">
@@ -30,7 +31,7 @@ const FooterHead = () => (
                          <div className="flex flex-row justify-center">
                          <div className="footer-img-container w-[80px] h-[80px] md:w-[50px] md:h-[50px]">
                             <img alt="img" className="w-[100%] h-[100%] object-contain" src={FooterImg1}/>
-                          </div>
+                         </div>
                           <div className="p-2 m-2">
                               <h3 className="text-lg">Confidentiality Assured!</h3>
                               <p className="text-sm">We are assuring you, your words will stay within us. If you are willing to
@@ -62,7 +63,7 @@ const FooterHead = () => (
                 <img
                  
                   className="w-[200px] h-[200px] object-contain h-6 sm:h-9 footer-logo"
-                  src="https://www.geogo.in/static/logo-white-a9aaab322545dd4a7ade1a1e44850b4c.png"
+                  src={GeogoLogo}
                   alt="logo"
                 />
                 <p className="max-w-xs mt-4 text-sm text-white md:mx-10">
@@ -193,26 +194,26 @@ const FooterHead = () => (
                 <nav className="flex flex-col  space-y-2 text-sm text-gray-500">
                   <p
                     className="text-lg text-gray-300  hover:text-green-500 no-underline"
-                    href
+                    
                   >
                     Our Offices
                   </p>
                   <p
                     className="text-lg text-gray-300  hover:text-green-500 no-underline"
-                    href
+                  
                   >
                     Bengaluru, India
                   </p>
 
                   <p
                     className="text-lg text-gray-300  hover:text-green-500 no-underline"
-                    href
+                  
                   >
                     Kolkata, India
                   </p>
                   <p
                     className="text-lg text-gray-300  hover:text-green-500 no-underline"
-                    href
+                
                   >
                     Texas, USA
                   </p>

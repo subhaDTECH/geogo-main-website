@@ -7,6 +7,7 @@ import { graphql } from "gatsby"
 const ServiceTemplates = ({ data }) => {
   const service = data?.allStrapiService?.edges[0]?.node
   console.log(service?.content?.data?.content, "content")
+  console.log(service)
 
   return (
     <Layout>

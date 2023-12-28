@@ -2,7 +2,7 @@
 FROM node:latest
 
 # Set the working directory inside the container
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # Copy package.json and package-lock.json to the working directory
 COPY package.json .
@@ -17,7 +17,7 @@ COPY . .
 # Set environment variables for connecting to Strapi
 
 # Expose the default Gatsby port
-EXPOSE 8000
+EXPOSE 3000
 
 # Define the command to start the Gatsby development server
-CMD ["npm", "start"]
+CMD ["gatsby", "develop", "-H", "0.0.0.0"]

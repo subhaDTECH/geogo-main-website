@@ -39,8 +39,8 @@ const Review = ({reviews}) => (
                 <a target="_blank" className="no-underline text-white ml-2" href={review?.link}>
                 <button class="bg-[#32373c] w-[160px] mx-auto  text-white rounded-sm px-4 py-2  focus:outline-none focus:shadow-outline-blue active:bg-blue-800">
                     View Full Review
-                    </button>
-                    </a>
+                </button>
+                </a>
                  
                 </div>
               </div>
