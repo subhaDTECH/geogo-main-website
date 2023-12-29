@@ -41,6 +41,7 @@ module.exports = {
            'job',
            'team',
            'solution_category',
+           'sevice_category',
            'solution',
            'gallery'
           // Add other content types as needed

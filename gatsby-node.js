@@ -106,13 +106,15 @@ result2?.data?.allStrapiSolution?.nodes?.map((res)=>{
       type:res?.slug,
       slug:res?.slug
       
-    
-      
-    },
+  },
   });
 
 
 })
+
+
+
+
 
 
 

@@ -18,7 +18,9 @@ const Header = ({ siteTitle }) => (
         <Link to="/company" className={` ${myClass} mr-5 hover:text-green-900 m-3 mx-2`}>Company</Link>
         <Link to="/career" className={` ${myClass} mr-5 hover:text-green-900 m-3 mx-2`}>Careers</Link>
         <Link to="https://blog.geogo.in/" target="_blank" className={` ${myClass} mr-5 hover:text-green-900 m-3 mx-2`}>Blog</Link>
-        <button className="w-32 px-5 py-2 border border-gray-400 font-medium hover:text-green-900 mr-5 inline-flex items-center focus:outline-none  rounded text-base mt-4 md:mt-0">Contact Us</button>
+        <Link to="/contact" className="no-underline text-black">
+            <button className="w-32 px-5 py-2 border border-gray-400 font-medium hover:text-green-900 mr-5 inline-flex items-center focus:outline-none  rounded text-base mt-4 md:mt-0">Contact Us</button>
+        </Link>
       </nav>
 
     </div>

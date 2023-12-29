@@ -5,10 +5,11 @@
 import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Contact from "../components/Contact/contact"
 
 const ContactPage = () => (
   <Layout>
-    <h1>hello world from ContactPage !!</h1>
+    <Contact/>
   </Layout>
 )
 

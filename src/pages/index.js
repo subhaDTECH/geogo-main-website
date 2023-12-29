@@ -40,7 +40,7 @@ export const Head = () => <Seo title="Home" />
 
 export const query = graphql`
   query MyQuery {
-    allStrapiService(limit: 4, sort: { piority: ASC }) {
+    allStrapiService(sort: {id: DESC}, limit: 4) {
       nodes {
         slug
         technology

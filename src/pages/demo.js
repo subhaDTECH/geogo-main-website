@@ -60,7 +60,7 @@ console.log(services_category,"cat")
                       id={service?.slug}
                       className=" text-justify md:text-start w-full border digital-product-box my-8 p-5 shadow-lg"
                     >
-                     <h3 className="text-sm my-2 top-0 right-0 text-right">{service?.type}</h3>
+                     <h3 className="text-sm my-2 top-0 right-0 text-right">{service?.slug}</h3>
                       <p className="text-[20px] opacity-0.8 font-semibold">
                         {service?.sub_title}
                       </p>
@@ -109,7 +109,6 @@ query MyQuery {
         sub_title
         slug
         description
-        type
         content {
           data {
             content
