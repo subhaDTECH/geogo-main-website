@@ -4,6 +4,8 @@
 }
 .HeroImgContainer{
     margin: 20px;
+    margin-top: 150px;
+    padding: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,6 +19,7 @@
 .Herotitle{
     font-size: 36px;
     font-weight: 500;
+    margin-top: 20px;
 }
 .Hero-btn{
     width: 160px;

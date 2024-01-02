@@ -3,25 +3,31 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 // import DigitalProductCom from "../components/digitalProduct";
 import { graphql } from "gatsby"
+import ReactMarkdown from "react-markdown"
+// import "../components/layout.css"
+//<div className=" text-[16px]" dangerouslySetInnerHTML={{ __html: htmlData }} />
 
 const ServiceTemplates = ({ data }) => {
   const service = data?.allStrapiService?.edges[0]?.node
   console.log(service?.content?.data?.content, "content")
-  const htmlData=service?.content?.data?.childMarkdownRemark?.html;
-  console.log(service,"service")
+  const htmlData = service?.content?.data?.childMarkdownRemark?.html
+  console.log(service, "service")
 
   return (
     <Layout>
-      <div className="container mx-auto py-10 my-8">
-        <div className="w-full md:w-1/2  mx-auto">
-        <h3 className="text-4xl font-bold">{service?.title}</h3>
-        <p className="text-[18px]">{service?.description}</p>
-         <div
-          className=" text-[16px]"
-          dangerouslySetInnerHTML={{ __html: htmlData }}
-        />
+      <div className="container mx-auto py-10 my-[90px]">
+        <div className="w-full p-4 m-4 md:w-[50%] mx-auto flex flex-col justify-center">
+          <h3 className="text-[40px] font-bold my-2">{service?.title}</h3>
+          <p className="text-[22px] py-3">{service?.description}</p>
+          {/* <div className="w-full h-[350px] ">
+            <img
+              className="w-[100%] h-[100%] object-contain"
+              alt="img"
+              src={service?.image?.localFile?.url}
+            />
+          </div> */}
+          <ReactMarkdown>{service?.content?.data?.content}</ReactMarkdown>
         </div>
-      
       </div>
     </Layout>
   )
@@ -35,11 +41,14 @@ export const query = graphql`
       edges {
         node {
           id
-          slug
           sub_title
           technology
           title
-          link
+          image {
+            localFile {
+              url
+            }
+          }
           content {
             data {
               content
@@ -47,7 +56,6 @@ export const query = graphql`
                 html
               }
             }
-            
           }
           description
         }

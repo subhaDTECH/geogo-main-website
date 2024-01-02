@@ -4,7 +4,7 @@ import Seo from "../components/seo"
 const PortfolioPage = () => {
   return (
     <Layout>
-      <div className="Technology-Section">
+      <div className="Technology-Section my-[200px]">
         <div className="container h-full mx-auto w-[95%] p-5 m-3 my-10 p-10 bg-white">
           <div className="py-10">
             <h2 className="text-3xl md:text-6xl font-semibold p-5">

@@ -9,7 +9,7 @@ const LifeAtGeogoPage = ({ data }) => {
   console.log(events, "events")
   return (
     <Layout>
-      <div className="Technology-Section">
+      <div className="Technology-Section my-[200px]">
         <div className="container h-full mx-auto w-[95%] p-5 m-3 my-10 p-10 bg-white">
           <div className="bg-white h-[100%] py-6 sm:py-8 lg:py-12">
             {events &&
@@ -20,14 +20,9 @@ const LifeAtGeogoPage = ({ data }) => {
                     className="mx-auto max-w-screen-2xl px-4 md:px-8"
                   >
                     <div className="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
-                      <div className="flex flex-col bg-transparent w-full lg:w-1/3  py-2 px-4   rounded  gap-3 shadow-lg">
-                        <strong>Program : {event?.event} </strong>
-                        <p className="hidden max-w-screen-sm  md:block text-[18px]">
-                          {event?.event_description}.
-                        </p>
-                        <p className="text-[18px]">
-                          Date : {event?.event_date}
-                        </p>
+                      <div className="flex flex-col bg-transparent w-full lg:w-1/3   px-4   rounded  gap-3">
+                        <strong>{event?.event} </strong>
+                        <p className="text-[18px]">{event?.event_date}</p>
                       </div>
                     </div>
 

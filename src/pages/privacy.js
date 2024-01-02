@@ -5,16 +5,15 @@ import Seo from "../components/seo"
 const PrivacyPage = () => {
   return (
     <Layout>
-      <div className="Technology-Section">
-        <div className="container h-full mx-auto w-[95%] p-5 m-3 my-10 p-10 bg-white">
-          <div className="py-10">
-            <h2 className="text-3xl md:text-6xl font-semibold p-5">
-              Privacy Policy.
-            </h2>
-          </div>
-
+      <div className="Technology-Section my-[200px]">
+        <div className="container h-full mx-auto w-[60%] p-5 m-3 my-10 p-10 bg-white">
           <div className="flex  flex-col md:flex-col justify-center py-10">
             <div className="content-box w-full md:w-1/2  mx-auto p-5">
+              <div className="py-10">
+                <h2 className="text-3xl md:text-6xl font-semibold p-5">
+                  Privacy Policy.
+                </h2>
+              </div>
               <p className="text-[18px] py-2">Last updated: June 22, 2021</p>
               <p className="text-[18px] py-2">
                 This Privacy Policy describes Our policies and procedures on the
@@ -31,11 +30,11 @@ const PrivacyPage = () => {
           </div>
 
           <div className="flex  flex-col md:flex-col justify-center py-10">
-            <h1 className="text-4xl font-semibold mx-3">
-              Interpretation and Definitions
-            </h1>
             <h4 className="text-2xl font-semibold mx-3">Interpretation</h4>
             <div className="content-box w-full md:w-1/2  mx-auto p-5">
+              <h1 className="text-4xl font-semibold mx-3">
+                Interpretation and Definitions
+              </h1>
               <p className="text-[18px] py-2">
                 The words of which the initial letter is capitalized have
                 meanings defined under the following conditions. The following
@@ -110,7 +109,7 @@ const PrivacyPage = () => {
                   <strong>Website</strong> Website refers to Geogo, accessible
                   from{" "}
                   <a href="https://www.geogo.in/contact">
-                        https://www.geogo.in/contact
+                    https://www.geogo.in/contact
                   </a>
                 </li>
                 <li>
@@ -124,14 +123,13 @@ const PrivacyPage = () => {
           </div>
 
           <div className="flex  flex-col md:flex-col justify-center py-10">
-            <h1 className="text-4xl font-semibold mx-3">
-              Collecting and Using Your Personal Data
-            </h1>
-            <h4 className="text-2xl font-semibold mx-3">
-              Types of Data Collected
-            </h4>
-
             <div className="content-box w-full md:w-1/2  mx-auto p-5">
+              <h1 className="text-4xl font-semibold mx-3">
+                Collecting and Using Your Personal Data
+              </h1>
+              <h4 className="text-2xl font-semibold mx-3">
+                Types of Data Collected
+              </h4>
               <h3 className="text-3xl font-semibold">Personal Data</h3>
               <p className="text-[18px] py-2">
                 While using Our Service, We may ask You to provide Us with

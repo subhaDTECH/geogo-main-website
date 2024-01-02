@@ -52,3 +52,13 @@
   max-width: none;
   line-height: var(--line-height-loose);
 }
+
+h2,
+h3,
+h4,
+h5,
+h6,
+h1 {
+  font-size: 26px;
+  font-weight: 400;
+}

@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 // import DigitalProductCom from "../components/digitalProduct";
 import { graphql } from "gatsby"
+import ReactMarkdown from "react-markdown"
 
 import remark from "remark"
 import remarkHtml from "remark-html"
@@ -15,18 +16,18 @@ const SolutionTemplates = ({ data }) => {
 
   return (
     <Layout>
-      <div className="container mx-auto py-10 my-8">
-        <div className="w-[90%]  flex items-center flex-col mx-auto  p-5 m-3">
-          <h2 className="text-4xl font-bold pb-5">{solutionData.title}</h2>
-          <p className="text-[18px] px-5">{solutionData.description}</p>
-          <div>
-            <p className="text-[18px] px-5">
-              {solutionData?.content?.data?.content}
-            </p>
-          </div>
-          <div>
-            {/* <div dangerouslySetInnerHTML={{ __html: solutionData?.content?.data?.content }} /> */}
-          </div>
+      <div className="container mx-auto py-10 my-[90px]">
+        <div className="w-full p-4 m-4 md:w-[50%] mx-auto flex flex-col justify-center">
+          <h3 className="text-[40px] font-bold my-2">{solutionData?.title}</h3>
+          <p className="text-[22px] py-3">{solutionData?.description}</p>
+          {/* <div className="w-full h-[350px] ">
+            <img
+              className="w-[100%] h-[100%] object-contain"
+              alt="img"
+              src={solutionData?.image?.localFile?.url}
+            />
+          </div> */}
+          <ReactMarkdown>{solutionData?.content?.data?.content}</ReactMarkdown>
         </div>
       </div>
     </Layout>
