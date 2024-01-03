@@ -4,11 +4,11 @@ import Seo from "../components/seo"
 const PortfolioPage = () => {
   return (
     <Layout>
-      <div className="Technology-Section my-[200px]">
+      <div className="Technology-Section  my-[100px] sm:my-[200px]">
         <div className="container h-full mx-auto w-[95%] p-5 m-3 my-10 p-10 bg-white">
           <div className="py-10">
-            <h2 className="text-3xl md:text-6xl font-semibold p-5">
-              Our Projects.
+            <h2 className="text-4xl md:text-6xl font-semibold p-5">
+              Our Projects<span className="text-green-500">.</span>
             </h2>
           </div>
 
@@ -21,7 +21,9 @@ const PortfolioPage = () => {
 
             <div className="content-box shadow border border-gray-200 w-full md:w-1/2  mx-auto p-5">
               <div>
-                <h2 className="text-3xl">Online ChatManagement Application</h2>
+                <h2 className="text-xl sm:text-3xl">
+                  Online ChatManagement Application
+                </h2>
               </div>
               <p className="text-[17px]">
                 Agile is a set of principles or methodologies that aims to
@@ -44,7 +46,9 @@ const PortfolioPage = () => {
 
             <div className="content-box shadow border border-gray-200 w-full md:w-1/2  mx-auto p-5">
               <div>
-                <h2 className="text-3xl">Email Sender Application</h2>
+                <h2 className="text-xl sm:text-3xl">
+                  Email Sender Application
+                </h2>
               </div>
               <p className="text-[17px]">
                 Agile is a set of principles or methodologies that aims to
@@ -71,6 +75,6 @@ const PortfolioPage = () => {
   )
 }
 
-export const Head = () => <Seo title="we are agile" />
+export const Head = () => <Seo title="Projects" />
 
 export default PortfolioPage

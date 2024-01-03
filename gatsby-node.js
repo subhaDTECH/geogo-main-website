@@ -7,14 +7,12 @@
 /**
  * @type {import('gatsby').GatsbyNode['createPages']}
  */
- // createPage({
-  //   path: "/using-dsg",
-  //   component: require.resolve("./src/templates/using-dsg.js"),
-  //   context: {},
-  //   defer: true,
-  // })
-
-
+// createPage({
+//   path: "/using-dsg",
+//   component: require.resolve("./src/templates/using-dsg.js"),
+//   context: {},
+//   defer: true,
+// })
 
 // exports.createPages = async ({ actions }) => {
 //   const { createPage } = actions
@@ -39,84 +37,60 @@
 
 // }
 
-
 //***************************FOR DYNAMIC PAGE ROUTE***************************** */
 
-const path = require('path');
+const path = require("path")
 
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions;
+  const { createPage } = actions
   const result = await graphql(`
-  query MyQuery {
-    allStrapiService {
-      nodes {
-        slug
-        sub_title
-        title
+    query MyQuery {
+      allStrapiService {
+        nodes {
+          slug
+          sub_title
+          title
+        }
       }
     }
-  }
-  `);
+  `)
 
-
-
-  const result2=await graphql(`
-  query MyQuery {
-  
+  const result2 = await graphql(`
+    query MyQuery {
       allStrapiSolution {
         nodes {
           slug
           type
         }
       }
-      
-    
-  }
-  
-  
-  `);
+    }
+  `)
 
+  console.log(result, "result")
+  console.log(result2, "result2")
 
-  console.log(result,"result");
-  console.log(result2,"result2");
-
-    result?.data?.allStrapiService?.nodes?.forEach((node) => {
-    
+  result?.data?.allStrapiService?.nodes?.forEach(node => {
     createPage({
-      path: `/service/${node?.slug}`, 
-      component: path.resolve('./src/templates/service.js'), 
+      path: `/service/${node?.slug}`,
+      component: path.resolve("./src/templates/service.js"),
       context: {
         id: node?.id,
-        title:node?.title,
-        slug: node?.slug, 
-      
-        
+        title: node?.title,
+        slug: node?.slug,
       },
-    });
-  });
+    })
+  })
 
-//2nd result 
-result2?.data?.allStrapiSolution?.nodes?.map((res)=>{
- console.log(res.slug,"res");
-  createPage({
-    path: `/solution/${res?.slug}`, 
-    component: path.resolve('./src/templates/solution.js'), 
-    context: {
-      
-      type:res?.slug,
-      slug:res?.slug
-      
-  },
-  });
-
-
-})
-
-
-
-
-
-
-
-};
-
+  //2nd result
+  result2?.data?.allStrapiSolution?.nodes?.map(res => {
+    //  console.log(res.slug,"res");
+    createPage({
+      path: `/solution/${res?.slug}`,
+      component: path.resolve("./src/templates/solution.js"),
+      context: {
+        type: res?.slug,
+        slug: res?.slug,
+      },
+    })
+  })
+}

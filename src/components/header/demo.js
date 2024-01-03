@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import GeogoLogo from "../../images/geogo-logo-1.png"
-import { FaBars } from "react-icons/fa"
+// import GeogoLogo from "../../images/geogo-logo-1.png"
+// import { FaBars } from "react-icons/fa"
 //import GeogoLogo from "../../src/images/geogo-logo-1.png";
 import { logoImg, myClass, logoContainer } from "./header.module.css"
 const Demo = () => {

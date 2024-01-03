@@ -7,9 +7,9 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
-require('dotenv').config({
+require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`, // Load environment variables based on the current environment
-});
+})
 
 module.exports = {
   siteMetadata: {
@@ -19,34 +19,34 @@ module.exports = {
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
-
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        
-        apiURL:process.env.STRAPI_API_URL,
-        
-        accessToken:process.env.STRAPI_ACCESS_TOKEN,
+        apiURL: process.env.STRAPI_API_URL,
+
+        accessToken: process.env.STRAPI_ACCESS_TOKEN,
         // Replace with your Strapi API URL
         queryLimit: 1000, // Optional, increase if you have a large number of content entries
         collectionTypes: [
           // Define the content types you want to fetch from Strapi
           // Adjust this to your content types in Strapi
-          'post',
-          'review',
-          'service',
-           'client',
-           'tool',
-           'program',
-           'job',
-           'team',
-           'solution_category',
-           'sevice_category',
-           'solution',
-           'gallery'
+          "post",
+          "review",
+          "service",
+          "client",
+          "tool",
+          "program",
+          "job",
+          "team",
+          "solution_category",
+          "sevice_category",
+          "solution",
+          "gallery",
+          "privacy",
+          "term",
+          "contact",
           // Add other content types as needed
         ],
-       
       },
     },
     `gatsby-plugin-image`,
@@ -73,7 +73,7 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-postcss',
-    'gatsby-transformer-remark',
+    "gatsby-plugin-postcss",
+    "gatsby-transformer-remark",
   ],
 }

@@ -10,13 +10,15 @@ const DemoPage = ({ data }) => {
   const services = data.allStrapiService.nodes
   const services_category = data.allStrapiSeviceCategory.nodes
   const [activeTabIndex, setActiveTabIndex] = React.useState(0)
-  console.log(activeTabIndex)
+
   return (
     <Layout>
       <section className="service-page-section relative my-[200px]">
         <div className="container h-full mx-auto w-[90%] p-5 m-3 my-10 p-10 mx-5">
           <div className="service-header">
-            <h1 className="text-[46px] font-semibold">Services.</h1>
+            <h1 className="text-[46px] font-semibold">
+              Services<span className="text-green-500">.</span>
+            </h1>
             <h3 className="text-[28px] font-semibold">Giving shape to ideas</h3>
             <p className="text-[18px]  opacity-0.8">
               We build high quality digital products and we also ensure rapid
@@ -58,12 +60,12 @@ const DemoPage = ({ data }) => {
                   <div
                     key={index}
                     id={service?.slug}
-                    className=" text-start md:text-start w-full border digital-product-box my-8 p-5 shadow-lg"
+                    className=" text-start md:text-start w-full border border-gray-200 digital-product-box my-8 p-5 shadow-lg"
                   >
                     <h3 className="text-sm my-2 top-0 right-0 text-right">
                       {service?.type}
                     </h3>
-                    <p className="text-[20px] opacity-0.8 font-semibold">
+                    <p className="text-[18px] sm:text-[20px] opacity-0.8 font-semibold">
                       {service?.sub_title}
                     </p>
                     <p className="text-[16px] opacity-0.8">

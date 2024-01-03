@@ -5,6 +5,7 @@
     align-items: center;
     text-align: center;
     justify-content: center;
+   
     
  }
  .logoImg{
@@ -27,10 +28,27 @@
     text-decoration: none;
     color:black;
     margin-right: 30px;
+  
+   
+ }
+ .navbar-header{
+   margin-left: 100px;
+   
  }
 
+.header-mobile{
+   transform: translateX(100vw);
+   width: 0% !important;
+   left:500px;
+   
+}
 
 
+.header-tab {
+   
+   width: 50%;
+  
+}
 
  
  @media (max-width:900px) {

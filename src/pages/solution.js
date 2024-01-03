@@ -10,15 +10,15 @@ const SolutionPage = ({ data }) => {
   const solution_category = data?.allStrapiSolutionCategory?.edges
 
   const [activeTabIndex, setActiveTabIndex] = React.useState(0)
-  console.log(activeTabIndex)
-  console.log(solution_category, "solution_category")
 
   return (
     <Layout>
       <section className="service-page-section my-[200px]">
         <div className="container h-full mx-auto w-[90%] p-5 m-3 my-10 p-10 mx-5">
           <div className="service-header">
-            <h1 className="text-[46px] font-semibold">Solutions.</h1>
+            <h1 className="text-[46px] font-semibold">
+              Solutions<span className="text-green-500">.</span>
+            </h1>
           </div>
           <div className="row my-8 p-5 flex flex-col lg:flex-row ">
             <div className="left-box sticky top-0 w-full lg:w-1/2 ">
@@ -52,14 +52,14 @@ const SolutionPage = ({ data }) => {
                   <div
                     key={index}
                     id={solution?.type}
-                    className="w-full border digital-product-box my-8 p-5 shadow-lg"
+                    className="w-full border border-gray-200 digital-product-box my-8 p-5 shadow-lg"
                   >
                     <h3 className="text-sm my-2 top-0 right-0 text-right">
                       {solution?.type}
                     </h3>
-                    <h2 className="text-2xl font-semibold">
+                    <p className="text-[18px] sm:text-[20px] opacity-0.8 font-semibold">
                       {solution?.title}
-                    </h2>
+                    </p>
                     <p className="text-[16px] opacity-0.8">
                       {solution?.description}
                     </p>

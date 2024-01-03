@@ -11,21 +11,14 @@ const ServiceTemplates = ({ data }) => {
   const service = data?.allStrapiService?.edges[0]?.node
   console.log(service?.content?.data?.content, "content")
   const htmlData = service?.content?.data?.childMarkdownRemark?.html
-  console.log(service, "service")
 
   return (
     <Layout>
       <div className="container mx-auto py-10 my-[90px]">
-        <div className="w-full p-4 m-4 md:w-[50%] mx-auto flex flex-col justify-center">
-          <h3 className="text-[40px] font-bold my-2">{service?.title}</h3>
+        <div className="w-[80%] p-4 m-4  md:w-[50%] mx-auto flex flex-col justify-center">
+          <h3 className="text-[36px] font-bold my-2">{service?.title}</h3>
           <p className="text-[22px] py-3">{service?.description}</p>
-          {/* <div className="w-full h-[350px] ">
-            <img
-              className="w-[100%] h-[100%] object-contain"
-              alt="img"
-              src={service?.image?.localFile?.url}
-            />
-          </div> */}
+
           <ReactMarkdown>{service?.content?.data?.content}</ReactMarkdown>
         </div>
       </div>

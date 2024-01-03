@@ -17,7 +17,7 @@ import CompanyHero from "../components/Company/Company.js"
 import Teamcard from "../components/Company/teamCard.js"
 
 const CompanyPage = ({ data }) => {
-  const teams = data.allStrapiTeam.nodes
+  const teams = data?.allStrapiTeam?.nodes
   return (
     <Layout>
       <CompanyHero />

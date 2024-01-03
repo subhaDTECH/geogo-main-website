@@ -9,7 +9,7 @@ import Contact from "../components/Contact/contact"
 
 const ContactPage = () => (
   <Layout>
-    <Contact/>
+    <Contact />
   </Layout>
 )
 

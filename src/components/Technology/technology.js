@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useState } from "react"
+import { useState, useCallback } from "react"
 // import "../service.css"
 
 import "./technology.css"
@@ -10,14 +10,26 @@ const Technology = ({ tools }) => {
   // const [toolsData,setToolsData]=useState(tools);
   const [showTools, setTools] = useState(tools)
 
-  const handleClick = type => {
-    console.log(type, "type")
-    const newData = tools.filter(tool => {
-      return tool.type === type
-    })
+  // const handleClick = type => {
+  //   console.log(type, "type")
+  //   const newData = tools.filter(tool => {
+  //     return tool.type === type
+  //   })
 
-    setTools(newData)
-  }
+  //   setTools(newData)
+  // }
+
+  const handleClick = useCallback(
+    type => {
+      const newData = tools.filter(tool => tool.type === type)
+      setTools(newData)
+    },
+    [tools]
+  )
+
+  const resetTools = useCallback(() => {
+    setTools(tools)
+  }, [tools])
 
   return (
     <div className="Technology-Section">

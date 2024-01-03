@@ -1,3 +1,10 @@
 .title-heading{
     line-height: 60px;
 }
+
+@media(max-width:786px){
+    .title-heading {
+            line-height: 40px;
+            margin-top: 20px;
+        }
+}
