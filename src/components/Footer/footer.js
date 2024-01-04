@@ -7,7 +7,7 @@ import { FaArrowRight } from "react-icons/fa"
 const FooterHead = () => (
   <div className="Footer-Header-Section  w-full h-full text-white">
     <div className=" h-[100%] flex flex-col lg:flex-row">
-      <div className="left-box  py-5 flex justify-center  flex-col w-full lg:w-1/2 h-[500px] bg-[#154406] text-white ">
+      <div className="left-box  py-5 flex justify-center  flex-col w-full lg:w-1/2 h-auto bg-[#154406] text-white ">
         <p className="text-lg  mx-10 px-3">Solutions</p>
         <h3 className="text-2xl md:text-4xl font-medium mx-10 px-3 py-3">
           Explore Our Offering.

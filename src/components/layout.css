@@ -248,5 +248,37 @@ h2,h3,h4,h5,h6,h1{
   font-size: 26px;
   font-weight:500;
 }
+a{
+  color: black;
+}
+/* .main-container{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  background-color: #7026b9;
+} */
+
+
+
+.left-box-service{
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 50vh;
+   
+  
+  }
+
+.right-box-service{
+        background: yellow;
+        padding: 5%;
+        flex: 1;
+        height: 100vh;
+        overflow-y: scroll;
+        
+}
+
+
+
 
 

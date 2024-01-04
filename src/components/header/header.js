@@ -24,10 +24,11 @@ const Header = ({ siteTitle }) => {
   const handleTab = () => {
     setOpen(!open)
   }
+
   return (
-    <header className=" body-font shadow-lg fixed w-[100%] top-0 z-10 bg-white">
+    <header className="body-font shadow-lg fixed w-[100%] top-0 z-10 bg-white">
       {open ? (
-        <div className="header-mobile w-[100%]  h-[100vh] bg-gray-200">
+        <div className="header-mobile w-[100%]  h-[100vh] bg-white-200">
           <div className="container  flex flex-wrap px-5  flex-row items-center justify-between  mx-auto">
             <div className={logoContainer}>
               <Link to="/">
@@ -36,43 +37,46 @@ const Header = ({ siteTitle }) => {
             </div>
 
             <div className="">
-              <IoCloseSharp onClick={handleTab} />
+              <IoCloseSharp size={"30px"} onClick={handleTab} />
             </div>
             <nav
               className={`  w-full flex-col mx-auto   mr-5 md:ml-auto flex  flex-wrap items-center text-base justify-center md:justify-end mx-5`}
             >
               <Link
                 to="/service"
-                className={` ${myClass} mr-5 hover:text-green-900 m-3 mx-2 text-xl`}
+                className={` ${myClass} mr-5 hover:text-green-900 m-3 my-3 mx-2 text-xl`}
               >
                 Services
               </Link>
               <Link
                 to="/solution"
-                className={` ${myClass} mr-5 hover:text-green-900 m-3 mx-2 text-xl`}
+                className={` ${myClass} mr-5 hover:text-green-900 m-3 my-3 mx-2 text-xl`}
               >
                 Solutions
               </Link>
               <Link
                 to="/company"
-                className={` ${myClass} mr-5 hover:text-green-900 m-3 mx-2 text-xl`}
+                className={` ${myClass} mr-5 hover:text-green-900 m-3 my-3 mx-2 text-xl`}
               >
                 Company
               </Link>
               <Link
                 to="/career"
-                className={` ${myClass} mr-5 hover:text-green-900 m-3 mx-2 text-xl`}
+                className={` ${myClass} mr-5 hover:text-green-900 m-3 mx-2 my-3 text-xl`}
               >
                 Careers
               </Link>
               <Link
                 to="https://blog.geogo.in/"
                 target="_blank"
-                className={` ${myClass} mr-5 hover:text-green-900 m-3 mx-2 text-xl`}
+                className={` ${myClass} mr-5 hover:text-green-900 m-3 my-3 mx-2 text-xl`}
               >
                 Blog
               </Link>
-              <Link to="/contact" className="no-underline text-black m-3 mt-3 ">
+              <Link
+                to="/contact"
+                className="no-underline text-black m-3 my-3 mt-3 "
+              >
                 <button className=" mt-2 w-32 px-5 py-2 border border-gray-400 font-medium hover:text-green-900 mr-5 inline-flex items-center focus:outline-none  rounded text-base mt-4 md:mt-0">
                   Contact Us
                 </button>
@@ -82,13 +86,14 @@ const Header = ({ siteTitle }) => {
         </div>
       ) : (
         <div className=" container w-[100%]  flex flex-wrap px-5  flex-row items-center justify-between  mx-auto">
-          <div className={logoContainer}>
+          <div className={`${logoContainer}`}>
             <Link to="/">
               <img alt="Img" className={logoImg} src={GeogoLogo} />
             </Link>
           </div>
+
           <nav
-            className={` hidden navbar-header sm:block w-[100%] md:w-1/2  flex-end    mr-5 md:ml-auto flex  flex-wrap items-center text-base justify-center md:justify-end mx-5`}
+            className={` hidden navbar-header sm:block w-[100%]    md:w-1/2  flex-end mr-5 md:ml-auto flex  flex-wrap items-center text-base justify-center md:justify-end mx-5`}
           >
             <Link
               to="/service"
@@ -104,7 +109,7 @@ const Header = ({ siteTitle }) => {
             </Link>
             <Link
               to="/company"
-              className={` ${myClass} mr-5 hover:text-green-900 m-3 mx-2 ml-[20px]`}
+              className={` ${myClass} mr-5 hover:text-green-900 m-3 mx-2 ml-[20px] `}
             >
               Company
             </Link>
@@ -123,13 +128,14 @@ const Header = ({ siteTitle }) => {
             </Link>
             <Link
               to="/contact"
-              className="no-underline text-black m-3 mt-4 ml-[20px]"
+              className="no-underline text-black m-3 mt-4 ml-[20px] text-[20px]"
             >
               <button className="w-32 px-5 py-2 border border-gray-400 font-medium hover:text-green-900 mr-5 inline-flex items-center focus:outline-none  rounded text-base mt-4 md:mt-0">
                 Contact Us
               </button>
             </Link>
           </nav>
+
           <div className="block sm:hidden">
             <FaBars onClick={handleTab} />
           </div>

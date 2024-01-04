@@ -1,15 +1,120 @@
 // import { Link } from "gatsby"
 // import { StaticImage } from "gatsby-plugin-image"
 // import * as styles from "../components/index.module.css"
-import * as React from "react"
+import React, { useState, useEffect, useRef } from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { graphql, Link } from "gatsby"
+import Help from "../components/help"
+import StickySidebar from "sticky-sidebar"
 
-const DemoPage = ({ data }) => {
+const ServicePage = ({ data }) => {
   const services = data.allStrapiService.nodes
   const services_category = data.allStrapiSeviceCategory.nodes
-  const [activeTabIndex, setActiveTabIndex] = React.useState(0)
+  const [activeTabIndex, setActiveTabIndex] = useState(0)
+  const [sidebarInstance, setSidebarInstance] = useState(null)
+  const sidebarRef = useRef(null)
+  const [activeSectionId, setActiveSectionId] = useState(null)
+  console.log(activeSectionId, "activesectionid")
+
+  // useEffect(() => {
+  //   let sidebarInstance = null
+
+  //   const initStickySidebar = () => {
+  //     if (sidebarRef.current) {
+  //       sidebarInstance = new StickySidebar(sidebarRef.current, {
+  //         // Configure options as needed, like topSpacing, bottomSpacing, etc.
+  //         // Example:
+  //         topSpacing: 120,
+  //         bottomSpacing: 20,
+  //       })
+  //     }
+  //   }
+
+  //   const destroyStickySidebar = () => {
+  //     if (sidebarInstance) {
+  //       sidebarInstance.destroy()
+  //       sidebarInstance = null
+  //     }
+  //   }
+
+  //   // Initialize the sticky sidebar only for larger screens (desktop)
+  //   if (window.matchMedia("(min-width: 1024px)").matches) {
+  //     initStickySidebar()
+  //   }
+
+  //   // Clean up when the component unmounts
+  //   return () => {
+  //     destroyStickySidebar()
+  //   }
+  // }, [])
+
+  useEffect(() => {
+    const initStickySidebar = () => {
+      if (sidebarRef.current && window.innerWidth >= 1024 && !sidebarInstance) {
+        const newSidebarInstance = new StickySidebar(sidebarRef.current, {
+          // Configure options as needed, like topSpacing, bottomSpacing, etc.
+          // Example:
+          topSpacing: 140,
+          bottomSpacing: 20,
+        })
+        setSidebarInstance(newSidebarInstance)
+      }
+    }
+
+    const destroyStickySidebar = () => {
+      if (sidebarInstance) {
+        sidebarInstance.destroy()
+        setSidebarInstance(null)
+      }
+    }
+
+    const handleResize = () => {
+      if (window.innerWidth >= 1024 && !sidebarInstance) {
+        initStickySidebar()
+      } else if (window.innerWidth < 1024 && sidebarInstance) {
+        destroyStickySidebar()
+      }
+    }
+
+    initStickySidebar()
+
+    window.addEventListener("resize", handleResize)
+
+    return () => {
+      window.removeEventListener("resize", handleResize)
+      destroyStickySidebar()
+    }
+  }, [sidebarInstance])
+
+  useEffect(() => {
+    const options = {
+      root: null, // Use the viewport as the root
+      rootMargin: "-50px 0px 0px 0px",
+      threshold: 0.2, // 0 to 1: Percentage of the section's visibility required to trigger the callback
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setActiveSectionId(entry.target.id)
+        }
+      })
+    }, options)
+
+    // Observe each section
+    const sections = document.querySelectorAll("section")
+    sections.forEach(section => {
+      observer.observe(section)
+    })
+
+    return () => {
+      // Clean up the observer on unmount
+      sections.forEach(section => {
+        observer.unobserve(section)
+      })
+    }
+  }, [])
 
   return (
     <Layout>
@@ -27,25 +132,29 @@ const DemoPage = ({ data }) => {
               across leading cloud platforms.
             </p>
           </div>
-
-          <div className=" row my-8 p-5 flex flex-col lg:flex-row">
-            <div className="left-box w-full lg:w-1/2  w-[100%] ">
+          {/* //start*/}
+          <div className="main-container row my-8 p-5 flex relative flex-col lg:flex-row">
+            <div
+              ref={sidebarRef}
+              className=" left-box w-full lg:w-1/2  w-[100%] "
+            >
               <ul className="sticky top-[20vh] z-5">
                 {services_category &&
                   services_category?.map((service, index) => {
+                    console.log(service, "service")
                     return (
                       <li
                         key={index}
-                        onClick={() => setActiveTabIndex(index)}
-                        className={`m-2 p-2 cursor-pointer`}
+                        //onClick={() => setActiveTabIndex(index)}
+                        className={`m-2 p-2 cursor-pointer ${
+                          service.slug === activeSectionId && "text-green-500"
+                        }`}
                       >
                         <a
                           href={`#${service?.slug}`}
-                          className={`no-underline   ${
-                            activeTabIndex === index
-                              ? "text-green-500"
-                              : "text-black"
-                          }`}
+                          className={`no-underline  ${
+                            service.slug === activeSectionId && "text-green-500"
+                          } `}
                         >
                           {service?.type}
                         </a>
@@ -57,7 +166,7 @@ const DemoPage = ({ data }) => {
             <div className="right-box p-5 md:mx-5 w-full">
               {services &&
                 services.map((service, index) => (
-                  <div
+                  <section
                     key={index}
                     id={service?.slug}
                     className=" text-start md:text-start w-full border border-gray-200 digital-product-box my-8 p-5 shadow-lg"
@@ -83,7 +192,7 @@ const DemoPage = ({ data }) => {
                         </Link>
                       </button>
                     )}
-                  </div>
+                  </section>
                 ))}
             </div>
           </div>
@@ -120,4 +229,4 @@ export const query = graphql`
   }
 `
 
-export default DemoPage
+export default ServicePage

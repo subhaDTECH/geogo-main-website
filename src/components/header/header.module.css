@@ -28,8 +28,12 @@
     text-decoration: none;
     color:black;
     margin-right: 30px;
+    
   
    
+ }
+ .font-icon{
+   font-size: 100px;
  }
  .navbar-header{
    margin-left: 100px;
