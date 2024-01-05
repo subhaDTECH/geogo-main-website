@@ -10,17 +10,17 @@ const CareerHero = () => (
       <h1 className="title-heading text-3xl md:text-5xl mb-4 font-medium mx-5   p-5">
         Crafting software with a human touch.
       </h1>
-      <section class="body-font mx-4">
-        <div class="container flex-col mx-auto flex px-5 py-15 md:py-24 md:flex-row items-center lg:justify-center">
-          <div class="order-2 md:order-1 lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0 mx-auto text-center">
+      <section className="body-font mx-4">
+        <div className="container flex-col mx-auto flex px-5 py-15 md:py-24 md:flex-row items-center lg:justify-center">
+          <div className="order-2 md:order-1 lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0 mx-auto text-center">
             <img
-              class="object-cover object-center rounded my-3"
+              className="object-cover object-center rounded my-3"
               alt="hero"
               src={CareerHeroImg}
             />
           </div>
-          <div class=" order-1 md:order-2 lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left ">
-            <h3 class="text-3xl sm:text-4xl py-3  mb-4 font-medium text-start">
+          <div className=" order-1 md:order-2 lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left ">
+            <h3 className="text-3xl sm:text-4xl py-3  mb-4 font-medium text-start">
               Why GEOGO?
             </h3>
             <h3 className="text-xl md:text-3xl mb-4">

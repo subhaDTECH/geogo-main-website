@@ -7,9 +7,12 @@ import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import "./layout.css"
 import Header from "../components/header/header.js"
-import FooterHead from "../components/Footer/footer.js"
+import Footer from "../components/Footer/footer.js"
+import FooterHead from "./Footer/footerHead.js"
 
 const Layout = ({ children }) => {
+  console.log(children?.props?.id, "children")
+  let ContactID = children?.props?.id
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -28,7 +31,8 @@ const Layout = ({ children }) => {
 
           <main>{children}</main>
           <footer>
-            <FooterHead />
+            {ContactID !== 1 && <FooterHead />}
+            <Footer />
           </footer>
         </div>
       </div>

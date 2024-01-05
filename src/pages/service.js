@@ -14,48 +14,19 @@ const ServicePage = ({ data }) => {
   const [activeTabIndex, setActiveTabIndex] = useState(0)
   const [sidebarInstance, setSidebarInstance] = useState(null)
   const sidebarRef = useRef(null)
-  const [activeSectionId, setActiveSectionId] = useState(null)
+  const [activeSectionId, setActiveSectionId] = useState(
+    services_category[0]?.slug
+  )
   console.log(activeSectionId, "activesectionid")
 
-  // useEffect(() => {
-  //   let sidebarInstance = null
-
-  //   const initStickySidebar = () => {
-  //     if (sidebarRef.current) {
-  //       sidebarInstance = new StickySidebar(sidebarRef.current, {
-  //         // Configure options as needed, like topSpacing, bottomSpacing, etc.
-  //         // Example:
-  //         topSpacing: 120,
-  //         bottomSpacing: 20,
-  //       })
-  //     }
-  //   }
-
-  //   const destroyStickySidebar = () => {
-  //     if (sidebarInstance) {
-  //       sidebarInstance.destroy()
-  //       sidebarInstance = null
-  //     }
-  //   }
-
-  //   // Initialize the sticky sidebar only for larger screens (desktop)
-  //   if (window.matchMedia("(min-width: 1024px)").matches) {
-  //     initStickySidebar()
-  //   }
-
-  //   // Clean up when the component unmounts
-  //   return () => {
-  //     destroyStickySidebar()
-  //   }
-  // }, [])
-
+  //this useEffect for stick sidebar only for large screen
   useEffect(() => {
     const initStickySidebar = () => {
       if (sidebarRef.current && window.innerWidth >= 1024 && !sidebarInstance) {
         const newSidebarInstance = new StickySidebar(sidebarRef.current, {
           // Configure options as needed, like topSpacing, bottomSpacing, etc.
           // Example:
-          topSpacing: 140,
+          topSpacing: 150,
           bottomSpacing: 20,
         })
         setSidebarInstance(newSidebarInstance)
@@ -87,13 +58,17 @@ const ServicePage = ({ data }) => {
     }
   }, [sidebarInstance])
 
+  //for scroll event part
+
   useEffect(() => {
+    //view port options configuration for scroll event part
     const options = {
       root: null, // Use the viewport as the root
       rootMargin: "-50px 0px 0px 0px",
-      threshold: 0.2, // 0 to 1: Percentage of the section's visibility required to trigger the callback
+      threshold: 0.8, // 0 to 1: Percentage of the section's visibility required to trigger the callback
     }
 
+    //observer for entries section
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -146,14 +121,25 @@ const ServicePage = ({ data }) => {
                       <li
                         key={index}
                         //onClick={() => setActiveTabIndex(index)}
+                        //  const element = document.getElementById(service?.slug)
+                        //   if (element) {
+                        //     element.scrollIntoView({ behavior: "smooth" })
+                        //   }
+                        onClick={() => {
+                          const element = document.getElementById(service?.slug)
+                          if (element) {
+                            element.scrollIntoView({ behavior: "smooth" })
+                          }
+                        }}
                         className={`m-2 p-2 cursor-pointer ${
-                          service.slug === activeSectionId && "text-green-500"
+                          service?.slug === activeSectionId && "text-green-500"
                         }`}
                       >
                         <a
-                          href={`#${service?.slug}`}
+                          // href={`#${service?.slug}`}
                           className={`no-underline  ${
-                            service.slug === activeSectionId && "text-green-500"
+                            service?.slug === activeSectionId &&
+                            "text-green-500"
                           } `}
                         >
                           {service?.type}
@@ -163,15 +149,15 @@ const ServicePage = ({ data }) => {
                   })}
               </ul>
             </div>
-            <div className="right-box p-5 md:mx-5 w-full">
+            <div className="right-box p-5 md:mx-5 w-full mt-[-40px]">
               {services &&
                 services.map((service, index) => (
                   <section
                     key={index}
                     id={service?.slug}
-                    className=" text-start md:text-start w-full border border-gray-200 digital-product-box my-8 p-5 shadow-lg"
+                    className="h-auto md:h-[400px] text-start md:text-start w-full border border-gray-200 digital-product-box my-8 p-5 shadow-lg"
                   >
-                    <h3 className="text-sm my-2 top-0 right-0 text-right">
+                    <h3 className="text-sm my-2 top-0 right-0 text-right mt-4">
                       {service?.type}
                     </h3>
                     <p className="text-[18px] sm:text-[20px] opacity-0.8 font-semibold">
@@ -183,7 +169,7 @@ const ServicePage = ({ data }) => {
                     <p className="text-[18px]">{service?.technology}</p>
 
                     {service?.content?.data?.content && (
-                      <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                      <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                         <Link
                           to={`${service?.slug}`}
                           className="no-underline text-black"

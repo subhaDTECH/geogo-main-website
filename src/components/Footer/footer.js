@@ -4,9 +4,9 @@ import FooterImg1 from "../../images/footer-logo1.png"
 import FooterImg2 from "../../images/footer-logo2.png"
 import GeogoLogo from "../../images/geogo-logo-1.png"
 import { FaArrowRight } from "react-icons/fa"
-const FooterHead = () => (
+const Footer = () => (
   <div className="Footer-Header-Section  w-full h-full text-white">
-    <div className=" h-[100%] flex flex-col lg:flex-row">
+    {/* <div className=" h-[100%] flex flex-col lg:flex-row">
       <div className="left-box  py-5 flex justify-center  flex-col w-full lg:w-1/2 h-auto bg-[#154406] text-white ">
         <p className="text-lg  mx-10 px-3">Solutions</p>
         <h3 className="text-2xl md:text-4xl font-medium mx-10 px-3 py-3">
@@ -74,7 +74,7 @@ const FooterHead = () => (
           </div>
         </div>
       </div>
-    </div>
+    </div> */}
 
     {/* footer end part  */}
     <div className="Footer-Header-Section bg-black w-full h-full text-white">
@@ -242,4 +242,4 @@ const FooterHead = () => (
   </div>
 )
 
-export default FooterHead
+export default Footer

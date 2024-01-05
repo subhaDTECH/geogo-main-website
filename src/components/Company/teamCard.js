@@ -5,25 +5,25 @@ import * as React from "react"
 const Teamcard = ({ teams }) => (
   <div className="Team-Section">
     <div className="container h-full mx-auto w-[95%]  m-3 my-10 p-10">
-      <section class="body-font mx-4">
-        <section class="text-gray-600 body-font">
-          <div class="container-full px-5 py-24 mx-auto">
+      <section className="body-font mx-4">
+        <section className="text-gray-600 body-font">
+          <div className="container-full px-5 py-24 mx-auto">
             {/* start  */}
 
-            <div class="mb-16">
-              <div class="container-full flex justify-center mx-auto pt-16">
+            <div className="mb-16">
+              <div className="container-full flex justify-center mx-auto pt-16">
                 <div>
-                  <p class="text-gray-500 mx-auto text-[20px] md:text-lg text-center font-normal pb-3">
+                  <p className="text-gray-500 mx-auto text-[20px] md:text-lg text-center font-normal pb-3">
                     BUILDING TEAM
                   </p>
-                  <h1 class=" w-full text-xl xl:text-4xl text-3xl text-center text-gray-800 font-extrabold pb-6 sm:w-4/6 w-5/6 mx-auto">
+                  <h1 className=" w-full text-xl xl:text-4xl text-3xl text-center text-gray-800 font-extrabold pb-6 sm:w-4/6 w-5/6 mx-auto">
                     The Talented People Behind the Scenes of the Organization
                   </h1>
                 </div>
               </div>
-              <div class="w-full bg-gray-100   py-10">
-                <div class="container-full lg:conatiner mx-auto">
-                  <div class="flex flex-row items-center justify-center flex-wrap gap-4">
+              <div className="w-full bg-gray-100   py-10">
+                <div className="container-full lg:conatiner mx-auto">
+                  <div className="flex flex-row items-center justify-center flex-wrap gap-4">
                     {teams &&
                       teams?.map((team, index) => {
                         return (
@@ -31,23 +31,23 @@ const Teamcard = ({ teams }) => (
                             target="_blank"
                             href={team?.link}
                             key={index}
-                            class="hover:shadow-xl no-underline text-black cursor-pointer rounded w-full md:w-1/3 lg:w-1/4 overflow-hidden shadow-md bg-white"
+                            className="hover:shadow-xl no-underline text-black cursor-pointer rounded w-full md:w-1/3 lg:w-1/4 overflow-hidden shadow-md bg-white"
                           >
-                            <div class="px-6 mt-16">
+                            <div className="px-6 mt-16">
                               <div className="w-[100px] h-[100px] rounded-full text-center mx-auto">
                                 <img
                                   src={team?.image?.localFile?.url}
                                   className="w-full h-full  rounded-full object-contain"
                                 />
                               </div>
-                              <h1 class="font-bold text-2xl text-center mb-1">
+                              <h1 className="font-bold text-2xl text-center mb-1">
                                 {team?.name}
                               </h1>
-                              <p class="text-gray-800 text-sm text-center">
+                              <p className="text-gray-800 text-sm text-center">
                                 {team?.position_type}
                               </p>
-                              {/* <p class="text-center text-gray-600 text-base pt-3 font-normal">The emphasis on innovation and technology in our companies has resulted in a few of them establishing global benchmarks in product design and development.</p> */}
-                              <div class="w-full flex justify-center pt-5 pb-5">
+                              {/* <p className="text-center text-gray-600 text-base pt-3 font-normal">The emphasis on innovation and technology in our companies has resulted in a few of them establishing global benchmarks in product design and development.</p> */}
+                              <div className="w-full flex justify-center pt-5 pb-5">
                                 <a
                                   target="_blank"
                                   href={team?.link}

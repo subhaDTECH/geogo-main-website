@@ -18,37 +18,6 @@ const SolutionPage = ({ data }) => {
   const [activeSectionId, setActiveSectionId] = useState(null)
   console.log(activeSectionId, "activesectionid")
 
-  // useEffect(() => {
-  //   let sidebarInstance = null
-
-  //   const initStickySidebar = () => {
-  //     if (sidebarRef.current) {
-  //       sidebarInstance = new StickySidebar(sidebarRef.current, {
-  //         // Configure options as needed, like topSpacing, bottomSpacing, etc.
-  //         // Example:
-  //         topSpacing: 120,
-  //         bottomSpacing: 20,
-  //       })
-  //     }
-  //   }
-
-  //   const destroyStickySidebar = () => {
-  //     if (sidebarInstance) {
-  //       sidebarInstance.destroy()
-  //       sidebarInstance = null
-  //     }
-  //   }
-
-  //   // Initialize the sticky sidebar only for larger screens (desktop)
-  //   if (window.matchMedia("(min-width: 1024px)").matches) {
-  //     initStickySidebar()
-  //   }
-  //   console.log("call")
-  //   // Clean up when the component unmounts
-  //   return () => {
-  //     destroyStickySidebar()
-  //   }
-  // }, [window.innerWidth])
   // let sidebarInstance = null
   // let resizeTimer = null
 
@@ -135,7 +104,7 @@ const SolutionPage = ({ data }) => {
     const options = {
       root: null, // Use the viewport as the root
       rootMargin: "-50px 0px 0px 0px",
-      threshold: 0.2, // 0 to 1: Percentage of the section's visibility required to trigger the callback
+      threshold: 0.8, // 0 to 1: Percentage of the section's visibility required to trigger the callback
     }
 
     const observer = new IntersectionObserver(entries => {
@@ -183,6 +152,14 @@ const SolutionPage = ({ data }) => {
                       <li
                         key={index}
                         //onClick={() => setActiveTabIndex(index)}
+                        onClick={() => {
+                          const element = document.getElementById(
+                            solution.node.type
+                          )
+                          if (element) {
+                            element.scrollIntoView({ behavior: "smooth" })
+                          }
+                        }}
                         className={`m-2 p-2 cursor-pointer ${
                           solution.node.type === activeSectionId &&
                           "text-green-500"
@@ -192,7 +169,7 @@ const SolutionPage = ({ data }) => {
                       >
                         <a
                           // key={index}
-                          href={`#${solution?.node?.type}`}
+                          // href={`#${solution?.node?.type}`}
                           className={`no-underline  ${
                             solution.node.type === activeSectionId &&
                             "text-green-500"
@@ -205,13 +182,13 @@ const SolutionPage = ({ data }) => {
                   })}
               </ul>
             </div>
-            <div className="right-box  p-5 mx-5 w-full  top-[-100px]">
+            <div className="right-box  p-5 mx-5 w-full  top-[-50px]">
               {solutions &&
                 solutions.map((solution, index) => (
                   <section
                     key={index}
                     id={solution?.type}
-                    className="w-full border border-gray-200 md:h-[400px]  digital-product-box my-8 p-5 shadow-lg"
+                    className="w-full border border-gray-200 h-auto md:h-[400px]  digital-product-box my-8 p-5 shadow-lg"
                   >
                     <h3 className="text-sm my-2 top-0 right-0 text-right mt-5">
                       {solution?.type}
@@ -224,7 +201,7 @@ const SolutionPage = ({ data }) => {
                     </p>
 
                     {solution?.content?.data?.content && (
-                      <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                      <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                         <Link
                           to={`${solution?.slug}`}
                           className="no-underline text-black"

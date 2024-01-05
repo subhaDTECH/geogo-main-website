@@ -1,8 +1,8 @@
 import * as React from "react"
-
 import AboutImg from "../../images/about-img.jpg"
+
 const CompanyHero = () => (
-  <div className="Company-Section my-[100px] sm:my-[200px]">
+  <div className="Company-Section my-[40px] sm:my-[200px]">
     <div className="container  w-[95%] md:w-[90%]  p-5 m-3 flex flex-col mx-auto grid grid-cols-1 md:grid-cols-2 px-5 md:flex-col md:flex-row ">
       <div className="HeroTextContainer  m-4 p-4 order-2">
         <h2 className="Herotitle">

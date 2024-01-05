@@ -52,11 +52,6 @@ exports.createPages = async ({ graphql, actions }) => {
           title
         }
       }
-    }
-  `)
-
-  const result2 = await graphql(`
-    query MyQuery {
       allStrapiSolution {
         nodes {
           slug
@@ -65,9 +60,6 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-
-  console.log(result, "result")
-  console.log(result2, "result2")
 
   result?.data?.allStrapiService?.nodes?.forEach(node => {
     createPage({
@@ -82,7 +74,7 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 
   //2nd result
-  result2?.data?.allStrapiSolution?.nodes?.map(res => {
+  result?.data?.allStrapiSolution?.nodes?.map(res => {
     //  console.log(res.slug,"res");
     createPage({
       path: `/solution/${res?.slug}`,
