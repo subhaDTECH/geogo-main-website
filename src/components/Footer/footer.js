@@ -1,9 +1,9 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import FooterImg1 from "../../images/footer-logo1.png"
-import FooterImg2 from "../../images/footer-logo2.png"
+// import FooterImg1 from "../../images/footer-logo1.png"
+// import FooterImg2 from "../../images/footer-logo2.png"
 import GeogoLogo from "../../images/geogo-logo-1.png"
-import { FaArrowRight } from "react-icons/fa"
+// import { FaArrowRight } from "react-icons/fa"
 const Footer = () => (
   <div className="Footer-Header-Section  w-full h-full text-white">
     {/* <div className=" h-[100%] flex flex-col lg:flex-row">

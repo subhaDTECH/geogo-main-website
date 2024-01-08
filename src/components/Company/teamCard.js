@@ -29,6 +29,7 @@ const Teamcard = ({ teams }) => (
                         return (
                           <a
                             target="_blank"
+                            rel="noreferrer"
                             href={team?.link}
                             key={index}
                             className="hover:shadow-xl no-underline text-black cursor-pointer rounded w-full md:w-1/3 lg:w-1/4 overflow-hidden shadow-md bg-white"
@@ -50,6 +51,7 @@ const Teamcard = ({ teams }) => (
                               <div className="w-full flex justify-center pt-5 pb-5">
                                 <a
                                   target="_blank"
+                                  rel="noreferrer"
                                   href={team?.link}
                                   className="cursor-pointer"
                                 >

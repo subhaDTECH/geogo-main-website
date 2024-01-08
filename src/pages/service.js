@@ -5,7 +5,7 @@ import React, { useState, useEffect, useRef } from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { graphql, Link } from "gatsby"
-import Help from "../components/help"
+// import Help from "../components/help"
 import StickySidebar from "sticky-sidebar"
 
 const ServicePage = ({ data }) => {

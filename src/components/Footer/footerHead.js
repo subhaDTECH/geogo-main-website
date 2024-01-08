@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import FooterImg1 from "../../images/footer-logo1.png"
 import FooterImg2 from "../../images/footer-logo2.png"
-import GeogoLogo from "../../images/geogo-logo-1.png"
+
 import { FaArrowRight } from "react-icons/fa"
 const FooterHead = () => (
   <div className=" h-[100%] flex flex-col lg:flex-row">
@@ -24,16 +24,24 @@ const FooterHead = () => (
       <div className="right-box-context  flex flex-col lg:flex-row flex-row mx-10 gap-2">
         <div className="btn-box-container flex flex-col items-center justify-center">
           <button className="text-start w-full border border-gray-500 px-3 py-2 m-3  hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-            Get our Service
+            <Link to="/contact" className="no-underline">
+              Get our Service
+            </Link>
           </button>
           <button className=" text-start w-full border border-gray-500 px-3 py-2 m-3  hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-            Become Our Patner
+            <Link to="/contact" className="no-underline">
+              Become Our Patner
+            </Link>
           </button>
           <button className="text-start w-full border border-gray-500 px-3 py-2 m-3  hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-            Join Our Team
+            <Link to="/contact" className="no-underline">
+              Join Our Team
+            </Link>
           </button>
           <button className="text-start w-full border border-gray-500 px-3 py-2 m-3  hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-            Discuss about something else
+            <Link to="/contact" className="no-underline">
+              Discuss about something else
+            </Link>
           </button>
         </div>
         <div className="content-box m-3  flex  flex-col  justify-center">

@@ -39,6 +39,7 @@ const Review = ({ reviews }) => (
                   <div class="p-4">
                     <a
                       target="_blank"
+                      rel="noreferrer"
                       className="no-underline text-white ml-2"
                       href={review?.link}
                     >

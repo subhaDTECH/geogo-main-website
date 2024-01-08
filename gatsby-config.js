@@ -75,5 +75,6 @@ module.exports = {
     },
     "gatsby-plugin-postcss",
     "gatsby-transformer-remark",
+    "gatsby-plugin-material-ui",
   ],
 }

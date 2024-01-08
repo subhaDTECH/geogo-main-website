@@ -61,6 +61,8 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
+  console.log(result, "result")
+
   result?.data?.allStrapiService?.nodes?.forEach(node => {
     createPage({
       path: `/service/${node?.slug}`,

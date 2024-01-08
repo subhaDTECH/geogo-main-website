@@ -11,6 +11,7 @@ const OurPatner = () => (
           <a
             className="no-underline"
             target="_blank"
+            rel="noreferrer"
             href="https://www.digitalocean.com/"
           >
             <img
@@ -23,6 +24,7 @@ const OurPatner = () => (
           <a
             className="no-underline"
             target="_blank"
+            rel="noreferrer"
             href="http://www.indishtech.com/"
           >
             <img

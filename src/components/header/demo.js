@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 // import GeogoLogo from "../../images/geogo-logo-1.png"
 // import { FaBars } from "react-icons/fa"
 //import GeogoLogo from "../../src/images/geogo-logo-1.png";
-import { logoImg, myClass, logoContainer } from "./header.module.css"
+import { myClass } from "./header.module.css"
 const Demo = () => {
   return (
     <div className="sm:block w-[100vw] h-[100vh] bg-gray-200">

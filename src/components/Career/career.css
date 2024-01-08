@@ -1,10 +1,10 @@
 .title-heading{
-    line-height: 60px;
+    line-height: 80px;
 }
 
-@media(max-width:786px){
+@media(max-width:800px){
     .title-heading {
-            line-height: 40px;
+            line-height: 50px;
             margin-top: 20px;
         }
 }
