@@ -8,11 +8,11 @@
 import * as React from "react"
 
 const Card = ({ post }) => (
-  <div class="flex px-3 py-3 items-center justify-center">
-    <div class="max-w-lg rounded cursor-pointer overflow-hidden shadow-lg transition transform duration-300 hover:translate-y-12 ease-in-out">
+  <div className="flex px-3 py-3 items-center justify-center">
+    <div className="max-w-lg rounded cursor-pointer overflow-hidden shadow-lg transition transform duration-300 hover:translate-y-12 ease-in-out">
       <div className="w-full h-[300px]">
         <img
-          class="w-full h-full"
+          className="w-full h-full"
           src={post?.post_image?.localFile?.url}
           alt="Img-Post"
         />

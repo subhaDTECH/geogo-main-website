@@ -5,7 +5,7 @@ import * as React from "react"
 
 const Review = ({ reviews }) => (
   <div className="Review-Section">
-    <div className="container h-full mx-auto w-[95%] p-5 m-3 my-10 p-10">
+    <div className="container h-full mx-auto w-[95%]  m-3 my-10 p-10">
       <div className=" min-h-screen flex items-center justify-center">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* frist review box start  */}
@@ -36,7 +36,7 @@ const Review = ({ reviews }) => (
                       {review?.author_name}
                     </p>
                   </div>
-                  <div class="p-4">
+                  <div className="p-4">
                     <a
                       target="_blank"
                       rel="noreferrer"
@@ -55,9 +55,10 @@ const Review = ({ reviews }) => (
       </div>
 
       <div className="btn-continer mx-auto mb-8  mt-20 text-center">
-        <button className="border border-gray-600 bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+        <button className=" bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
           <a
             target="_blank"
+            rel="noreferrer"
             href="https://clutch.co/profile/geogo-techsolutions"
             className="no-underline text-black"
           >

@@ -122,119 +122,136 @@
 
 // export default IndexPage
 
+//  allStrapiService(sort: { id: DESC }, limit: 4) {
+//           nodes {
+//             slug
+//             technology
+//             title
+//             id
+//             description
+//             image {
+//               localFile {
+//                 url
+//               }
+//             }
+//           }
+//         }
+
 import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Hero from "../components/Hero/hero.js"
 import Service from "../components/Service/service.js"
-import { graphql, StaticQuery } from "gatsby"
+import { graphql, StaticQuery, useStaticQuery } from "gatsby"
 
-const IndexPage = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        allStrapiService(sort: { id: DESC }, limit: 4) {
-          nodes {
-            slug
-            technology
-            title
-            id
-            description
-            image {
-              localFile {
-                url
-              }
+const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allStrapiService(
+        filter: { IsForHomePage: { eq: true } }
+        limit: 4
+        sort: { id: DESC }
+      ) {
+        nodes {
+          slug
+          technology
+          title
+          id
+          description
+          image {
+            localFile {
+              url
             }
-          }
-        }
-        allStrapiClient {
-          nodes {
-            id
-            client_image {
-              localFile {
-                url
-              }
-            }
-          }
-        }
-        allStrapiTool {
-          nodes {
-            type
-            id
-            image {
-              localFile {
-                url
-              }
-            }
-          }
-        }
-        allStrapiPost {
-          nodes {
-            author_name
-            author_subtitle
-            description
-            created_time(fromNow: true)
-            slug
-            title
-            post_image {
-              id
-              localFile {
-                url
-              }
-            }
-            content {
-              data {
-                content
-              }
-            }
-            author_image {
-              localFile {
-                url
-              }
-            }
-          }
-        }
-        allStrapiReview {
-          nodes {
-            author_name
-            rating
-            review_text
-            review_platform_image {
-              createdAt(fromNow: true)
-              localFile {
-                url
-              }
-              name
-            }
-            link
           }
         }
       }
-    `}
-    render={data => {
-      const {
-        allStrapiService,
-        allStrapiClient,
-        allStrapiTool,
-        allStrapiPost,
-        allStrapiReview,
-      } = data
 
-      return (
-        <Layout>
-          <Hero />
-          <Service
-            services={allStrapiService.nodes}
-            clients={allStrapiClient.nodes}
-            tools={allStrapiTool.nodes}
-            posts={allStrapiPost.nodes}
-            reviews={allStrapiReview.nodes}
-          />
-        </Layout>
-      )
-    }}
-  />
-)
+      allStrapiClient {
+        nodes {
+          id
+          client_image {
+            localFile {
+              url
+            }
+          }
+        }
+      }
+      allStrapiTool {
+        nodes {
+          type
+          id
+          image {
+            localFile {
+              url
+            }
+          }
+        }
+      }
+      allStrapiPost {
+        nodes {
+          author_name
+          author_subtitle
+          description
+          created_time(fromNow: true)
+          slug
+          title
+          post_image {
+            id
+            localFile {
+              url
+            }
+          }
+          content {
+            data {
+              content
+            }
+          }
+          author_image {
+            localFile {
+              url
+            }
+          }
+        }
+      }
+      allStrapiReview {
+        nodes {
+          author_name
+          rating
+          review_text
+          review_platform_image {
+            createdAt(fromNow: true)
+            localFile {
+              url
+            }
+            name
+          }
+          link
+        }
+      }
+    }
+  `)
+
+  const {
+    allStrapiService,
+    allStrapiClient,
+    allStrapiTool,
+    allStrapiPost,
+    allStrapiReview,
+  } = data
+
+  return (
+    <Layout>
+      <Hero />
+      <Service
+        services={allStrapiService.nodes}
+        clients={allStrapiClient.nodes}
+        tools={allStrapiTool.nodes}
+        posts={allStrapiPost.nodes}
+        reviews={allStrapiReview.nodes}
+      />
+    </Layout>
+  )
+}
 
 export const Head = () => <Seo title="Home" />
 

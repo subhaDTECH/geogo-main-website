@@ -2,10 +2,10 @@ import * as React from "react"
 import AboutImg from "../../images/about-img.jpg"
 
 const CompanyHero = () => (
-  <div className="Company-Section my-[40px] sm:my-[200px]">
-    <div className="container  w-[95%] md:w-[90%]  p-5 m-3 flex flex-col mx-auto grid grid-cols-1 md:grid-cols-2 px-5 md:flex-col md:flex-row ">
-      <div className="HeroTextContainer  m-4 p-4 order-2">
-        <h2 className="Herotitle">
+  <div className="Company-Section my-[100px] sm:my-[150px] lg:my-[180px]">
+    <div className="container  w-[95%] md:w-[90%]  p-5 m-3 flex flex-col mx-auto grid grid-cols-1 md:grid-cols-2 px-5 md:flex-col ">
+      <div className="HeroTextContainer  sm:m-4 sm:p-4 order-2">
+        <h2 className="text-[46px]">
           About Us<span className="text-green-500">.</span>
         </h2>
         <p className="mt-5 pt-5">
@@ -25,7 +25,7 @@ const CompanyHero = () => (
           are GeoGO !!
         </p>
       </div>
-      <div className="HeroImgContainer m-4 p-4 order-2">
+      <div className="HeroImgContainer1 sm:m-4 sm:p-4 order-2">
         <img
           alt="Img"
           className="w-[100%] h-[100%] object-contain"

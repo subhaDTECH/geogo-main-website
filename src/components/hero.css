@@ -10,10 +10,7 @@
     width: 100%;
     
 }
-.HeroImg{
-    /* width: 540px;
-    height: 440px; */
-}
+
 .Herotitle{
     font-size: 36px;
     font-weight: 500;
@@ -33,3 +30,4 @@
     text-align: center;
     text-decoration: none;
 }
+

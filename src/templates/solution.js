@@ -12,7 +12,7 @@ const SolutionTemplates = ({ data }) => {
   return (
     <Layout>
       <div className="container mx-auto py-10 my-[90px]">
-        <div className="w-full p-4 m-4 w-[80%] md:w-[50%] mx-auto flex flex-col justify-center">
+        <div className=" p-4 m-4 w-[90%] md:w-[50%] mx-auto flex flex-col justify-center">
           <h3 className="text-[40px] font-bold my-2">{solutionData?.title}</h3>
           <p className="text-[22px] py-3">{solutionData?.description}</p>
 

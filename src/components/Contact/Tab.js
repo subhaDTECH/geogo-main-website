@@ -83,7 +83,7 @@ export default function TabDialog({ open, handleClickOpen, handleClose }) {
   }
 
   const handleCloseDialog = () => {
-    setOpenDialog(false)
+    // setOpenDialog(false)
     setRequestSuccess(false)
     setRequestError(false)
   }

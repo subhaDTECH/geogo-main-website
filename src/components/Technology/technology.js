@@ -7,17 +7,7 @@ import "./technology.css"
 //import graphql
 
 const Technology = ({ tools }) => {
-  // const [toolsData,setToolsData]=useState(tools);
   const [showTools, setTools] = useState(tools)
-
-  // const handleClick = type => {
-  //   console.log(type, "type")
-  //   const newData = tools.filter(tool => {
-  //     return tool.type === type
-  //   })
-
-  //   setTools(newData)
-  // }
 
   const handleClick = useCallback(
     type => {

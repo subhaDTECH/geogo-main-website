@@ -5,7 +5,7 @@ const PortfolioPage = () => {
   return (
     <Layout>
       <div className="Technology-Section  my-[100px] sm:my-[200px]">
-        <div className="container h-full mx-auto w-[95%] p-5 m-3 my-10 p-10 bg-white">
+        <div className="container h-full mx-auto w-[95%]  m-3 my-10 p-10 bg-white">
           <div className="py-10">
             <h2 className="text-4xl md:text-6xl font-semibold p-5">
               Our Projects<span className="text-green-500">.</span>
@@ -13,17 +13,9 @@ const PortfolioPage = () => {
           </div>
 
           <div className="flex   flex-col md:flex-row justify-center py-10 gap-4">
-            {/* <div className="title-container w-full  md:w-1/2 p-5">
-              <h2 className="text-2xl md:text-4xl font-semibold p-3">
-                Project Name
-              </h2>
-            </div> */}
-
             <div className="content-box shadow border border-gray-200 w-full md:w-1/2  mx-auto p-5">
               <div>
-                <h2 className="text-xl sm:text-3xl">
-                  Online ChatManagement Application
-                </h2>
+                <h2 className="text-xl sm:text-3xl">Project Title</h2>
               </div>
               <p className="text-[17px]">
                 Agile is a set of principles or methodologies that aims to
@@ -46,9 +38,7 @@ const PortfolioPage = () => {
 
             <div className="content-box shadow border border-gray-200 w-full md:w-1/2  mx-auto p-5">
               <div>
-                <h2 className="text-xl sm:text-3xl">
-                  Email Sender Application
-                </h2>
+                <h2 className="text-xl sm:text-3xl">Project Title</h2>
               </div>
               <p className="text-[17px]">
                 Agile is a set of principles or methodologies that aims to

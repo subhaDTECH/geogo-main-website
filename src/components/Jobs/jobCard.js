@@ -4,11 +4,11 @@
 import * as React from "react"
 import "./jobCard.css"
 const JobCard = ({ jobs }) => {
-  console.log(jobs, "jobs")
-  console.log("image", jobs[0])
+  // console.log(jobs, "jobs")
+  // console.log("image", jobs[0])
   return (
     <div className="Job-Section my-10 py-5 p-5">
-      <div className="h-full mx-auto w-[95%] p-5 m-3 my-10 p-10">
+      <div className="h-full mx-auto w-[95%]  m-3 my-10 p-5">
         <h1 className="text-3xl md:text-4xl font-bold  p-2 m-2">
           Want to Join Us?
         </h1>
@@ -36,7 +36,7 @@ const JobCard = ({ jobs }) => {
                   <p className="text-lg">{job?.location}</p>
                   <button
                     type="button"
-                    class="btn-primary transition duration-300 ease-in-out focus:outline-none focus:shadow-outline bg-purple-700 hover:bg-purple-900 text-white font-normal py-2 px-4 mr-1 rounded"
+                    className="btn-primary transition duration-300 ease-in-out focus:outline-none focus:shadow-outline bg-purple-700 hover:bg-purple-900 text-white font-normal py-2 px-4 mr-1 rounded"
                   >
                     <a href={job?.link} className="no-underline text-white">
                       Apply Now

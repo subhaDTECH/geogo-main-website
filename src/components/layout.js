@@ -28,7 +28,6 @@ const Layout = ({ children }) => {
       <div>
         <div>
           <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-
           <main>{children}</main>
           <footer>
             {ContactID !== 1 && <FooterHead />}

@@ -22,12 +22,13 @@ import Review from "../Review/review.js"
 const Service = ({ services, clients, tools, posts, reviews }) => {
   return (
     <div className="Service-Section">
-      <div className="container h-full mx-auto w-[95%] p-5 m-3 my-10 p-10">
+      <div className="container h-full mx-auto w-[95%]  m-3 my-10 p-10">
         <h1 className="title">Our Core Services</h1>
         <div className="row grid grid-cols-1 md:grid-cols-2 gap-5  mx-auto ">
           {services &&
-            services?.map(service => (
+            services?.map((service, index) => (
               <Link
+                key={index}
                 to={`/service/${service?.slug}`}
                 className="Service-box no-underline text-black text-sm bg-white h-full w-full md:80vh   shadow-lg flex flex-row flex items-center justify-center"
               >
@@ -54,14 +55,14 @@ const Service = ({ services, clients, tools, posts, reviews }) => {
 
       {/* team part section  */}
       <div className="service-team-section py-10 my-10">
-        <div className="container h-full mx-auto w-[95%] p-5 m-3 my-10 p-10">
+        <div className="container h-full mx-auto w-[95%]  m-3 my-10 p-10">
           <h2 className="title my-10">
             We’re a team of thinkers and problem solvers
           </h2>
 
           {/* first row of team  */}
           <div className="row grid grid-cols-1 md:grid-cols-2 gap-5 mx-auto m-3">
-            <div className="h-full w-full flex flex-row justify-center flex items-center border border-gray-200 hover:bg-white  rounded-sm transition transform ease-in-out duration-300 hover:shadow-xl ease-in-out">
+            <div className="h-full w-full flex flex-row justify-center  items-center border border-gray-200 hover:bg-white  rounded-sm transition transform ease-in-out duration-300 hover:shadow-xl ease-in-out">
               <div className="Img-container  md:flex items-center justify-center">
                 <img
                   alt="Img"
@@ -98,7 +99,7 @@ const Service = ({ services, clients, tools, posts, reviews }) => {
                 </span>
               </div>
             </div>
-            <div className="h-full w-full flex flex-row justify-center flex items-center border border-gray-200 hover:bg-white  rounded-sm transition transform ease-in-out duration-300 hover:shadow-xl ease-in-out">
+            <div className="h-full w-full flex flex-row justify-center  items-center border border-gray-200 hover:bg-white  rounded-sm transition transform ease-in-out duration-300 hover:shadow-xl ease-in-out">
               <div className="Img-container  md:flex items-center justify-center">
                 <img
                   alt="Img"
@@ -116,7 +117,7 @@ const Service = ({ services, clients, tools, posts, reviews }) => {
                 </span>
               </div>
             </div>
-            <div className="h-full w-full flex flex-row justify-center flex items-center border border-gray-200 hover:bg-white  rounded-sm transition transform ease-in-out duration-300 hover:shadow-xl ease-in-out">
+            <div className="h-full w-full flex flex-row justify-center  items-center border border-gray-200 hover:bg-white  rounded-sm transition transform ease-in-out duration-300 hover:shadow-xl ease-in-out">
               <div className="Img-container  md:flex items-center justify-center">
                 <img
                   alt="Img"
@@ -140,7 +141,7 @@ const Service = ({ services, clients, tools, posts, reviews }) => {
         </div>
         <div className="btn-continer mx-auto my-10 text-center">
           <Link to="/company">
-            <button class="border border-gray-300 bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+            <button className="border border-gray-300 bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4  rounded shadow">
               LEARN MORE ABOUT OUR COMPANY
             </button>
           </Link>

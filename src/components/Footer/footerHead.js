@@ -5,7 +5,7 @@ import FooterImg2 from "../../images/footer-logo2.png"
 
 import { FaArrowRight } from "react-icons/fa"
 const FooterHead = () => (
-  <div className=" h-[100%] flex flex-col lg:flex-row">
+  <div className=" h-[100%] flex flex-col lg:flex-row z-20">
     <div className="left-box  py-5 flex justify-center  flex-col w-full lg:w-1/2 h-auto bg-[#154406] text-white ">
       <p className="text-lg  mx-10 px-3">Solutions</p>
       <h3 className="text-2xl md:text-4xl font-medium mx-10 px-3 py-3">
@@ -21,24 +21,24 @@ const FooterHead = () => (
         <p className="px-4 text-sm">We’d love to hear from you.</p>
         <p className="px-4 text-sm">Just tell us what you want from us.</p>
       </div>
-      <div className="right-box-context  flex flex-col lg:flex-row flex-row mx-10 gap-2">
+      <div className="right-box-context  flex flex-col lg:flex-row  mx-10 gap-2">
         <div className="btn-box-container flex flex-col items-center justify-center">
-          <button className="text-start w-full border border-gray-500 px-3 py-2 m-3  hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+          <button className="text-start w-full  m-3  hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
             <Link to="/contact" className="no-underline">
               Get our Service
             </Link>
           </button>
-          <button className=" text-start w-full border border-gray-500 px-3 py-2 m-3  hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+          <button className=" text-start w-full  m-3  hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
             <Link to="/contact" className="no-underline">
               Become Our Patner
             </Link>
           </button>
-          <button className="text-start w-full border border-gray-500 px-3 py-2 m-3  hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+          <button className="text-start w-full  m-3  hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
             <Link to="/contact" className="no-underline">
               Join Our Team
             </Link>
           </button>
-          <button className="text-start w-full border border-gray-500 px-3 py-2 m-3  hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+          <button className="text-start w-full  m-3  hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
             <Link to="/contact" className="no-underline">
               Discuss about something else
             </Link>

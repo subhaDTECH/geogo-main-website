@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react"
 import Typography from "@mui/material/Typography"
 
 import { Button } from "@mui/material"
-import { IoCloseSharp } from "react-icons/io5"
-import { ToastContainer, toast } from "react-toastify"
+// import { IoCloseSharp } from "react-icons/io5"
+import { toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 
 const ContactQuestion = ({

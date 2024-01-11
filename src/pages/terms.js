@@ -9,9 +9,9 @@ const TearmsPage = ({ data }) => {
 
   return (
     <Layout>
-      <div className="Technology-Section my-[200px]">
-        <div className="container h-full mx-auto w-[80%] md:w-[50%] p-5 m-3 my-10 p-10 ">
-          <h2 className="text-3xl  sm:text-4xl font-semibold">
+      <div className="Terms-Section w-full my-[130px] lg:my-[200px]">
+        <div className="sm:container h-full mx-auto w-[100%] md:w-[60%]  m-3 my-10 p-10 ">
+          <h2 className="text-3xl  sm:text-4xl font-semibold mt-8">
             {termsData.title}
           </h2>
           <div>

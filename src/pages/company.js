@@ -4,7 +4,7 @@
 // import CompanyHero from "../components/Company"
 // import CompanyCard from "../components/CompanyCard"
 // import Teamcard from "../components/teamCard"
-import * as React from "react"
+import React, { useState, useEffect } from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import CompanyImg1 from "../images/company-img1.jpg"
@@ -18,38 +18,49 @@ import Teamcard from "../components/Company/teamCard.js"
 
 const CompanyPage = ({ data }) => {
   const teams = data?.allStrapiTeam?.nodes
+  const [domLoaded, setDomLoaded] = useState(false)
+
+  useEffect(() => {
+    setDomLoaded(true)
+  }, [])
   return (
     <Layout>
-      <CompanyHero />
-      <CompanyCard
-        imageUrl={CompanyImg1}
-        title={"Our Mission"}
-        subtitle1={"To simplify digital technology adoption with a human touch"}
-      />
-      <CompanyCard
-        imageUrl={CompanyImg2}
-        title={"Our Vision"}
-        subtitle1={
-          "Be a Team of Champions delivering high quality Digital Products & solutions to solve business needs and challenges with agility using best of technology"
-        }
-      />
-      <CompanyCard
-        imageUrl={CompanyImg3}
-        title={"Our culture charter reads"}
-        subtitle1={"1. Goals first, People second & Individual third."}
-        subtitle2={
-          "2. A WIN-WIN-WIN business, where Customer wins, Employees win and the Business Owners win."
-        }
-        subtitle3={"3. Fail fast, fail differently."}
-      />
+      {domLoaded && (
+        <>
+          <CompanyHero />
+          <CompanyCard
+            imageUrl={CompanyImg1}
+            title={"Our Mission"}
+            subtitle1={
+              "To simplify digital technology adoption with a human touch"
+            }
+          />
+          <CompanyCard
+            imageUrl={CompanyImg2}
+            title={"Our Vision"}
+            subtitle1={
+              "Be a Team of Champions delivering high quality Digital Products & solutions to solve business needs and challenges with agility using best of technology"
+            }
+          />
+          <CompanyCard
+            imageUrl={CompanyImg3}
+            title={"Our culture charter reads"}
+            subtitle1={"1. Goals first, People second & Individual third."}
+            subtitle2={
+              "2. A WIN-WIN-WIN business, where Customer wins, Employees win and the Business Owners win."
+            }
+            subtitle3={"3. Fail fast, fail differently."}
+          />
 
-      <RecogCom />
-      <Teamcard teams={teams} />
+          <RecogCom />
+          <Teamcard teams={teams} />
+        </>
+      )}
     </Layout>
   )
 }
 
-export const Head = () => <Seo title="Company" />
+export const Head = () => <Seo title="About Our Agile Software Company" />
 
 export const query = graphql`
   query MyQuery {

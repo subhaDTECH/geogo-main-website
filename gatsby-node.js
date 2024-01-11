@@ -56,14 +56,16 @@ exports.createPages = async ({ graphql, actions }) => {
         nodes {
           slug
           type
+          id
         }
       }
     }
   `)
 
-  console.log(result, "result")
+  // console.log(result, "result")
 
   result?.data?.allStrapiService?.nodes?.forEach(node => {
+    //console.log(node?.slug, "res")
     createPage({
       path: `/service/${node?.slug}`,
       component: path.resolve("./src/templates/service.js"),
@@ -76,13 +78,14 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 
   //2nd result
-  result?.data?.allStrapiSolution?.nodes?.map(res => {
-    //  console.log(res.slug,"res");
+  result?.data?.allStrapiSolution?.nodes?.forEach(res => {
+    // console.log(res.slug, "res")
     createPage({
       path: `/solution/${res?.slug}`,
       component: path.resolve("./src/templates/solution.js"),
       context: {
-        type: res?.slug,
+        id: res?.id,
+        type: res?.type,
         slug: res?.slug,
       },
     })

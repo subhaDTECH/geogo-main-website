@@ -9,8 +9,8 @@ const PrivacyPage = ({ data }) => {
 
   return (
     <Layout>
-      <div className="privacy-Section my-[200px]">
-        <div className="container h-full mx-auto w-[80%] md:w-[50%] p-5 m-3 my-10 p-10 ">
+      <div className="privacy-Section my-[150px] md:my-[200px]">
+        <div className="container h-full mx-auto w-[100%] md:w-[50%]  m-3 my-10 p-10 ">
           <h2 className="text-3xl  sm:text-4xl font-semibold">
             {privacyData?.title}
             <span className="text-green-500">.</span>
@@ -24,7 +24,7 @@ const PrivacyPage = ({ data }) => {
   )
 }
 
-export const Head = () => <Seo title="privacy" />
+export const Head = () => <Seo title="Privacy" />
 
 export const query = graphql`
   query MyQuery {

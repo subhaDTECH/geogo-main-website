@@ -19,7 +19,7 @@ const RecogCom = () => (
               src={StartUpImg}
             />
           </div>
-          <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left">
+          <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left">
             <h4 className="text-orange-400 py-3 text-4xl">
               #startupind<span className="text-blue-500">i</span>a
             </h4>
