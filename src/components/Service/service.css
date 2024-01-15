@@ -1,16 +1,29 @@
 .Service-Section{
     width: 100%;
+    
     background-color: #f8f8f8;
     /* height: 100vh; */
 }
+
+.Service-box{
+    height:auto !important;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
 .Service-box-Img{
-    width: 200px;
+    /* width: 200px;
     height: 90%;
     box-sizing: border-box;
-    object-fit: cover;
+    object-fit: cover; */
+
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 .Service-Paragraph{
     font-size: 16px;
+    line-height: 1.6rem;
     padding: 5px;
     display: block;
     margin-block-start: 1em;
@@ -26,7 +39,7 @@
 
 /* //team section */
 .Img-container{
-    flex:0.7;
+    /* flex:0.7; */
     width: 100%;
     height: 100% !important;
     /* display: flex;
@@ -45,13 +58,44 @@
     
 }
 
+.service-title{
+    color: #306f43;
+    font-size: 1.375rem;
+    font-weight: 500;
+}
+
+.service-img-container{
+    width: 60%;
+    height: 100%;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
 @media(max-width:900px)
 {
+
+    .Service-box {
+            height: auto !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     .Service-box-Img{
-        width: 100px;
+        /* width: 100px;
         height: 140px;
         box-sizing: border-box;
-        object-fit: cover;
+        object-fit: cover; */
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
     }
     .team-Img{
         width: 140px;

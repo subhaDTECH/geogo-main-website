@@ -10,7 +10,7 @@ import CareersImg6 from "../../images/careers-img6.jpg"
 // import GeogoLogo from "../../src/images/geogo-logo-1.png";
 const CareerCard = () => (
   <div className="Career-Section my-10 py-5">
-    <div className="container h-full mx-auto w-[90%]  m-3 my-10 p-10">
+    <div className=" h-full mx-auto w-[100%]  m-3 my-10 p-10">
       {/* first row start  */}
       <div className="row  shadow-lg flex grid grid-cols-1 md:grid-cols-4">
         <div className="box h-[360px] w-full flex flex-col justify-center order-2 md:order-none">

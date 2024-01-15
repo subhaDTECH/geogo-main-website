@@ -139,6 +139,7 @@
 
 import * as React from "react"
 import Layout from "../components/layout"
+
 import Seo from "../components/seo"
 import Hero from "../components/Hero/hero.js"
 import Service from "../components/Service/service.js"
@@ -241,14 +242,16 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <Hero />
-      <Service
-        services={allStrapiService.nodes}
-        clients={allStrapiClient.nodes}
-        tools={allStrapiTool.nodes}
-        posts={allStrapiPost.nodes}
-        reviews={allStrapiReview.nodes}
-      />
+      <div>
+        <Hero />
+        <Service
+          services={allStrapiService.nodes}
+          clients={allStrapiClient.nodes}
+          tools={allStrapiTool.nodes}
+          posts={allStrapiPost.nodes}
+          reviews={allStrapiReview.nodes}
+        />
+      </div>
     </Layout>
   )
 }

@@ -5,8 +5,8 @@ import * as React from "react"
 import StartUpImg from "../../images/startupIndia3.jpg"
 
 const RecogCom = () => (
-  <div className="Career-Section">
-    <div className="container h-full mx-auto w-[95%]  m-3 my-10 p-10">
+  <div className="">
+    <div className="container  mx-auto w-[95%]  m-3  p-10">
       <h1 className="text-5xl mb-2 font-medium md:mx-5 leading-tight  p-5">
         Recognition
       </h1>

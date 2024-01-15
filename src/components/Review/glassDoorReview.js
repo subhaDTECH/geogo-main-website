@@ -8,7 +8,7 @@ const GlassDoorReview = () => (
       <div className="review-container w-[280px] h-[100px]">
         <img
           alt="img"
-          className="w-[100%] h-[100%] "
+          className="w-[100%] h-[100%]"
           src="https://www.glassdoor.co.in/api/widget/verticalStarRating.htm?e=5413808"
         />
       </div>

@@ -2,11 +2,27 @@
 // import GeogoLogo from "../../src/images/geogo-logo-1.png"
 
 import * as React from "react"
+import "./review.css"
+
+const StarRating = ({ rating }) => {
+  // Round the rating to the nearest half-star
+  const roundedRating = Math.round(rating * 2) / 2
+
+  // Create an array of stars based on the rounded rating
+  const stars = Array.from({ length: 5 }, (_, index) => (
+    <span
+      key={index}
+      className={`star ${index < roundedRating ? "filled" : ""}`}
+    ></span>
+  ))
+
+  return <div className="star-rating">{stars}</div>
+}
 
 const Review = ({ reviews }) => (
-  <div className="Review-Section">
-    <div className="container h-full mx-auto w-[95%]  m-3 my-10 p-10">
-      <div className=" min-h-screen flex items-center justify-center">
+  <div className="">
+    <div className="container h-full mx-auto w-[95%]  px-3 mt-[40px] ">
+      <div className=" flex items-center justify-center">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* frist review box start  */}
 
@@ -15,7 +31,7 @@ const Review = ({ reviews }) => (
               return (
                 <div
                   key={index}
-                  className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform transform ease-in-out hover:shadow-xl ease-in-out"
+                  className="bg-white border border-gray-300 rounded-lg overflow-hidden shadow-lg transition-transform transform ease-in-out hover:shadow-xl "
                 >
                   <div className="p-1 bg-[#53c07d]"></div>
                   <div className="p-8">
@@ -27,12 +43,18 @@ const Review = ({ reviews }) => (
                         />
                         <p className="text-sm">THE REVIEW</p>
                       </div>
-                      <div className=" w-[40px] h-[40px] p-2 bg-green-500 text-white rounded-full flex items-center  justify-center">
+                      {/* <div className=" w-[40px] h-[40px] p-2 bg-green-500 text-white rounded-full flex items-center  justify-center">
                         <p className="text-sm">{review?.rating}</p>
-                      </div>
+                      </div> */}
+                      <span className="flex items-center  text-[24px]">
+                        {review?.rating}
+                        <span className="mx-2">
+                          <StarRating rating={review?.rating} />
+                        </span>
+                      </span>
                     </div>
-                    <p className="mb-6 text-lg">{review?.review_text}</p>
-                    <p className="text-sm  text-gray-800 my-2">
+                    <p className="mb-2 text-lg">{review?.review_text}</p>
+                    <p className="text-sm  text-gray-800">
                       {review?.author_name}
                     </p>
                   </div>
@@ -54,7 +76,7 @@ const Review = ({ reviews }) => (
         </div>
       </div>
 
-      <div className="btn-continer mx-auto mb-8  mt-20 text-center">
+      <div className="btn-continer mx-auto mb-8  mt-[60px] text-center">
         <button className=" bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
           <a
             target="_blank"

@@ -2,7 +2,7 @@ import * as React from "react"
 import AboutImg from "../../images/about-img.jpg"
 
 const CompanyHero = () => (
-  <div className="Company-Section my-[100px] sm:my-[150px] lg:my-[180px]">
+  <div className="Company-Section mt-[100px] my-[100px] sm:my-[150px] lg:my-[80px]">
     <div className="container  w-[95%] md:w-[90%]  p-5 m-3 flex flex-col mx-auto grid grid-cols-1 md:grid-cols-2 px-5 md:flex-col ">
       <div className="HeroTextContainer  sm:m-4 sm:p-4 order-2">
         <h2 className="text-[46px]">

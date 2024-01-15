@@ -5,10 +5,10 @@ import * as React from "react"
 
 const Teamcard = ({ teams }) => (
   <div className="Team-Section">
-    <div className="container h-full mx-auto w-[95%]  m-3 my-10 p-10">
+    <div className="container  mx-auto w-[95%]  m-3  p-10">
       <section className="body-font">
         <section className="text-gray-600 body-font">
-          <div className="container-full px-5 py-24 mx-auto">
+          <div className="container-full px-5 mx-auto">
             {/* start  */}
 
             <div className="mb-16">

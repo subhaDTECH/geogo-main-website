@@ -12,7 +12,7 @@ const JobCard = ({ jobs }) => {
         <h1 className="text-3xl md:text-4xl font-bold  p-2 m-2">
           Want to Join Us?
         </h1>
-        <h2 className="text-xl md:text-3xl font-bold  p-2 m-2">
+        <h2 className="text-xl md:text-3xl font-semibold  p-2 m-2">
           Find Your Role
         </h2>
         {jobs &&

@@ -5,9 +5,9 @@ import "./Career.css"
 // import GeogoLogo from "../../src/images/geogo-logo-1.png";
 
 const CareerHero = () => (
-  <div className="Career-Section my-[80px] sm:my-[180px]">
-    <div className="container-full text-start h-full mx-auto w-full md:w-[95%] p-5 m-3 sm:my-10 ">
-      <h1 className="title-heading text-3xl md:text-5xl mb-4 font-medium mx-5   pt-5 sm:p-4">
+  <div className="Career-Section mt-[150px] lg:mt-[20px]">
+    <div className="container-full text-start  mx-auto w-full md:w-[95%] p-5 m-3 sm:my-10 ">
+      <h1 className="title-heading text-3xl md:text-5xl mb-4 font-medium mx-5 mt-[100px]  pt-5 sm:p-4">
         Crafting software with a human touch.
       </h1>
       <section className="body-font">

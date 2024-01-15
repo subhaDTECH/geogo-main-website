@@ -8,7 +8,7 @@
 import * as React from "react"
 
 const Card = ({ post }) => (
-  <div className="flex px-3 py-3 items-center justify-center">
+  <div className="flex px-3py-3 items-center justify-center">
     <div className="max-w-lg rounded cursor-pointer overflow-hidden shadow-lg transition transform duration-300 hover:translate-y-12 ease-in-out">
       <div className="w-full h-[300px]">
         <img
@@ -17,11 +17,11 @@ const Card = ({ post }) => (
           alt="Img-Post"
         />
       </div>
-      <div className="px-6 py-4">
+      <div className="px-6 py-4 bg-white">
         <div className="font-bold text-xl mb-2">{post?.title}</div>
         <p className="text-gray-700 text-base">{post?.description}</p>
       </div>
-      <div className="p-5">
+      <div className="p-5 bg-white">
         <div className="flex items-center">
           <img
             className="w-16 h-16 rounded-full mr-3"

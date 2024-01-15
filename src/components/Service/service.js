@@ -22,30 +22,30 @@ import Review from "../Review/review.js"
 const Service = ({ services, clients, tools, posts, reviews }) => {
   return (
     <div className="Service-Section">
-      <div className="container h-full mx-auto w-[95%]  m-3 my-10 p-10">
-        <h1 className="title">Our Core Services</h1>
+      <div className="h-full mx-auto w-[96%]  m-3 my-10 p-10">
+        <h1 className="title my-4 py-2">Our Core Services</h1>
         <div className="row grid grid-cols-1 md:grid-cols-2 gap-5  mx-auto ">
           {services &&
             services?.map((service, index) => (
               <Link
                 key={index}
                 to={`/service/${service?.slug}`}
-                className="Service-box no-underline text-black text-sm bg-white h-full w-full md:80vh   shadow-lg flex flex-row flex items-center justify-center"
+                className="Service-box no-underline text-black text-sm bg-white h-full w-full md:80vh   shadow-lg flex flex-row flex  justify-center"
               >
-                <img
-                  alt="Img"
-                  className="Service-box-Img hidden md:block"
-                  src={service?.image?.localFile?.url}
-                />
-                <div className="Service-text-container p-2 flex flex-col gap-1">
-                  <h2 className="font-bold text-green-900 text-xl p-2">
-                    {service?.title}
-                  </h2>
-                  <h4 className="font-bold text-sm p-2">
+                <div className="service-img-container hidden md:block">
+                  <img
+                    alt="Img"
+                    className="Service-box-Img "
+                    src={service?.image?.localFile?.url}
+                  />
+                </div>
+                <div className="Service-text-container  px-2 flex flex-col gap-1">
+                  <h3 className="service-title p-2 mt-8">{service?.title}</h3>
+                  <h4 className="text-[16px] font-medium mt-2 p-2">
                     {service?.technology}
                   </h4>
                   <p className="Service-Paragraph text-[16px] font-normal">
-                    {service?.description}.
+                    {service?.description}
                   </p>
                 </div>
               </Link>
@@ -54,82 +54,100 @@ const Service = ({ services, clients, tools, posts, reviews }) => {
       </div>
 
       {/* team part section  */}
-      <div className="service-team-section py-10 my-10">
-        <div className="container h-full mx-auto w-[95%]  m-3 my-10 p-10">
-          <h2 className="title my-10">
+      <div className="service-team-section">
+        <div className="container h-full mx-auto w-[96%]  m-3  p-10">
+          <h2 className="title my-6">
             We’re a team of thinkers and problem solvers
           </h2>
 
           {/* first row of team  */}
           <div className="row grid grid-cols-1 md:grid-cols-2 gap-5 mx-auto m-3">
-            <div className="h-full w-full flex flex-row justify-center  items-center border border-gray-200 hover:bg-white  rounded-sm transition transform ease-in-out duration-300 hover:shadow-xl ease-in-out">
-              <div className="Img-container  md:flex items-center justify-center">
+            <div className="overflow-hidden   w-full flex flex-row justify-between  items-center border border-gray-200 hover:bg-white  rounded-sm transition transform ease-in-out duration-300 hover:shadow-xl">
+              <div className="hidden sm:block  w-[40%] h-[100%] flex-1  md:flex items-center justify-center">
                 <img
                   alt="Img"
-                  className="team-Img items-center mx-auto "
+                  className="w-[200px] h-[100px] lg:w-[100%] lg:h-[120%]"
                   src={TeamPartImg1}
                 />
               </div>
-              <div className="flex flex-col w-full md:w-[60%]   p-3 m-3">
-                <p>We believe</p>
-                <h2 className="text-2xl md:text-3xl">Simplicity is the Key</h2>
+              <div className="flex flex-col mx-5 w-[60%]">
+                <p className="mx-2">We believe</p>
+                <h2 className="text-2xl md:text-3xl mx-2">
+                  Simplicity is the Key
+                </h2>
                 <span className="py-3 my-5 ">
-                  <Link to="/portfolio" className="no-underline">
+                  <Link
+                    to="/portfolio"
+                    className="no-underline text-blue-500 font-normal mx-2"
+                  >
                     See Our Work
                   </Link>
                 </span>
               </div>
             </div>
 
-            <div className="h-full w-full flex flex-row justify-center flex items-center border border-gray-200 hover:bg-white  rounded-sm transition transform ease-in-out duration-300 hover:shadow-xl ease-in-out">
-              <div className="Img-container  md:flex items-center justify-center">
+            <div className="overflow-hidden   w-full flex flex-row justify-between  items-center border border-gray-200 hover:bg-white  rounded-sm transition transform ease-in-out duration-300 hover:shadow-xl">
+              <div className="hidden sm:block  w-[40%] h-[100%] flex-1  md:flex items-center justify-center">
                 <img
                   alt="Img"
-                  className="team-Img items-center mx-auto "
+                  className="w-[200px] h-[100px] lg:w-[100%] lg:h-[120%]"
                   src={TeamPartImg2}
                 />
               </div>
-              <div className="flex flex-col w-full md:w-[60%]   p-3 m-3">
-                <p>We practice</p>
-                <h2 className="text-2xl md:text-3xl">Creativity at Core</h2>
+              <div className="flex flex-col mx-5 w-[100%] md:w-[60%]">
+                <p className="mx-2">Creativity at Core</p>
+                <h2 className="text-2xl md:text-3xl mx-2">
+                  Simplicity is the Key
+                </h2>
                 <span className="py-3 my-5 ">
-                  <Link to="/service" className="no-underline">
+                  <Link
+                    to="/service"
+                    className="no-underline text-blue-500 font-normal mx-2"
+                  >
                     Explore our services
                   </Link>
                 </span>
               </div>
             </div>
-            <div className="h-full w-full flex flex-row justify-center  items-center border border-gray-200 hover:bg-white  rounded-sm transition transform ease-in-out duration-300 hover:shadow-xl ease-in-out">
-              <div className="Img-container  md:flex items-center justify-center">
+
+            <div className="overflow-hidden   w-full flex flex-row justify-between  items-center border border-gray-200 hover:bg-white  rounded-sm transition transform ease-in-out duration-300 hover:shadow-xl">
+              <div className="hidden sm:block  w-[40%] h-[100%] flex-1  md:flex items-center justify-center">
                 <img
                   alt="Img"
-                  className="team-Img items-center mx-auto "
+                  className="w-[200px] h-[100px] lg:w-[100%] lg:h-[120%]"
                   src={TeamParImg3}
                 />
               </div>
-              <div className="flex flex-col w-full md:w-[60%]   p-3 m-3">
-                <p>Our process is</p>
-                <h2 className="text-2xl md:text-3xl">Always Agile</h2>
+              <div className="flex flex-col mx-5 w-[60%]">
+                <p className="mx-2">Our process is</p>
+                <h2 className="text-2xl md:text-3xl mx-2">Always Agile</h2>
                 <span className="py-3 my-5 ">
-                  <Link to="/we-are-agile" className="no-underline">
+                  <Link
+                    to="/we-are-agile"
+                    className="no-underline text-blue-500 font-normal mx-2"
+                  >
                     More about our process
                   </Link>
                 </span>
               </div>
             </div>
-            <div className="h-full w-full flex flex-row justify-center  items-center border border-gray-200 hover:bg-white  rounded-sm transition transform ease-in-out duration-300 hover:shadow-xl ease-in-out">
-              <div className="Img-container  md:flex items-center justify-center">
+
+            <div className="overflow-hidden   w-full flex flex-row justify-between  items-center border border-gray-200 hover:bg-white  rounded-sm transition transform ease-in-out duration-300 hover:shadow-xl">
+              <div className="hidden sm:block  w-[40%] h-[100%] flex-1  md:flex items-center justify-center">
                 <img
                   alt="Img"
-                  className="team-Img items-center mx-auto "
+                  className="w-[200px] h-[100px] lg:w-[100%] lg:h-[120%]"
                   src={TeamPartImg4}
                 />
               </div>
-              <div className="flex flex-col w-full md:w-[60%]   p-3 m-3">
-                <p>Powered by</p>
-                <h2 className="text-2xl md:text-3xl">Passionate People</h2>
+              <div className="flex flex-col mx-5 w-[60%]">
+                <p className="mx-2">Powered by</p>
+                <h2 className="text-2xl md:text-3xl mx-2">Passionate People</h2>
                 <span className="py-3 my-5 ">
-                  <Link to="/career" className="no-underline">
+                  <Link
+                    to="/career"
+                    className="no-underline text-blue-500 font-normal mx-2"
+                  >
                     Join our team
                   </Link>
                 </span>
