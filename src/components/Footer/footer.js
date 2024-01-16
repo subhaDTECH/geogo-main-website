@@ -3,22 +3,24 @@ import { Link } from "gatsby"
 // import FooterImg1 from "../../images/footer-logo1.png"
 // import FooterImg2 from "../../images/footer-logo2.png"
 import GeogoLogo from "../../images/geogo-logo-1.png"
+import { CiLinkedin } from "react-icons/ci"
 // import { FaArrowRight } from "react-icons/fa"
 const Footer = () => (
-  <div className="Footer-Header-Section  w-full h-full text-white z-20">
-    <div className="Footer-Header-Section bg-black w-full h-full text-white">
-      <div className="container-full">
-        <section className="bg-[#013220]">
-          <div className=" px-4 py-16 mx-auto sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
-              <div>
+  <div className="w-full text-[#ffffff80] z-20">
+    <div className="w-full  text-[#ffffff80]">
+      <div className="w-full">
+        <section className="bg-[#12302d] h-auto">
+          <div className=" px-4 py-6 mx-auto sm:px-6 lg:px-8">
+            {/* <div className="grid grid-cols-1 gap-5 lg:grid-cols-3"> */}
+            <div className="grid grid-cols-1 gap-4 lg:grid-cols-4">
+              <div className="mt-[20px]">
                 <div>
                   <img
                     className="w-[200px] h-[200px] object-contain  sm:h-9 footer-logo"
                     src={GeogoLogo}
                     alt="logo"
                   />
-                  <p className="max-w-xs mt-4 text-sm text-white md:mx-10">
+                  <p className="max-w-xs mt-4 text-sm text-[#ffffff80] md:mx-10">
                     © 2021 GEOGO Techsolutions Pvt. Ltd. All rights reserved.
                   </p>
                 </div>
@@ -29,7 +31,7 @@ const Footer = () => (
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <span className="sr-only"> Facebook </span>
+                    <span className="sr-only text-[#ffffff80]"> Facebook </span>
                     <svg
                       className="w-8 h-8"
                       fill="#fff"
@@ -50,7 +52,7 @@ const Footer = () => (
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <span className="sr-only"> Twitter </span>
+                    <span className="sr-only text-[#ffffff80]"> Twitter </span>
                     <svg
                       className="w-8 h-8"
                       fill="#fff"
@@ -66,7 +68,7 @@ const Footer = () => (
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <span className="sr-only"> GitHub </span>
+                    <span className="sr-only text-[#ffffff80]"> GitHub </span>
                     <svg
                       className="w-8 h-8"
                       fill="#fff"
@@ -82,86 +84,87 @@ const Footer = () => (
                   </a>
                 </div>
               </div>
-              <div className="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
-                <div>
-                  <p className="font-medium">Company</p>
-                  <nav className="flex flex-col mt-4 space-y-2 text-sm">
-                    <Link
-                      className="text-gray-300 cursor-pointer hover:text-green-500 no-underline"
-                      to="/company"
-                    >
-                      About Us
-                    </Link>
-                    <Link
-                      className="text-gray-300 cursor-pointer hover:text-green-500 no-underline"
-                      to="/terms"
-                    >
-                      Terms of Service
-                    </Link>
-                    <Link
-                      className="text-gray-300 cursor-pointer hover:text-green-500 no-underline"
-                      to="/privacy"
-                    >
-                      Privacy Policy
-                    </Link>
-                    <Link
-                      className="text-gray-300 cursor-pointer hover:text-green-500 no-underline"
-                      to="/life-at-geogo"
-                    >
-                      Life at Geogo
-                    </Link>
-                  </nav>
-                </div>
-                <div>
-                  <p className="font-medium">Services</p>
-                  <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-                    <Link
-                      className="text-gray-300 cursor-pointer hover:text-green-500 no-underline"
-                      to="/service/digital-product-development"
-                    >
-                      Digital Products Engineering
-                    </Link>
-                    <Link
-                      className="text-gray-300 cursor-pointer hover:text-green-500 no-underline"
-                      to="/service/agile-service-management"
-                    >
-                      Agile Service Management
-                    </Link>
-                    <Link
-                      className="text-gray-300 cursor-pointer hover:text-green-500 no-underline"
-                      to="/service/business-process-automation/"
-                    >
-                      Business Process Automation
-                    </Link>
-                    <Link
-                      className="text-gray-300 cursor-pointer hover:text-green-500 no-underline"
-                      to="/service/recruitment-training"
-                    >
-                      Recruitment & Training
-                    </Link>
-                  </nav>
-                </div>
-                <div>
-                  <p className="font-medium">Contact Us</p>
-                  <nav className="flex flex-col  space-y-2 text-sm text-gray-500">
-                    <p className="text-lg text-gray-300  hover:text-green-500 no-underline">
-                      Our Offices
-                    </p>
-                    <p className="text-lg text-gray-300  hover:text-green-500 no-underline">
-                      Bengaluru, India
-                    </p>
 
-                    <p className="text-lg text-gray-300  hover:text-green-500 no-underline">
-                      Kolkata, India
-                    </p>
-                    <p className="text-lg text-gray-300  hover:text-green-500 no-underline">
-                      Texas, USA
-                    </p>
-                  </nav>
-                </div>
-                <div></div>
+              <div>
+                <p className="font-medium text-white">Company</p>
+                <nav className="flex flex-col mt-4 space-y-2 text-sm">
+                  <Link
+                    className="text-gray-300 cursor-pointer hover:text-green-500 no-underline py-[6px]"
+                    to="/company"
+                  >
+                    About Us
+                  </Link>
+                  <Link
+                    className="text-gray-300 cursor-pointer hover:text-green-500 no-underline py-[6px]"
+                    to="/terms"
+                  >
+                    Terms of Service
+                  </Link>
+                  <Link
+                    className="text-gray-300 cursor-pointer hover:text-green-500 no-underline py-[6px]"
+                    to="/privacy"
+                  >
+                    Privacy Policy
+                  </Link>
+                  <Link
+                    className="text-gray-300 cursor-pointer hover:text-green-500 no-underline py-[6px]"
+                    to="/life-at-geogo"
+                  >
+                    Life at Geogo
+                  </Link>
+                </nav>
+              </div>
+
+              <div>
+                <p className="font-medium text-white">Services</p>
+                <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+                  <Link
+                    className="text-gray-300 cursor-pointer hover:text-green-500 no-underline py-[6px]"
+                    to="/service/digital-product-development"
+                  >
+                    Digital Products Engineering
+                  </Link>
+                  <Link
+                    className="text-gray-300 cursor-pointer hover:text-green-500 no-underline py-[6px]"
+                    to="/service/agile-service-management"
+                  >
+                    Agile Service Management
+                  </Link>
+                  <Link
+                    className="text-gray-300 cursor-pointer hover:text-green-500 no-underline py-[6px]"
+                    to="/service/business-process-automation/"
+                  >
+                    Business Process Automation
+                  </Link>
+                  <Link
+                    className="text-gray-300 cursor-pointer hover:text-green-500 no-underline py-[6px]"
+                    to="/service/recruitment-training"
+                  >
+                    Recruitment & Training
+                  </Link>
+                </nav>
+              </div>
+
+              <div>
+                <p className="font-medium text-white">Contact Us</p>
+                <nav className="flex flex-col  space-y-2 text-sm text-gray-500">
+                  <p className="text-lg text-gray-300  hover:text-green-500 no-underline">
+                    Our Offices
+                  </p>
+                  <p className="text-lg text-gray-300  hover:text-green-500 no-underline">
+                    Bengaluru, India
+                  </p>
+
+                  <p className="text-lg text-gray-300  hover:text-green-500 no-underline">
+                    Kolkata, India
+                  </p>
+                  <p className="text-lg text-gray-300  hover:text-green-500 no-underline">
+                    Texas, USA
+                  </p>
+                </nav>
               </div>
             </div>
+            {/* </div> */}
             <p className="mt-8 text-xs text-gray-800">© 2022 Comany Name</p>
           </div>
         </section>

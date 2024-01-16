@@ -47,7 +47,7 @@ const Review = ({ reviews }) => (
                         <p className="text-sm">{review?.rating}</p>
                       </div> */}
                       <span className="flex items-center  text-[24px]">
-                        {review?.rating}
+                        {Math.round(review?.rating)}
                         <span className="mx-2">
                           <StarRating rating={review?.rating} />
                         </span>
@@ -76,15 +76,15 @@ const Review = ({ reviews }) => (
         </div>
       </div>
 
-      <div className="btn-continer mx-auto mb-8  mt-[60px] text-center">
-        <button className=" bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+      <div className="btn-continer mx-auto mb-8  mt-[60px] text-center  transition-all duration-300 ease-in-out">
+        <button className="hover-btn bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-black rounded shadow">
           <a
             target="_blank"
             rel="noreferrer"
             href="https://clutch.co/profile/geogo-techsolutions"
             className="no-underline text-black"
           >
-            OUR CLUTCH PROFILE
+            OUR CLUT<span className="text-orange-400">C</span>H PROFILE
           </a>
         </button>
       </div>

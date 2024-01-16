@@ -70,7 +70,7 @@ const Service = ({ services, clients, tools, posts, reviews }) => {
                   src={TeamPartImg1}
                 />
               </div>
-              <div className="flex flex-col mx-5 w-[60%]">
+              <div className="flex flex-col mx-5 w-full md:w-[60%]">
                 <p className="mx-2">We believe</p>
                 <h2 className="text-2xl md:text-3xl mx-2">
                   Simplicity is the Key
@@ -118,7 +118,7 @@ const Service = ({ services, clients, tools, posts, reviews }) => {
                   src={TeamParImg3}
                 />
               </div>
-              <div className="flex flex-col mx-5 w-[60%]">
+              <div className="flex flex-col mx-5 w-full md:w-[60%]">
                 <p className="mx-2">Our process is</p>
                 <h2 className="text-2xl md:text-3xl mx-2">Always Agile</h2>
                 <span className="py-3 my-5 ">
@@ -140,7 +140,7 @@ const Service = ({ services, clients, tools, posts, reviews }) => {
                   src={TeamPartImg4}
                 />
               </div>
-              <div className="flex flex-col mx-5 w-[60%]">
+              <div className="flex flex-col mx-5 w-full md:w-[60%]">
                 <p className="mx-2">Powered by</p>
                 <h2 className="text-2xl md:text-3xl mx-2">Passionate People</h2>
                 <span className="py-3 my-5 ">
@@ -157,9 +157,9 @@ const Service = ({ services, clients, tools, posts, reviews }) => {
 
           {/* end of team row  */}
         </div>
-        <div className="btn-continer mx-auto my-10 text-center">
+        <div className="hover-btn btn-continer mx-auto my-10 text-center transition-all duration-300 ease-in-out">
           <Link to="/company">
-            <button className="border border-gray-300 bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4  rounded shadow">
+            <button className="border border-black bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4  rounded shadow">
               LEARN MORE ABOUT OUR COMPANY
             </button>
           </Link>
