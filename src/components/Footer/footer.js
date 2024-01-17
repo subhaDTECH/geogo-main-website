@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 // import FooterImg1 from "../../images/footer-logo1.png"
 // import FooterImg2 from "../../images/footer-logo2.png"
 import GeogoLogo from "../../images/geogo-logo-1.png"
+import GeogoLogo2 from "../../images/geogo-logo.png"
 import { CiLinkedin } from "react-icons/ci"
 // import { FaArrowRight } from "react-icons/fa"
 const Footer = () => (
@@ -12,21 +13,23 @@ const Footer = () => (
         <section className="bg-[#12302d] h-auto">
           <div className=" px-4 py-6 mx-auto sm:px-6 lg:px-8">
             {/* <div className="grid grid-cols-1 gap-5 lg:grid-cols-3"> */}
-            <div className="grid grid-cols-1 gap-4 lg:grid-cols-4">
-              <div className="mt-[20px]">
+            <div className="grid grid-cols-1 gap-4 lg:grid-cols-4 mt-5">
+              <div className="mt-[30px]">
                 <div>
-                  <img
-                    className="w-[200px] h-[200px] object-contain  sm:h-9 footer-logo"
-                    src={GeogoLogo}
-                    alt="logo"
-                  />
-                  <p className="max-w-xs mt-4 text-sm text-[#ffffff80] md:mx-10">
+                  <div className="w-[180px]  h-[80px] md:h-[50px]">
+                    <img
+                      className="w-full h-full object-contain   sm:h-9 footer-logo"
+                      src={GeogoLogo2}
+                      alt="logo"
+                    />
+                  </div>
+                  <p className="max-w-xs mt-4 text-sm text-[#ffffff80] lg:mx-10">
                     © 2021 GEOGO Techsolutions Pvt. Ltd. All rights reserved.
                   </p>
                 </div>
-                <div className="flex mt-8 space-x-6 text-gray-600 md:mx-10">
+                <div className="flex mt-8 space-x-4 text-gray-600 lg:mx-10">
                   <a
-                    className="hover:opacity-75"
+                    className=""
                     href="https://www.facebook.com/geogo.in"
                     target="_blank"
                     rel="noreferrer"
@@ -47,7 +50,7 @@ const Footer = () => (
                   </a>
 
                   <a
-                    className="hover:opacity-75"
+                    className=""
                     href="https://twitter.com/go_geogo"
                     target="_blank"
                     rel="noreferrer"
@@ -63,7 +66,7 @@ const Footer = () => (
                     </svg>
                   </a>
                   <a
-                    className="hover:opacity-75"
+                    className=""
                     href="https://github.com/geogo-in"
                     target="_blank"
                     rel="noreferrer"
@@ -89,25 +92,25 @@ const Footer = () => (
                 <p className="font-medium text-white">Company</p>
                 <nav className="flex flex-col mt-4 space-y-2 text-sm">
                   <Link
-                    className="text-gray-300 cursor-pointer hover:text-green-500 no-underline py-[6px]"
+                    className="text-[#ffffff80] text-[16px] font-normal cursor-pointer hover:text-green-500 no-underline py-[6px]"
                     to="/company"
                   >
                     About Us
                   </Link>
                   <Link
-                    className="text-gray-300 cursor-pointer hover:text-green-500 no-underline py-[6px]"
+                    className="text-[#ffffff80] text-[16px] font-normal cursor-pointer hover:text-green-500 no-underline py-[6px]"
                     to="/terms"
                   >
                     Terms of Service
                   </Link>
                   <Link
-                    className="text-gray-300 cursor-pointer hover:text-green-500 no-underline py-[6px]"
+                    className="text-[#ffffff80] text-[16px] font-normal cursor-pointer hover:text-green-500 no-underline py-[6px]"
                     to="/privacy"
                   >
                     Privacy Policy
                   </Link>
                   <Link
-                    className="text-gray-300 cursor-pointer hover:text-green-500 no-underline py-[6px]"
+                    className="text-[#ffffff80] text-[16px] font-normal cursor-pointer hover:text-green-500 no-underline py-[6px]"
                     to="/life-at-geogo"
                   >
                     Life at Geogo
@@ -119,25 +122,25 @@ const Footer = () => (
                 <p className="font-medium text-white">Services</p>
                 <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
                   <Link
-                    className="text-gray-300 cursor-pointer hover:text-green-500 no-underline py-[6px]"
+                    className="text-[#ffffff80] text-[16px] font-normal cursor-pointer hover:text-green-500 no-underline py-[6px]"
                     to="/service/digital-product-development"
                   >
                     Digital Products Engineering
                   </Link>
                   <Link
-                    className="text-gray-300 cursor-pointer hover:text-green-500 no-underline py-[6px]"
+                    className="text-[#ffffff80] text-[16px] font-normal cursor-pointer hover:text-green-500 no-underline py-[6px]"
                     to="/service/agile-service-management"
                   >
                     Agile Service Management
                   </Link>
                   <Link
-                    className="text-gray-300 cursor-pointer hover:text-green-500 no-underline py-[6px]"
+                    className="text-[#ffffff80] text-[16px] font-normal cursor-pointer hover:text-green-500 no-underline py-[6px]"
                     to="/service/business-process-automation/"
                   >
                     Business Process Automation
                   </Link>
                   <Link
-                    className="text-gray-300 cursor-pointer hover:text-green-500 no-underline py-[6px]"
+                    className="text-[#ffffff80] text-[16px] font-normal cursor-pointer hover:text-green-500 no-underline py-[6px]"
                     to="/service/recruitment-training"
                   >
                     Recruitment & Training
@@ -146,19 +149,24 @@ const Footer = () => (
               </div>
 
               <div>
-                <p className="font-medium text-white">Contact Us</p>
+                <p className="font-medium text-[#53c07d] hover:text-white cursor-pointer     underline ">
+                  <a className="no-underline   text-[#53c07d] hover:text-white">
+                    {" "}
+                    Contact Us
+                  </a>
+                </p>
                 <nav className="flex flex-col  space-y-2 text-sm text-gray-500">
-                  <p className="text-lg text-gray-300  hover:text-green-500 no-underline">
+                  <p className="text-lg text-[#ffffff80] text-[14px] font-normal  hover:text-green-500 no-underline">
                     Our Offices
                   </p>
-                  <p className="text-lg text-gray-300  hover:text-green-500 no-underline">
+                  <p className="text-lg text-white font-normal text-[16px] hover:text-green-500 no-underline">
                     Bengaluru, India
                   </p>
 
-                  <p className="text-lg text-gray-300  hover:text-green-500 no-underline">
+                  <p className="text-lg text-white font-normal text-[16px] hover:text-green-500 no-underline">
                     Kolkata, India
                   </p>
-                  <p className="text-lg text-gray-300  hover:text-green-500 no-underline">
+                  <p className="text-lg text-white font-normal text-[16px]  hover:text-green-500 no-underline">
                     Texas, USA
                   </p>
                 </nav>

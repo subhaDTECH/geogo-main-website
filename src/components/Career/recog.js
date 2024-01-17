@@ -11,7 +11,7 @@ const RecogCom = () => (
         Recognition
       </h1>
       <section className="body-font md:mx-4">
-        <div className=" w-full md:container shadow-lg mx-auto flex px-5 py-2 md:flex-row flex-col justify-center items-center">
+        <div className=" w-full md:container border border-gray-300 hover:shadow-md mx-auto flex px-5 py-2 md:flex-row flex-col justify-center items-center">
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
             <img
               className="object-cover object-center rounded"

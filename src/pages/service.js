@@ -62,13 +62,22 @@ const ServicePage = ({ data }) => {
           <div className="container h-full w-full mx-auto sm:w-[90%]  m-3 my-10 p-10">
             {/* ... (existing code) */}
 
-            <div className="service-header  sm:mt-[100x] lg:mt-[10px]">
+            <div className="service-header  sm:mt-[100x] ">
               <h1 className="text-[46px] font-semibold">
                 Services<span className="text-green-500">.</span>
               </h1>
+              <h3 className="text-[28px] font-semibold">
+                Giving shape to ideas
+              </h3>
+              <p className="text-[18px]  opacity-0.8">
+                We build high quality digital products and we also ensure rapid
+                on-boarding of applications by automating end-to-end delivery
+                pipeline and facilitate continuous integration and development
+                across leading cloud platforms.
+              </p>
             </div>
 
-            <div className="row my-8 p-5 flex  flex-col lg:flex-row relative ">
+            <div className="row my-8 p-5 flex  flex-col lg:flex-row relative text-start">
               <div className="left-box   w-full lg:w-1/2 hidden lg:block">
                 <Sticky>
                   {({ style }) => (
@@ -78,7 +87,7 @@ const ServicePage = ({ data }) => {
                       style={{
                         ...style,
                         zIndex: 1000,
-                        top: style.isSticky ? "120px" : "120px",
+                        top: style.isSticky ? "150px" : "150px",
                       }}
                     >
                       {services_category &&

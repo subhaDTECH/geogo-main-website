@@ -3,7 +3,7 @@ import AboutImg from "../../images/about-img.jpg"
 
 const CompanyHero = () => (
   <div className="Company-Section mt-[100px] my-[100px] sm:my-[150px] lg:my-[80px]">
-    <div className="w-full  md:w-[95%]  p-5 m-3  flex flex-col mx-auto grid grid-cols-1 md:grid-cols-2 px-5 md:flex-col ">
+    <div className="w-full   sm:w-[95%]  p-5 m-3   mx-auto grid grid-cols-1 md:grid-cols-2 px-5  ">
       <div className="HeroTextContainer mx-3  sm:m-4 sm:p-4 order-2">
         <h2 className="text-[46px]">
           About Us<span className="text-green-500">.</span>
@@ -26,10 +26,10 @@ const CompanyHero = () => (
           values, ethics and to our roots. We are GeoGO !!
         </p>
       </div>
-      <div className="HeroImgContainer1 sm:m-4 sm:p-4 order-2 mx-3">
+      <div className=" h-[300px] md:h-[500px]   lg:p-[30px] w-[80%] sm:m-4 sm:p-4 order-2 mx-3">
         <img
           alt="Img"
-          className="w-[100%] h-[100%] object-contain"
+          className="w-[100%] h-[100%] object-contain lg:p-[20px]"
           src={AboutImg}
         />
       </div>

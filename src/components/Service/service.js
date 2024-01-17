@@ -159,7 +159,7 @@ const Service = ({ services, clients, tools, posts, reviews }) => {
         </div>
         <div className="hover-btn btn-continer mx-auto my-10 text-center transition-all duration-300 ease-in-out">
           <Link to="/company">
-            <button className="border border-black bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4  rounded shadow">
+            <button className="border border-black bg-[#f8f8f8]  text-gray-800 font-semibold py-2 px-4  rounded shadow">
               LEARN MORE ABOUT OUR COMPANY
             </button>
           </Link>
@@ -168,7 +168,7 @@ const Service = ({ services, clients, tools, posts, reviews }) => {
         <OurClient clients={clients} />
         <Review reviews={reviews} />
         <Technology tools={tools} />
-        <Post posts={posts} />
+        {/* <Post posts={posts} /> */}
         <OurPatner />
       </div>
     </div>

@@ -31,41 +31,47 @@ const Review = ({ reviews }) => (
               return (
                 <div
                   key={index}
-                  className="bg-white border border-gray-300 rounded-lg overflow-hidden shadow-lg transition-transform transform ease-in-out hover:shadow-xl "
+                  className="bg-[#f8f8f8] hover:bg-white border border-gray-300 rounded-lg overflow-hidden shadow-lg transition-transform transform ease-in-out hover:shadow-xl "
                 >
                   <div className="p-1 bg-[#53c07d]"></div>
                   <div className="p-8">
                     <div className="flex items-center justify-between">
-                      <div className="start-container">
+                      <div className="start-container mt-3">
                         <img
+                          className="w-[100%] h-[100%] object-contain"
                           alt="Img"
                           src={review?.review_platform_image?.localFile?.url}
                         />
-                        <p className="text-sm">THE REVIEW</p>
                       </div>
                       {/* <div className=" w-[40px] h-[40px] p-2 bg-green-500 text-white rounded-full flex items-center  justify-center">
                         <p className="text-sm">{review?.rating}</p>
                       </div> */}
-                      <span className="flex items-center  text-[24px]">
-                        {Math.round(review?.rating)}
-                        <span className="mx-2">
-                          <StarRating rating={review?.rating} />
+                      <div>
+                        <span className="flex items-center  text-[24px] mb-3">
+                          {Math.round(review?.rating)}
+                          <span className="mx-2">
+                            <StarRating rating={review?.rating} />
+                          </span>
                         </span>
-                      </span>
+                      </div>
                     </div>
-                    <p className="mb-2 text-lg">{review?.review_text}</p>
+                    <p className="text-sm text-gray-400">THE REVIEW</p>
+
+                    <p className="mb-2 text-lg">
+                      {review?.review_text.substring(0, 140)}...
+                    </p>
                     <p className="text-sm  text-gray-800">
                       {review?.author_name}
                     </p>
                   </div>
-                  <div className="p-4">
+                  <div className="p-4 text-center">
                     <a
                       target="_blank"
                       rel="noreferrer"
                       className="no-underline text-white ml-2"
                       href={review?.link}
                     >
-                      <button className="bg-[#32373c] w-[160px] mx-auto  text-white rounded-sm px-4 py-2  focus:outline-none focus:shadow-outline-blue active:bg-blue-800">
+                      <button className="bg-[#32373c]  w-[70%] mx-auto  text-white rounded-sm px-4 py-2  focus:outline-none focus:shadow-outline-blue active:bg-blue-800">
                         View Full Review
                       </button>
                     </a>
@@ -77,12 +83,12 @@ const Review = ({ reviews }) => (
       </div>
 
       <div className="btn-continer mx-auto mb-8  mt-[60px] text-center  transition-all duration-300 ease-in-out">
-        <button className="hover-btn bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-black rounded shadow">
+        <button className="hover-btn bg-[#f8f8f8]  text-gray-800 font-semibold py-2 px-4 border border-black rounded shadow">
           <a
             target="_blank"
             rel="noreferrer"
             href="https://clutch.co/profile/geogo-techsolutions"
-            className="no-underline text-black"
+            className="no-underline text-black text-[14px]"
           >
             OUR CLUT<span className="text-orange-400">C</span>H PROFILE
           </a>
