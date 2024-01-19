@@ -5,10 +5,10 @@ import Seo from "../components/seo"
 const WeAerAgilePage = () => {
   return (
     <Layout>
-      <div className="weareagile-Section my-[100px] sm:my-[180px]">
-        <div className="container h-full mx-auto w-[95%]  m-3 my-10 p-10 bg-white">
+      <div className="weareagile-Section my-[70px] sm:my-[180px]">
+        <div className="w-full lg:container h-full mx-auto md:w-[95%]  m-3 my-10 lg:p-10 bg-white">
           <div className="py-6">
-            <h2 className="text-4xl md:text-6xl font-semibold p-5">
+            <h2 className="text-[32px] md:text-[46px] font-semibold p-5">
               We are Agile
             </h2>
           </div>

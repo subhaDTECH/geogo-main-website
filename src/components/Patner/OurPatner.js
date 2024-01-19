@@ -4,7 +4,7 @@ import * as React from "react"
 import "./OurPatner.css"
 const OurPatner = () => (
   <div className="OurPatner-Section">
-    <div className="container mx-auto w-[95%] p-10">
+    <div className="md:container mx-auto w-full md:w-[95%] p-3 lg:p-10">
       <h3 className="title my-10">Our Patners</h3>
       <div className="row grid grid-cols-2 md:grid-cols-4 gap-2">
         <div className=" w-[100%] h-[80px]   p-4 md:m-3">
@@ -21,7 +21,7 @@ const OurPatner = () => (
             />
           </a>
         </div>
-        <div className=" w-[100%] h-[80px]   p-4 md:m-3">
+        <div className=" w-[100%] h-[80px]   sm:p-4 md:m-3">
           <a
             className="no-underline"
             target="_blank"

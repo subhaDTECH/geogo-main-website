@@ -10,10 +10,10 @@ const LifeAtGeogoPage = ({ data }) => {
   return (
     <Layout>
       <div className="life-Section my-[150px] sm:my-[180px] lg:my-[200px] w-full">
-        <div className="container h-full mx-auto w-[95%]  m-3 my-10 p-10 bg-white">
-          <h2 className="px-3  text-[36px] lg:text-[46px] mb-4 pb-3">
+        <div className="lg:container h-full mx-auto lg:w-[95%]  m-3 my-10 sm:p-10 bg-white">
+          <h1 className="px-3  text-[36px] lg:text-[36px] mb-4 pb-3">
             Life at Geogo<span className="text-green-500">.</span>
-          </h2>
+          </h1>
           <div className="bg-white h-[100%] py-8 sm:py-8 lg:py-12">
             {events &&
               events?.map((event, index) => {

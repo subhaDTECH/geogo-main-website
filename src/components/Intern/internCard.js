@@ -4,8 +4,8 @@ import * as React from "react"
 
 const InternCard = ({ programs }) => {
   return (
-    <div className="Job-Section my-6 py-5 p-5">
-      <div className="mx-auto w-full md:w-[90%] p-5 m-3 my-5">
+    <div className="Job-Section my-6 py-5 sm:p-5 mr-[17px]">
+      <div className="mx-auto w-full lg:w-[90%]  sm:p-5 m-3 my-5">
         <h1 className="mx-3  text-2xl md:text-4xl font-bold  p-2 m-2">
           Intern with us
         </h1>

@@ -5,6 +5,7 @@
 // row my-8 p-5 w-[100%] flex flex-row relative
 //left-sidebar-box lg:w-1/2 hidden md:block
 //w-[100%] top-[-50px]
+import HiringImg from "../images/hiring-img5.jpg"
 import React, { useState, useEffect, useRef } from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -38,6 +39,7 @@ const ServicePage = ({ data }) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           setActiveSectionId(entry.target.id)
+          console.log(entry.target.id)
         }
       })
     }, options)
@@ -59,22 +61,22 @@ const ServicePage = ({ data }) => {
     <Layout>
       <StickyContainer>
         <section className="service-page-section relative my-[150px] sm:my-[180px]">
-          <div className="container h-full w-full mx-auto sm:w-[90%]  m-3 my-10 p-10">
+          <div className="container h-full w-full mx-auto lg:w-[90%]  m-3 my-10 p-3 sm:p-10">
             {/* ... (existing code) */}
 
             <div className="service-header  sm:mt-[100x] ">
-              <h1 className="text-[46px] font-semibold">
+              <h1 className="text-[36px] sm:text-[46px]  font-semibold">
                 Services<span className="text-green-500">.</span>
               </h1>
-              <h3 className="text-[28px] font-semibold">
+              {/* <h3 className="text-[28px] font-semibold">
                 Giving shape to ideas
               </h3>
-              <p className="text-[18px]  opacity-0.8">
+              <p className="text-[21px]  opacity-0.8">
                 We build high quality digital products and we also ensure rapid
                 on-boarding of applications by automating end-to-end delivery
                 pipeline and facilitate continuous integration and development
                 across leading cloud platforms.
-              </p>
+              </p> */}
             </div>
 
             <div className="row my-8 p-5 flex  flex-col lg:flex-row relative text-start">
@@ -87,7 +89,7 @@ const ServicePage = ({ data }) => {
                       style={{
                         ...style,
                         zIndex: 1000,
-                        top: style.isSticky ? "150px" : "150px",
+                        top: style.isSticky ? "100px" : "100px",
                       }}
                     >
                       {services_category &&
@@ -97,7 +99,7 @@ const ServicePage = ({ data }) => {
                             onClick={() => {
                               // setActiveSectionId(index)
                               const element = document.getElementById(
-                                service?.slug
+                                service?.type
                               )
                               if (element) {
                                 element.scrollIntoView({
@@ -106,13 +108,13 @@ const ServicePage = ({ data }) => {
                               }
                             }}
                             className={`m-2 p-2 cursor-pointer ${
-                              service?.slug === activeSectionId &&
+                              service?.type === activeSectionId &&
                               "text-green-500"
                             }`}
                           >
                             <a
                               className={`no-underline  ${
-                                service?.slug === activeSectionId &&
+                                service?.type === activeSectionId &&
                                 "text-green-500"
                               } `}
                             >
@@ -125,36 +127,43 @@ const ServicePage = ({ data }) => {
                 </Sticky>
               </div>
 
-              <div ref={sectionsRef} className="right-box  w-full  top-[-50px]">
+              <div
+                ref={sectionsRef}
+                className="right-box   w-full  top-[-50px]"
+              >
                 {services &&
                   services.map((service, index) => (
                     <section
                       // ref={el => (sectionsRef.current[index] = el)}
                       key={index}
-                      id={service?.slug}
-                      className=" h-auto lg:h-[400px] text-start md:text-start w-[100%] border border-gray-200 digital-product-box my-8 p-5 shadow-lg"
+                      id={service?.type}
+                      className=" h-auto lg:h-[400px] text-start md:text-start w-[100%] border  border-gray-300 digital-product-box my-8 p-2 shadow-lg"
                     >
-                      <h3 className="text-sm my-2 top-0 right-0 text-right mt-4">
-                        {service?.type}
-                      </h3>
-                      <p className="text-[18px] sm:text-[20px] opacity-0.8 font-semibold">
-                        {service?.sub_title}
-                      </p>
-                      <p className="text-[16px] opacity-0.8">
-                        {service?.description}
-                      </p>
-                      <p className="text-[18px]">{service?.technology}</p>
+                      <div className="w-full p-4">
+                        <h3 className="text-sm my-2 top-0 right-0 text-right mt-4">
+                          {service?.type}
+                        </h3>
+                        <p className="text-[22px] sm:text-[20px] opacity-0.8 font-semibold">
+                          {service?.sub_title}
+                        </p>
+                        <p className="text-[18px] opacity-0.8 text-[##000000DE]">
+                          {service?.description}
+                        </p>
+                        <p className="text-[20px] font-normal">
+                          {service?.technology}
+                        </p>
 
-                      {service?.content?.data?.content && (
-                        <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-                          <Link
-                            to={`${service?.slug}`}
-                            className="no-underline text-black"
-                          >
-                            Read More..
-                          </Link>
-                        </button>
-                      )}
+                        {service?.content?.data?.content && (
+                          <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                            <Link
+                              to={`${service?.slug}`}
+                              className="no-underline text-black"
+                            >
+                              Read More..
+                            </Link>
+                          </button>
+                        )}
+                      </div>
                     </section>
                   ))}
               </div>

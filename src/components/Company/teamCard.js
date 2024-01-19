@@ -5,14 +5,14 @@ import * as React from "react"
 
 const Teamcard = ({ teams }) => (
   <div className="Team-Section">
-    <div className="w-full   mx-auto lg:w-[95%]  md:m-3  p-10">
+    <div className="w-full   mx-auto lg:w-[95%]  md:m-3 p-3 sm:p-10">
       <section className="body-font">
         <section className="text-gray-600 body-font">
-          <div className="w-full px-5 mx-auto">
+          <div className="w-ful px-2l lg:px-5 mx-auto">
             {/* start  */}
 
             <div className="mb-16">
-              <div className="container-full flex justify-center mx-auto pt-16">
+              <div className="container-full flex justify-center mx-auto pt-2 sm:pt-16">
                 <div>
                   <p className="text-gray-500 mx-auto text-[20px] md:text-lg text-center font-normal pb-3">
                     BUILDING TEAM

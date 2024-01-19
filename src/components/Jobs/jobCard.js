@@ -11,11 +11,11 @@ const JobCard = ({ jobs }) => {
   // console.log("image", jobs[0])
   return (
     <div className="Job-Section px-5 p-5">
-      <div className=" mx-auto w-full md:w-[95%]  m-3  px-5">
-        <h1 className="text-3xl md:text-4xl font-bold  p-2 m-2 mx-5">
+      <div className=" mx-auto w-full lg:w-[95%]  m-3  sm:px-5">
+        <h1 className="text-3xl md:text-4xl font-bold  lg:p-2 lg:m-2 lg:mx-5">
           Want to Join Us?
         </h1>
-        <h2 className="text-xl md:text-3xl font-semibold   p-2 m-2 mx-5">
+        <h2 className="text-xl md:text-3xl font-semibold   lg:p-2 lg:m-2 lg:mx-5">
           Find Your Role
         </h2>
 

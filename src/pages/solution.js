@@ -49,9 +49,9 @@ const SolutionPage = ({ data }) => {
     <Layout>
       <StickyContainer>
         <div className="service-page-section my-[150px]">
-          <div className="container  h-full mx-auto w-[90%]  m-3 my-10 p-10 ">
+          <div className="sm:container  h-full mx-auto w-full lg:w-[90%]  m-3 my-10 p-3 sm:p-10 ">
             <div className="service-header sm:my-[100px] lg:my-[10px]">
-              <h1 className="text-[46px] font-semibold">
+              <h1 className="text-[36px] md:text-[46px] font-semibold">
                 Solutions<span className="text-green-500">.</span>
               </h1>
             </div>
@@ -117,15 +117,15 @@ const SolutionPage = ({ data }) => {
                     <section
                       key={index}
                       id={solution?.type}
-                      className="w-full border border-gray-200 h-auto md:h-[400px]  digital-product-box my-8 p-5 shadow-lg"
+                      className="w-full border border-gray-300 h-auto md:h-[400px]  digital-product-box my-8 p-5 shadow-lg"
                     >
                       <h3 className="text-sm my-2 top-0 right-0 text-right mt-5">
                         {solution?.type}
                       </h3>
-                      <p className="text-[18px] sm:text-[20px] opacity-0.8 font-semibold">
+                      <p className="text-[22px] sm:text-[20px] opacity-0.8 font-semibold">
                         {solution?.title}
                       </p>
-                      <p className="text-[16px] opacity-0.8">
+                      <p className="text-[18px] opacity-0.8 text-[##000000DE]">
                         {solution?.description}
                       </p>
 
@@ -161,7 +161,7 @@ export const query = graphql`
         }
       }
     }
-    allStrapiSolution(sort: { solution_category: { priority: ASC } }) {
+    allStrapiSolution(sort: { piority: ASC }) {
       nodes {
         slug
         title

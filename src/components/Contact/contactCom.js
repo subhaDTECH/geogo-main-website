@@ -2,9 +2,11 @@ import React from "react"
 import FooterImg1 from "../../images/footer-logo1.png"
 import FooterImg2 from "../../images/footer-logo2.png"
 import TabDialog from "./Tab"
+import { useOpenState } from "../OpenStateProvider"
 
 const ContactCom = () => {
-  const [open, setOpen] = React.useState(false)
+  // const [open, setOpen] = React.useState(false)
+  const { open, setOpen } = useOpenState()
 
   const handleClickOpen = () => {
     setOpen(true)
@@ -13,14 +15,6 @@ const ContactCom = () => {
   const handleClose = () => {
     setOpen(false)
   }
-  // ;<TabDialog
-  //   open={open}
-  //   handleClickOpen={handleClickOpen}
-  //   handleClose={handleClose}
-  // />
-  //sevice_category
-  //belongs to many
-  //services
 
   return (
     <>
@@ -31,20 +25,19 @@ const ContactCom = () => {
           handleClose={handleClose}
         />
       )}
-      (
-      <div className=" h-[100%] w-[90%] mx-auto flex flex-col justify-between lg:flex-row my-10">
-        <div className="right-box row  w-full my-5    text-black">
-          <div className="mx-4 p-4 my-2">
-            <h2 className="px-4 text-black text-2xl sm:text-5xl">
+      <div className="  w-[90%] mx-auto flex flex-col justify-between lg:flex-row my-3 sm:my-[28px] lg:my-10">
+        <div className="right-box row  w-full my-5  sm:mt-[60px] lg:mt-[20px]  text-black">
+          <div className="lg:mx-4 lg:p-4 my-2">
+            <h1 className="lg:px-4 text-black text-[36px] sm:text-5xl ">
               Let's have a talk <span className="text-green-500">.</span>
-            </h2>
-            <p className="px-4 text-[18px]">
+            </h1>
+            <p className="lg:px-4 text-[18px]">
               Just tell us what you want from us.
             </p>
           </div>
 
-          <div className="right-box-context  flex justify-between flex-col lg:flex-row flex-row mx-10 gap-2">
-            <div className="btn-box-container w-full  flex flex-col items-center justify-center">
+          <div className="right-box-context  flex justify-between flex-col lg:flex-row flex-row lg:mx-10 gap-2">
+            <div className="btn-box-container lg:w-1/2 w-full  flex flex-col items-center justify-center">
               <button
                 type="button"
                 data-hs-overlay="#hs-full-screen-modal"
@@ -76,16 +69,16 @@ const ContactCom = () => {
                 Discuss about something else
               </button>
             </div>
-            <div className="content-box m-3  flex  flex-col  justify-center">
-              <div className="flex flex-row justify-center">
-                <div className="footer-img-container  w-[80px] h-[80px] md:w-[50px] md:h-[50px]">
+            <div className="content-box m-3  flex  flex-col  justify-center sm:mx-3">
+              <div className="flex flex-row justify-center sm:mx-3">
+                <div className="footer-img-container  w-[100px] h-[100px] lg:w-[70px] lg:h-[70px] ">
                   <img
                     alt="img"
                     className="w-[100%] h-[100%] object-contain"
                     src={FooterImg1}
                   />
                 </div>
-                <div className="p-2 m-2">
+                <div className="p-2 m-2 lg:mx-3">
                   <h3 className="text-lg">Confidentiality Assured!</h3>
                   <p className="text-sm">
                     We are assuring you, your words will stay within us. If you
@@ -94,8 +87,8 @@ const ContactCom = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-row justify-center">
-                <div className="footer-img-container w-[80px] h-[80px] md:w-[50px] md:h[50px] ">
+              <div className="flex flex-row justify-center sm:mx-3 sm:mx-0">
+                <div className="footer-img-container w-[100px] h-[100px] lg:w-[70px] lg:h-[70px] ">
                   <img
                     alt="img"
                     className="w-[100%] h-[100%] object-contain"
@@ -114,7 +107,6 @@ const ContactCom = () => {
           </div>
         </div>
       </div>
-      )
     </>
   )
 }

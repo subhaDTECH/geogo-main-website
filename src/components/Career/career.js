@@ -6,14 +6,14 @@ import "./Career.css"
 // m-4 lg:mt-[100px] h-[300px] lg:h-[450px] order-2 md:order-1 lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0 mx-auto text-center
 const CareerHero = () => (
   <div className="Career-Section mt-[150px] lg:mt-[20px]">
-    <div className="text-start  mx-auto w-full md:w-[95%] p-5 m-3 sm:my-10 ">
+    <div className="text-start  mx-auto w-full lg:w-[95%] sm:p-5 m-3 sm:my-10 ">
       <h1 className="title-heading text-3xl md:text-5xl mb-4 font-medium mx-5 mt-[100px]  pt-5 sm:p-4">
         Crafting software with a human touch
         <span className="text-green-500">.</span>
       </h1>
       <section className="body-font w-[95%] mx-auto mt-[80px]">
         <div className="grid gird-cols-1 sm:grid-cols-2 gap-3">
-          <div className="w-full  lg:w-[80%] h-[400px] order-2 sm:order-1 p-3">
+          <div className="w-full  lg:w-[80%] h-[400px] order-1 sm:order-2 p-3 ">
             <img
               className="object-cover object-center rounded my-3 w-[100%] h-[100%]"
               alt="hero"

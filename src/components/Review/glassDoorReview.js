@@ -4,7 +4,7 @@ import * as React from "react"
 
 const GlassDoorReview = () => (
   <div className="Career-Section">
-    <div className="mx-auto w-full md:w-[90%]  m-3 px-10 ">
+    <div className="mx-auto w-full lg:w-[90%]  m-3 px-[15px] sm:px-10 ">
       <div className="review-container w-[280px] h-[100px]">
         <img
           alt="img"

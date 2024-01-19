@@ -57,6 +57,13 @@ body {
   padding: 0px;
   box-sizing: border-box;
   overflow-y: hidden;
+  color: #000000DE;
+}
+html{
+  font-family: Avenir Next, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, system-ui, -apple-system, sans-serif;
+}
+p{
+  font-family: Avenir Next, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, system-ui, -apple-system, sans-serif;
 }
 a {
   background-color: transparent;

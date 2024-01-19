@@ -6,12 +6,12 @@ import StartUpImg from "../../images/startupIndia3.jpg"
 
 const RecogCom = () => (
   <div className="">
-    <div className="w-full  mx-auto md:w-[95%]    p-10">
-      <h1 className="text-4xl  font-medium md:mx-5 leading-tight  md:px-5">
+    <div className="w-full  mx-auto lg:w-[95%]   p-3 lg:p-10">
+      <h2 className="text-[32px] my-3 sm:text-[46px]  font-medium md:mx-5 leading-tight  md:px-5">
         Recognition
-      </h1>
+      </h2>
       <section className="body-font md:mx-4">
-        <div className=" w-full md:container border border-gray-300 hover:shadow-md mx-auto flex px-5 py-2 md:flex-row flex-col justify-center items-center">
+        <div className="my-[20px] w-full md:container border border-gray-300 hover:shadow-md mx-auto flex px-5 py-2 md:flex-row flex-col justify-center items-center">
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
             <img
               className="object-cover object-center rounded"

@@ -13,23 +13,23 @@ const CareerCard = () => (
     <div className=" h-full mx-auto w-[100%]  my-10 ">
       {/* first row start  */}
       <div className="row w-[100%]    grid grid-cols-1 md:grid-cols-4">
-        <div className="box h-[360px] w-full flex flex-col justify-center order-2 md:order-none">
-          <h2 className="text-2xl lg:text-[36px] font-medium px-4 p-4">
+        <div className="box h-auto sm:h-[360px] w-full flex flex-col justify-center order-2 md:order-none">
+          <h2 className="text-[32px] lg:text-[36px] font-medium px-4 p-4">
             Core Values
           </h2>
           <p className="text-[18px] px-4 ">
             We will be AGILE in doing what we do.
           </p>
         </div>
-        <div className="box h-[360px] w-full md:order-none">
+        <div className="box h-auto sm:h-[360px] w-full md:order-none">
           <img
             alt="img"
             className="w-full h-full object-cover"
             src={CareersImg2}
           />
         </div>
-        <div className="box h-[360px] w-full flex flex-col  justify-center md:order-none">
-          <h2 className="text-2xl md:text-[36px] font-medium px-4 p-4">
+        <div className="box h-auto sm:h-[360px] w-full flex flex-col  justify-center md:order-none">
+          <h2 className="text-[32px] md:text-[36px] font-medium px-4 p-4">
             Craft
           </h2>
           <p className="text-[18px] px-4">
@@ -38,23 +38,23 @@ const CareerCard = () => (
             level every single time.
           </p>
         </div>
-        <div className="box h-[360px] w-full md:order-none">
-          <img alt="img " className="w-full h-full" src={CareersImg3} />
+        <div className="box h-auto sm:h-[360px] w-full md:order-none">
+          <img alt="img" className="w-full h-full" src={CareersImg3} />
         </div>
       </div>
       {/* first row end  */}
 
       {/* 2nd row start  */}
       <div className="row  shadow-lg flex grid grid-cols-1 md:grid-cols-4">
-        <div className="box h-[360px] w-full ">
+        <div className="box h-auto sm:h-[360px] w-full ">
           <img
             alt="img"
             className="w-full h-full object-cover"
             src={CareersImg1}
           />
         </div>
-        <div className="box h-[360px] w-full flex flex-col justify-center">
-          <h4 className="text-2xl md:text-[36px] font-medium px-2 p-4">
+        <div className="box  h-auto sm:h-[360px] w-full flex flex-col justify-center">
+          <h4 className="text-[32px] md:text-[36px] font-medium px-4 sm:px-2 p-4">
             Open Discussions
           </h4>
           <p className="text-[18px] px-4 ">
@@ -63,15 +63,15 @@ const CareerCard = () => (
           </p>
         </div>
 
-        <div className="box h-[360px] w-full">
+        <div className="box h-auto sm:h-[360px] w-full">
           <img
             alt="img"
             className="w-full h-full object-cover"
             src={CareersImg4}
           />
         </div>
-        <div className="box h-[360px] w-full flex flex-col  justify-center">
-          <h4 className="text-2xl md:text-[36px] font-medium px-4 p-4">
+        <div className="box h-auto sm:h-[360px] w-full flex flex-col  justify-center">
+          <h4 className="text-[32px] md:text-[36px] font-medium px-4 p-4">
             Ownership
           </h4>
           <p className="text-[18px] px-4">
@@ -86,8 +86,8 @@ const CareerCard = () => (
 
       {/* 3rd row start  */}
       <div className="row  shadow-lg flex grid grid-cols-1 md:grid-cols-4">
-        <div className="box h-[360px] w-full flex flex-col justify-center order-2 md:md:order-none">
-          <h4 className="text-2xl lg:text-[36px] font-medium px-4 p-4">
+        <div className="box h-auto sm:h-[360px] w-full flex flex-col justify-center order-2 md:md:order-none">
+          <h4 className="text-[32px] lg:text-[36px] font-medium px-4 p-4">
             Teamwork
           </h4>
           <p className="text-[18px] px-4">
@@ -96,15 +96,15 @@ const CareerCard = () => (
             our team..
           </p>
         </div>
-        <div className="box h-[360px] w-full order-1 md:md:order-none">
+        <div className="box h-auto sm:h-[360px] w-full order-1 md:md:order-none">
           <img
             alt="img"
             className="w-full h-full object-cover"
             src={CareersImg5}
           />
         </div>
-        <div className="box h-[360px] w-full flex flex-col  justify-center order-4 md:md:order-none">
-          <h4 className="text-2xl md:text-[36px] font-medium px-4 p-4">
+        <div className="box h-auto sm:h-[360px] w-full flex flex-col  justify-center order-4 md:md:order-none">
+          <h4 className="text-[32px] md:text-[36px] font-medium px-4 p-4">
             & Life
           </h4>
           <p className="text-[18px] px-4">
@@ -112,7 +112,7 @@ const CareerCard = () => (
             fulfilments will be high enough to enjoy a real holistic life..
           </p>
         </div>
-        <div className="box h-[360px] w-full order-3 md:md:order-none">
+        <div className="box h-auto sm:h-[360px] w-full order-3 md:md:order-none">
           <img
             alt="img"
             className="w-full h-full object-cover"

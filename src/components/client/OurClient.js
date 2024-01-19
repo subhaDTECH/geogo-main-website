@@ -8,7 +8,7 @@ import "./ourClient.css"
 const OurClient = ({ clients }) => {
   return (
     <div className="OurClient-Section mt-[60px]">
-      <div className="container  mx-auto w-[95%] p-5 ">
+      <div className="md:container  mx-auto w-full md:w-[95%] p-3 md:p-5 ">
         <h3 className="title my-10">Our Clients and their words about us</h3>
         <div className=" row grid grid-cols-2  lg:grid-cols-6 gap-5 mx-3">
           {clients &&

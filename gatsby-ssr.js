@@ -10,3 +10,15 @@
 exports.onRenderBody = ({ setHtmlAttributes }) => {
   setHtmlAttributes({ lang: `en` })
 }
+
+// gatsby-ssr.js
+// import React from "react"
+// import { OpenStateProvider } from "./src/components/layout.js"
+
+// export const onRenderBody = ({ setHtmlAttributes }) => {
+//   setHtmlAttributes({ lang: "en" })
+// }
+
+// export const wrapRootElement = ({ element }) => {
+//   return <OpenStateProvider>{element}</OpenStateProvider>
+// }

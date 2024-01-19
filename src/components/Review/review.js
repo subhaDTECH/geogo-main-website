@@ -21,7 +21,7 @@ const StarRating = ({ rating }) => {
 
 const Review = ({ reviews }) => (
   <div className="">
-    <div className="container h-full mx-auto w-[95%]  px-3 mt-[40px] ">
+    <div className="sm:container h-full mx-auto w-full sm:w-[95%]  px-3 mt-[40px] ">
       <div className=" flex items-center justify-center">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* frist review box start  */}
@@ -83,14 +83,14 @@ const Review = ({ reviews }) => (
       </div>
 
       <div className="btn-continer mx-auto mb-8  mt-[60px] text-center  transition-all duration-300 ease-in-out">
-        <button className="hover-btn bg-[#f8f8f8]  text-gray-800 font-semibold py-2 px-4 border border-black rounded shadow">
+        <button className="hover-btn bg-[#f8f8f8]  mx-2 text-gray-800 font-semibold py-2 px-4 border-2 border-black rounded shadow">
           <a
             target="_blank"
             rel="noreferrer"
             href="https://clutch.co/profile/geogo-techsolutions"
-            className="no-underline text-black text-[14px]"
+            className="no-underline text-black text-[16px]"
           >
-            OUR CLUT<span className="text-orange-400">C</span>H PROFILE
+            Our Clut<span className="text-orange-400">c</span>h Profile
           </a>
         </button>
       </div>

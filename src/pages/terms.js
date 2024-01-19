@@ -10,9 +10,9 @@ const TearmsPage = ({ data }) => {
   return (
     <Layout>
       <div className="Terms-Section w-full my-[130px] lg:my-[200px]">
-        <div className="sm:container h-full mx-auto w-[100%] md:w-[60%]  m-3 my-10 p-10 ">
+        <div className="sm:container h-full mx-auto w-[100%] lg:w-[60%]  m-3 my-10 p-4 sm:p-10 ">
           <h2 className="text-3xl  sm:text-4xl font-semibold mt-8">
-            {termsData.title}
+            {termsData.title} <span className="text-green-500">.</span>
           </h2>
           <div>
             <ReactMarkdown>{termsData?.content?.data?.content}</ReactMarkdown>

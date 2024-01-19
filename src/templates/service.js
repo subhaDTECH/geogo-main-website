@@ -13,9 +13,11 @@ const ServiceTemplates = ({ data }) => {
 
   return (
     <Layout>
-      <div className="container mx-auto py-10 my-[90px]">
-        <div className="w-[90%] p-4 m-4  md:w-[50%] mx-auto flex flex-col justify-center">
-          <h3 className="text-[36px] font-bold my-2">{service?.title}</h3>
+      <div className="sm:container w-[97%] mx-auto py-10 my-[90px]">
+        <div className="w-[95%] sm:p-4 m-4  lg:w-[50%] mx-auto flex flex-col justify-center sm:mt-[80px]">
+          <h3 className="text-[36px] font-semibold my-2 sm:mt[60px]">
+            {service?.title}
+          </h3>
           <p className="text-[22px] py-3">{service?.description}</p>
 
           <ReactMarkdown>{service?.content?.data?.content}</ReactMarkdown>

@@ -10,7 +10,7 @@ const PrivacyPage = ({ data }) => {
   return (
     <Layout>
       <div className="privacy-Section my-[150px] md:my-[200px]">
-        <div className="container h-full mx-auto w-[100%] md:w-[50%]  m-3 my-10 p-10 ">
+        <div className="sm:container h-full mx-auto w-[100%] lg:w-[50%]  m-3 my-10 p-4 sm:p-10 ">
           <h2 className="text-3xl  sm:text-4xl font-semibold">
             {privacyData?.title}
             <span className="text-green-500">.</span>

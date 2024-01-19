@@ -22,7 +22,7 @@ import Review from "../Review/review.js"
 const Service = ({ services, clients, tools, posts, reviews }) => {
   return (
     <div className="Service-Section">
-      <div className="h-full mx-auto w-[96%]  m-3 my-10 p-10">
+      <div className="h-full mx-auto w-full md:w-[96%] lg:w-full  sm:m-3 my-10 p-3 sm:p-[10px] lg:p-10">
         <h1 className="title my-4 py-2">Our Core Services</h1>
         <div className="row grid grid-cols-1 md:grid-cols-2 gap-5  mx-auto ">
           {services &&
@@ -55,7 +55,7 @@ const Service = ({ services, clients, tools, posts, reviews }) => {
 
       {/* team part section  */}
       <div className="service-team-section">
-        <div className="container h-full mx-auto w-[96%]  m-3  p-10">
+        <div className="sm:container h-full  mx-auto w-full lg:w-[100%]  sm:m-3 p-3 sm:p-[15px] lg:p-10">
           <h2 className="title my-6">
             We’re a team of thinkers and problem solvers
           </h2>
@@ -159,7 +159,7 @@ const Service = ({ services, clients, tools, posts, reviews }) => {
         </div>
         <div className="hover-btn btn-continer mx-auto my-10 text-center transition-all duration-300 ease-in-out">
           <Link to="/company">
-            <button className="border border-black bg-[#f8f8f8]  text-gray-800 font-semibold py-2 px-4  rounded shadow">
+            <button className="border-2  border-black bg-[#f8f8f8]  text-gray-800 font-semibold py-2 px-4  rounded shadow">
               LEARN MORE ABOUT OUR COMPANY
             </button>
           </Link>

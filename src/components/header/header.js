@@ -81,7 +81,7 @@ const Header = ({ siteTitle }) => {
           </div>
         </div>
       ) : (
-        <div className="w-[100%]  h-[14vh]   flex  px-5  flex-row items-center justify-between  mx-auto">
+        <div className="w-[100%]  h-[14vh]   flex  pl-2 pr-3 sm:px-5  flex-row items-center justify-between  mx-auto">
           <div className={`${logoContainer}`}>
             <Link to="/">
               <img alt="Img" className={logoImg} src={GeogoLogo} />
@@ -131,7 +131,10 @@ const Header = ({ siteTitle }) => {
           </nav>
 
           <div className="block sm:hidden">
-            <FaBars className="w-[30px] h-[30px]" onClick={handleTab} />
+            <FaBars
+              className="w-[30px] h-[30px] ml-[10px]"
+              onClick={handleTab}
+            />
           </div>
         </div>
       )}
