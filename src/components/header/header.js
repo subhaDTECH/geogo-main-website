@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useEffect, useRef, useState } from "react"
 import { Link } from "gatsby"
 import GeogoLogo from "../../images/geogo-logo-1.png"
 import { FaBars } from "react-icons/fa"
@@ -6,17 +6,29 @@ import { FaBars } from "react-icons/fa"
 import { logoImg, myClass, logoContainer } from "./header.module.css"
 // import Demo from "./demo"
 import { IoCloseSharp } from "react-icons/io5"
-const Header = ({ siteTitle }) => {
+const Header = ({ setIsOpen, atTopOfPage, siteTitle }) => {
   const [open, setOpen] = React.useState(false)
+
+  // const [atTopOfPage, setAtTopOfPage] = useState(true)
+
+  // console.log(atTopOfPage, "page")
+  // const containerRef = useRef(null)
 
   const handleTab = () => {
     setOpen(!open)
   }
 
   return (
-    <header className=" h-[14vh] w-[100vw]  body-font shadow-lg  fixed top-0 z-10 bg-white">
+    <header
+      // ref={containerRef}
+      className={`h-[14vh] w-[100vw] body-font fixed top-0 z-10 bg-white ${
+        atTopOfPage ? "" : "shadow-md"
+      }`}
+
+      //className=" h-[14vh] w-[100vw]  body-font shadow-lg  fixed top-0 z-10 bg-white"
+    >
       {open ? (
-        <div className="header-mobile w-[100%] bg-white  h-[100vh]   ease-in-out duration-300">
+        <div className="header-mobile  bg-white w-[100%]   h-[100vh]   ease-in-out duration-300">
           <div className="container  flex flex-wrap px-5 my-5 flex-row items-center justify-between  mx-auto">
             <div className={logoContainer}>
               <Link onClick={handleTab} to="/">
@@ -71,9 +83,9 @@ const Header = ({ siteTitle }) => {
               <Link
                 onClick={handleTab}
                 to="/contact"
-                className="no-underline text-black m-3 my-3  "
+                className="no-underline text-black m-3 my-3 mx-3 "
               >
-                <button className="mt-2 w-32 px-5 py-2 border border-gray-400 font-medium hover:text-green-900 mr-5 inline-flex items-center focus:outline-none  rounded text-base mt-4 md:mt-0">
+                <button className="mt-2 ml-3 w-32 px-5 py-2 border border-gray-400 font-medium hover:text-green-900 mr-5 inline-flex items-center focus:outline-none  rounded text-base mt-4 md:mt-0">
                   Contact Us
                 </button>
               </Link>
@@ -81,7 +93,10 @@ const Header = ({ siteTitle }) => {
           </div>
         </div>
       ) : (
-        <div className="w-[100%]  h-[14vh]   flex  pl-2 pr-3 sm:px-5  flex-row items-center justify-between  mx-auto">
+        <div
+          id="header"
+          className="w-[100%]  h-[14vh]   flex  pl-2 pr-3 sm:px-5  flex-row items-center justify-between  mx-auto"
+        >
           <div className={`${logoContainer}`}>
             <Link to="/">
               <img alt="Img" className={logoImg} src={GeogoLogo} />
@@ -133,7 +148,8 @@ const Header = ({ siteTitle }) => {
           <div className="block sm:hidden">
             <FaBars
               className="w-[30px] h-[30px] ml-[10px]"
-              onClick={handleTab}
+              // onClick={handleTab}
+              onClick={() => setIsOpen(true)}
             />
           </div>
         </div>

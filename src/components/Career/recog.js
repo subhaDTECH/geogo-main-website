@@ -6,7 +6,7 @@ import StartUpImg from "../../images/startupIndia3.jpg"
 
 const RecogCom = () => (
   <div className="">
-    <div className="w-full  mx-auto lg:w-[95%]   p-3 lg:p-10">
+    <div className="w-full  mx-auto lg:w-[100%]   p-3 lg:p-10">
       <h2 className="text-[32px] my-3 sm:text-[46px]  font-medium md:mx-5 leading-tight  md:px-5">
         Recognition
       </h2>

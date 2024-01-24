@@ -63,6 +63,19 @@
   
 }
 
+
+
+
+
+
+
+/* Navbar.css */
+.scrolledHeader {
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+   /* border: 1px solid gray; */
+}
+
  
  @media (max-width:900px) {
     .logoContainer{

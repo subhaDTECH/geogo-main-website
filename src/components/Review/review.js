@@ -21,7 +21,8 @@ const StarRating = ({ rating }) => {
 
 const Review = ({ reviews }) => (
   <div className="">
-    <div className="sm:container h-full mx-auto w-full sm:w-[95%]  px-3 mt-[40px] ">
+    {/* sm:container h-full mx-auto w-full sm:w-[95%] */}
+    <div className="w-full px-3 mt-[40px] mx-auto">
       <div className=" flex items-center justify-center">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* frist review box start  */}

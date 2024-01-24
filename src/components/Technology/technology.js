@@ -30,7 +30,8 @@ const Technology = ({ tools }) => {
 
   return (
     <div className="Technology-Section">
-      <div className="sm:container h-full mx-auto w-full sm:w-[95%] sm:p-5 p-3 m-3 my-10 mt-[80px]">
+      {/* sm:container h-full mx-auto w-full sm:w-[95%] */}
+      <div className="mx-auto w-full h-full  sm:p-5 p-3 m-3 my-10 mt-[80px]">
         <h3 className="title mt-5">
           Ensuring quality and performance using these{" "}
           <span className="text-green-500">Tools</span> and{" "}
