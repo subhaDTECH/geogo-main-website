@@ -71,25 +71,6 @@ const Layout = ({ children }) => {
   const containerRef = useRef(null)
   const [isOpen, setIsOpen] = useState(false)
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     if (containerRef.current && containerRef.current.scrollTop > 0) {
-  //       if (atTopOfPage) setAtTopOfPage(false)
-  //     } else {
-  //       if (!atTopOfPage) setAtTopOfPage(true)
-  //     }
-  //   }
-
-  //   if (containerRef.current) {
-  //     console.log("scroll")
-  //     containerRef.current.addEventListener("scroll", handleScroll)
-
-  //     return () => {
-  //       containerRef.current.removeEventListener("scroll", handleScroll)
-  //     }
-  //   }
-  // }, [atTopOfPage])
-
   useEffect(() => {
     const handleScroll = () => {
       if (typeof window !== "undefined") {
@@ -126,43 +107,44 @@ const Layout = ({ children }) => {
 
           <main>{children}</main>
           <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
-            <nav className={`h-full flex flex-col p-4 mt-5`}>
+            <nav className={`h-full flex  flex-col p-4 mt-8`}>
               <Link
-                className="m-2 no-underline mt-[20px] text-[18px]"
+                className="m-2 no-underline mt-[20px] text-[16px] font-normal"
                 to="/service"
               >
                 Services
               </Link>
               <Link
-                className="m-2 no-underline mt-[20px] text-[18px]"
+                className="m-2 no-underline mt-[20px] text-[16px] font-normal"
                 to="/solution"
               >
                 Solutions
               </Link>
               <Link
-                className="m-2 no-underline mt-[20px] text-[18px]"
+                className="m-2 no-underline mt-[20px] text-[16px] font-normal"
                 to="/company"
               >
                 Company
               </Link>
 
               <Link
-                className="m-2 no-underline mt-[20px] text-[18px]"
+                className="m-2 no-underline mt-[20px] text-[16px] font-normal"
                 to="/career"
               >
                 Careers
               </Link>
               <Link
-                className="m-2 no-underline mt-[20px] text-[18px]"
+                className="m-2 no-underline mt-[20px] text-[16px] font-normal"
                 to="https://blog.geogo.in/"
               >
                 Blog
               </Link>
 
-              <Link to="/contact" className="no-underline text-black my-3  ">
-                <button className=" w-32 p-5 py-2 border border-gray-400 font-medium hover:text-green-900 mr-5 inline-flex items-center focus:outline-none  rounded text-base mt-4 md:mt-0">
-                  Contact Us
-                </button>
+              <Link
+                to="/contact"
+                className="no-underline text-black my-3  mt-[20px] text-[16px] font-normal"
+              >
+                Contact Us
               </Link>
             </nav>
           </Drawer>
